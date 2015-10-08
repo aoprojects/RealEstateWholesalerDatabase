@@ -74,11 +74,18 @@
                 </ul>    
             </nav>
         </div><!--end #main-nav-container --> 
+        <div><!-- begin div for internal page content -->
+            <% flash.each do |name, msg| %>
+            <% content_tag(:div, msg, class: "alert alert-#{name}") %>
+            <% end %>
 
+            <%= yield %>
 
-<%= yield %>
+            
+    
+        </div><!-- end div for internal page content -->
 
-   <div>
+        <div><!-- start div for footer -->
             <footer>
                 <ul class="footer-lists">
                     <li>TODO: List yourself as a wholesaler</li>
