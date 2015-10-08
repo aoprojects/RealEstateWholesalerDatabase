@@ -1,14 +1,96 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<html lang="en">
+
+<!-- written by Alison Ostendorf
+	Project: Real Estate Wholesaler Database
+	to be posted at rewholesalerdatabase.com when all done
+    team@rewholesalerdatabase.com
+	contact: aostendorf@gmail.com -->
+
   <title>RealEstateWholesalerDatabase</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Vie a national database of real estate investment wholesalers, free." content="Real Estate Wholesaler Databse">
+  
+   
+    <link href='https://fonts.googleapis.com/css?family=Cousine' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Patrick+Hand' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
 </head>
 <body>
 
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+    <div class="container" id="main-container">
+
+        <div class="social-media-container">
+
+        
+           
+            <h6 class="inline">Please like us on facebook --></h6>
+
+            <a href="https://www.facebook.com/REWholesalerDatabase" target="_none">
+            	<%= image_tag('facebook.png', alt: "facebook") %></a>
+
+            <a href="https://twitter.com/REWholesalerDb" alt="twitter" target="_none"><%= image_tag('twitter.png', alt: 'twitter') %></a><br>
+
+             <div class="fb-like" data-href="https://www.facebook.com/REWholesalerDatabase" data-width="50" data-layout="standard" data-action="like" data-show-faces="false" data-share="true"></div>
+
+
+            <button>TODO: Sign up for email updates</button>
+        </div><!-- end social media div -->
+        <div class="clear"></div>
+
+        <div>
+            <a class="no-decoration"><href="index.html" alt="Real Estate Wholesaler"><h1>Real Estate Wholesaler Database</h1></a>
+            <h3 class="tagline"> No more scouring Craigslist or contacting bandit signs to find off market property deals...<br> Contact real estate property wholesalers in your investing market directly. </h3>
+        </div>
+        <div class="clear"></div>
+
+
+        <div class="container" id="main-nav-container">
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="vertical-line">Wholesaler Database</a></li>
+                    <li><a href="learnwholesaling.html" class="vertical-line">Learn Wholesaling</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                </ul>    
+            </nav>
+        </div><!--end #main-nav-container --> 
+
+
 <%= yield %>
+
+   <div>
+            <footer>
+                <ul class="footer-lists">
+                    <li>List yourself as a wholesaler</li>
+                    <li>List yourself as a wholesaling resource</li>
+                    <li>Contact us at team@rewholesalerdatabase.com</li>
+                </ul>
+                
+            </footer>
+        </div> 
+
+
+    </div><!--end #main-container -->
 
 </body>
 </html>
