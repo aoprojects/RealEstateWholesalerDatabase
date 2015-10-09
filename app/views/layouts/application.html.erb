@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<html lang="en">
+    <html lang="en">
 
 <!-- written by Alison Ostendorf
-	Project: Real Estate Wholesaler Database
-	to be posted at rewholesalerdatabase.com when all done
+    Project: Real Estate Wholesaler Database
+    to be posted at rewholesalerdatabase.com when all done
     team@rewholesalerdatabase.com
-	contact: aostendorf@gmail.com -->
+    contact: aostendorf@gmail.com -->
 
 
   <title>RealEstateWholesalerDatabase</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-	<meta charset="utf-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="Vie a national database of real estate investment wholesalers, free." content="Real Estate Wholesaler Databse">
@@ -32,7 +32,7 @@
 
 
     <div class="container" id="main-container">  
-
+        <div class="jumbotron">
         <div>
             <a class="no-decoration"><href="index.html" alt="Real Estate Wholesaler"><h1>Real Estate Wholesaler Database</h1></a>
             
@@ -44,12 +44,13 @@
         <div class="container" id="main-nav-container">
             <nav>
                 <ul>
-                	<li><%= link_to "Wholesaler Database", root_path, class: "vertical-line nav-only" %></li>
+                    <li><%= link_to "Wholesaler Database", root_path, class: "vertical-line nav-only" %></li>
                     <li><%= link_to "Learn Wholesaling", wholesaling_path, class: "vertical-line nav-only" %></li>
                     <li><%= link_to "Contact Us", about_path, class: "vertical-line nav-only"%></li>
                 </ul>    
             </nav>
         </div><!--end #main-nav-container --> 
+    </div> <!-- end jumbotron div -->
    
         <div><!-- begin div for internal page content -->
             <% flash.each do |name, msg| %>
@@ -62,20 +63,24 @@
 
     
         </div><!-- end div for internal page content -->
+</div><!--end #main-container -->
         <br>
         <div><!-- start div for footer -->
             <footer>
                 <ul class="footer-lists">
                     <li><%= render 'layouts/new_wholesaler_modal' %></li>
                     <li><%= link_to 'List yourself as a trainer', wholesaling_path %></li>
-                    <li>Contact us here or send an email directly to team@rewholesalerdatabase.com</li>
+                    <li>team@rewholesalerdatabase.com</li>
                 </ul>
-                
+
+                <ul class="align-right-float">
+                    <li><%= link_to "Real Estate Wholesaler Database", root_path, class: 'title-footer no-decoration' %></li>
+                </ul> 
             </footer>
         </div> 
 
 
-    </div><!--end #main-container -->
+    
 
      
 </body>

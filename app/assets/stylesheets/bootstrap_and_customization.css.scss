@@ -13,92 +13,6 @@ $navbar-height:  	20px;
 $navbar-default-bg: #D5D0C4;
 $navbar-default-toggle-hover-bg: #D5D0C4;
 
-#main-container {
-
-}
-
-#main-nav-container {
-	margin: 0 auto 0 auto;
-}
-
-
-.align-center {
-	text-align: center;
-}
-
-.align-right-float {
-	text-align: right;
-	float: right;
-}
-
-.clear {
-	clear: both;
-}
-
-.col-sm-2 {
-	padding-left: 10px;
-	padding-right: 10px;
-	/*this is changing the bootstrap padding for col 2, I am doing this to fit the states better into lists with one line per state */
-
-}
-
-.container {
-	width: 1000px;
-}
-
-.explanation {
-	padding: 25px;
-	border-radius: 15px;
-}
-
-.footer-lists {
-	padding: 10px;
-}
-
-.inline {
-	display: inline;
-}
-
-.internal-list {
-	padding: 10px;
-}
-
-.location-lists {
-	list-style: none;
-}
-
-.no-decoration {
-	text-decoration: none;
-	color: black;
-}
-
-.no-decoration:hover {
-	text-decoration: none;
-	color: black;
-}
-
-.social-media-container {
-	text-align: right;
-	padding: 18px;
-	padding-top: 23px;
-
-}
-
-.tagline {
-	padding: 5px;
-	padding-bottom: 15px
-}
-
-.vertical-line {
-	border-right: 1px solid;
-}
-
-.wholesaler-areas {
-	background-color: rgba(221,224,207,0.3);
-	border-radius: 15px;
-	padding: 12px;
-}
-
 
 button {
 	float: right;
@@ -113,16 +27,6 @@ button {
 button:hover {
 	color: blue;
 	transition: color 0.1s ease-in;
-}
-
-footer {
-	background-color: #E8E8E8;
-	padding: 10px;
-	border-radius: 10px;
-}
-
-footer ul {
-	
 }
 
 footer ul li{
@@ -143,6 +47,10 @@ h3 {
 
 h4 {
 	text-align: center;
+}
+
+h5 {
+	text-align: right;
 }
 
 h6 {
@@ -183,7 +91,106 @@ table {
 
 }
 
+footer {
+	background-color: #F8F8F8;
+	padding: 35px;
+}
 
+
+#main-nav-container {
+	margin: 0 auto 0 auto;
+}
+
+.align-center {
+	text-align: center;
+}
+
+.align-right-float {
+	text-align: right;
+	float: right;
+}
+
+.clear {
+	clear: both;
+}
+
+.col-sm-2 {
+	padding-left: 10px;
+	padding-right: 10px;
+	/*this is changing the bootstrap padding for col 2, I am doing this to fit the states better into lists with one line per state */
+
+}
+
+.container {
+	width: 1000px;
+}
+
+.explanation {
+	padding: 25px;
+	border-radius: 15px;
+}
+
+
+.footer-lists {
+	padding: 10px;
+}
+
+.inline {
+	display: inline;
+}
+
+.internal-list {
+	padding: 10px;
+}
+
+.location-lists {
+	list-style: none;
+}
+
+.no-decoration {
+	text-decoration: none;
+	color: black;
+}
+
+.no-decoration:hover {
+	text-decoration: none;
+	color: black;
+}
+
+.social-media-container {
+	text-align: right;
+	padding: 18px;
+	padding-top: 23px;
+
+}
+
+.tagline {
+	padding: 5px;
+	padding-bottom: 15px
+}
+
+.title-footer {
+	font-family: 'Fjalla One', sans-serif;
+	font-size: 18px;
+	
+}
+
+footer ul {
+	display: inline-block;
+	float: left;
+	vertical-align: middle;
+}
+
+
+.vertical-line {
+	border-right: 1px solid;
+}
+
+.wholesaler-areas {
+	background-color: rgba(221,224,207,0.3);
+	border-radius: 15px;
+	padding: 12px;
+}
 
 
 .navbar {
@@ -194,7 +201,6 @@ table {
 	font-size: 14px;
 	text-decoration: none;
 }
-
 
 .nav-text:hover {
 	border-bottom: none;
