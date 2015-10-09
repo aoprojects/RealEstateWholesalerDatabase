@@ -1,1 +1,20 @@
 @import 'bootstrap';
+
+$navbar-height:  	20px;
+$navbar-default-bg: #D5D0C4;
+$navbar-default-toggle-hover-bg: #D5D0C4;
+
+.navbar {
+	font-size: 30px;
+}
+
+.nav-text {
+	font-size: 12px;
+	text-decoration: none;
+}
+
+
+
+.nav-text:hover {
+	border-bottom: none;
+}
