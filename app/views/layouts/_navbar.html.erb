@@ -34,26 +34,28 @@
       </form>
 -->
       <ul class="nav navbar-nav navbar-right">
-
+<!--
           <li><div class="fb-like" data-href="https://www.facebook.com/REWholesalerDatabase" data-width="50" data-layout="button" data-action="like" data-show-faces="false"></div></li>
-
+-->
           <li><a href="https://www.facebook.com/REWholesalerDatabase" target="_none" class="nav-text"><%= image_tag('facebook.png', alt: "facebook", class: 'icon-small') %></a></li>
 
           <li><a href="https://twitter.com/REWholesalerDb" alt="twitter" target="_none" class="nav-text"><%= image_tag('twitter.png', alt: 'twitter', class: 'icon-small bottom') %></a></li>
-        
 
-          <li><a href ="#" class="nav-text">Newsletter</a></li>
+          <li><a href ="#" class="nav-text"><%= render 'layouts/newsletter_modal' %></a></li>
 
           
            <li class="dropdown">
               <a href="#" class="dropdown-toggle nav-text" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                 
-                Dp<span class="caret"></span>
+                More<span class="caret"></span>
               </a>
               <ul class="dropdown-menu">
-                  <li><a href="#" class="nav-text">List yourself as a wholesaler</a></li>
-                  <li><a href="#" class="nav-text">List yourself as a trainer</a></li>
-                  <li><a href="#" class="nav-text">Contact Us</a></li>
+                  <li><%= link_to 'List yourself as a wholesaler', root_path, class: 'nav-text' %></li>
+                  <li><%= link_to 'List yourself as a trainer', wholesaling_path, class: 'nav-text' %></li>
+                  <hr/>
+                  <li><%= link_to 'Contact Us', about_path, class: 'nav-text' %></li>
+
+                    
                   <% if user_signed_in? %>
                   <li><%= link_to 'Sign Out', destroy_user_session_path, class: 'nav-text'%></li>
                   <% else %>
