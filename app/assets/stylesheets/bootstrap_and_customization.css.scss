@@ -1,7 +1,3 @@
-@import 'bootstrap-sprockets';
-@import 'bootstrap';
-@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css");
-
 
 /*
 Project by Alison Ostendorf
@@ -9,9 +5,13 @@ aostendorf@gmail.com
 Project name: Real Estate Wholesaler Database
 */
 
-$navbar-height:  	20px;
-$navbar-default-bg: #D5D0C4;
-$navbar-default-toggle-hover-bg: #D5D0C4;
+$navbar-default-toggle-hover-bg: rgb(193,34,44);
+
+
+
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css");
 
 
 button {
@@ -199,6 +199,7 @@ footer ul {
 .nav-text {
 	font-size: 14px;
 	text-decoration: none;
+	font-weight: bold;
 }
 
 .nav-text:hover {
