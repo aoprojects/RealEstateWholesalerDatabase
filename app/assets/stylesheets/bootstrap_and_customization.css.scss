@@ -7,6 +7,7 @@ Project name: Real Estate Wholesaler Database
 
 $navbar-default-toggle-hover-bg: rgb(193,34,44);
 $jumbotron-padding: 20px;
+$jumbotron-bg: rgb(255,255,255);
 
 
 @import 'bootstrap-sprockets';
@@ -29,6 +30,11 @@ button:hover {
 	transition: color 0.1s ease-in;
 }
 
+footer {
+	background-color: #F8F8F8;
+	padding: 35px;
+}
+
 footer ul {
 	display: inline-block;
 	float: left;
@@ -49,6 +55,7 @@ h1 {
 h3 {
 	font-family: 'Open Sans Condensed', sans-serif;
 	margin-left: 30px;
+	text-align: center;
 }
 
 
@@ -97,19 +104,6 @@ nav ul li a:hover {
 	border-bottom: 1px solid;
 }
 
-table {
-
-}
-
-footer {
-	background-color: #F8F8F8;
-	padding: 35px;
-}
-
-
-#main-nav-container {
-	margin: 0 auto 0 auto;
-}
 
 .align-center {
 	text-align: center;
@@ -145,6 +139,11 @@ footer {
 	padding: 10px;
 }
 
+.icon-small {
+	width: 28px;
+	margin: -8px;
+}
+
 .inline {
 	display: inline;
 }
@@ -155,6 +154,21 @@ footer {
 
 .location-lists {
 	list-style: none;
+}
+
+
+.navbar {
+	font-size: 30px;
+}
+
+.nav-text {
+	font-size: 14px;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.nav-text:hover {
+	border-bottom: none;
 }
 
 .no-decoration {
@@ -180,7 +194,7 @@ footer {
 
 .tagline {
 	padding: 5px;
-	padding-bottom: 15px
+	padding-bottom: 15px;
 }
 
 .title-footer {
@@ -199,21 +213,3 @@ footer {
 	padding: 12px;
 }
 
-.navbar {
-	font-size: 30px;
-}
-
-.nav-text {
-	font-size: 14px;
-	text-decoration: none;
-	font-weight: bold;
-}
-
-.nav-text:hover {
-	border-bottom: none;
-}
-
-.icon-small {
-	width: 28px;
-	margin: -8px;
-}
