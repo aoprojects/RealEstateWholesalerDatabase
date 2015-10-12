@@ -19,7 +19,7 @@
         <span class="icon-bar"></span>
       </button>
       
-      <%= link_to "Real Estate Wholesaler Database", root_path, class: 'title-footer no-decoration' %>
+      <p class="small-logo"><%= link_to "Real Estate Wholesaler Database", root_path, class: 'title-footer no-decoration' %></p>
   
     </div>
 
@@ -36,12 +36,24 @@
       <ul class="nav navbar-nav navbar-right">
 <!--
           <li><div class="fb-like" data-href="https://www.facebook.com/REWholesalerDatabase" data-width="50" data-layout="button" data-action="like" data-show-faces="false"></div></li>
+
+
 -->
+          <% if user_signed_in? %>
+          <li>My Account</li>
+          <li><%= link_to 'Sign Out', destroy_user_session_path, :method => :delete, class: 'nav-text'%></li>
+          <% else %>
+          <li><%= link_to 'Sign In', new_user_session_path, class: 'nav-text' %></li>
+          
+          <li></li>
+          <% end %>
+
+
           <li><a href="https://www.facebook.com/REWholesalerDatabase" target="_none" class="nav-text"><%= image_tag('facebook.png', alt: "facebook", class: 'icon-small') %></a></li>
 
           <li><a href="https://twitter.com/REWholesalerDb" alt="twitter" target="_none" class="nav-text"><%= image_tag('twitter.png', alt: 'twitter', class: 'icon-small bottom') %></a></li>
 
-          <li><a href ="#" class="nav-text"><%= render 'layouts/newsletter_modal' %></a></li>
+          <li><a href ="#" class="nav-text">Newsletter</a></li>
           
            <li class="dropdown">
               <a href="#" class="dropdown-toggle nav-text" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">

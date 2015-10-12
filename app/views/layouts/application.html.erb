@@ -24,9 +24,14 @@
     <link href='https://fonts.googleapis.com/css?family=Patrick+Hand' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <!-- below is for modals -->
+    <script type="text/javascript"> $(function ()
+        { $("#myModal").modal({show:false }); </script>
+        
+    <%= javascript_include_tag :defaults %>
 
 </head>
-<body>
+<body class="<%= controller_name %><%= action_name%>">
 
     <%= render 'layouts/navbar' %>
 
