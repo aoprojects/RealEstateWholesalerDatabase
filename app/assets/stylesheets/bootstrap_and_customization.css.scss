@@ -6,7 +6,7 @@ Project name: Real Estate Wholesaler Database
 */
 
 $navbar-default-toggle-hover-bg: rgb(193,34,44);
-
+$jumbotron-padding: 20px;
 
 
 @import 'bootstrap-sprockets';
@@ -29,6 +29,12 @@ button:hover {
 	transition: color 0.1s ease-in;
 }
 
+footer ul {
+	display: inline-block;
+	float: left;
+	vertical-align: middle;
+}
+
 footer ul li{
 	list-style: none;
 }
@@ -37,6 +43,7 @@ h1 {
 	font-family: 'Fjalla One', sans-serif;
 	font-size: 50px;
 	margin-bottom: -15px;
+	text-align: center;
 }
 
 h3 {
@@ -63,7 +70,6 @@ nav {
 }
 
 nav ul {
-	
 	list-style: none;
 }
 
@@ -71,12 +77,16 @@ nav ul li {
 	float: left;
 	font-size: 22px;
 	text-align: center;
+	margin-right: 10px;
 	
 }
 
 nav ul li a {
 	display: inline-block;
-	padding: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-top: -5px;
+	padding-bottom: -5px;
 	font-weight: bold;
 }
 
@@ -178,13 +188,6 @@ footer {
 	font-size: 18px;
 	
 }
-
-footer ul {
-	display: inline-block;
-	float: left;
-	vertical-align: middle;
-}
-
 
 .vertical-line {
 	border-right: 1px solid;
