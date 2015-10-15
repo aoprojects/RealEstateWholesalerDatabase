@@ -51,9 +51,7 @@
           <li><a href="https://twitter.com/REWholesalerDb" alt="twitter" target="_none" class="nav-text"><%= image_tag('twitter.png', alt: 'twitter', class: 'icon-small bottom') %></a></li>
 
            <% if user_signed_in? %>
-          <li><%= link_to my_account_path do %>
-            <span class="glyphicon glyphicon-user"></span>
-            <% end %>
+          <li><%= link_to 'My Account', my_account_path, class: 'nav-text' %>
           </li>
           <li><%= link_to 'Sign Out', destroy_user_session_path, :method => :delete, class: 'nav-text'%></li>
           <% else %>

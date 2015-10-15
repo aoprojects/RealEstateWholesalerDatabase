@@ -1,17 +1,31 @@
+<div class="clear">
+<br>
 
+<div class="account-settings">
+	<div class="row">
+		<div class="col-xs-12">
+			<h3 class="align-center">My Account Settings</h3>
+		</div>
+	</div><!-- end panel header -->
+	<br>
+	<div class="row">
+		<div class="col-sm-6 col-xs-12 text-right">
 
-<h3>My Account</h3>
+			<p><%= link_to 'Edit Account Settings', edit_user_registration_path %></p>
+			<p><%= link_to 'Change password', edit_user_password_path %></p>
 
+			<p>My User Profile</p>
 
-<p><%= link_to 'Edit account details', edit_user_registration_path %></p>
-<p><%= link_to 'Change password', edit_user_password_path %></p>
+			<p>All My Posts</p>
 
-<p>Profile</p>
+			<p>Advertising $ Summary</p>
+			</div><!-- end col#1 -->
+		<div class="col-sm-6 col-xs-12">
+			<p><%= link_to 'Log Out', destroy_user_session_path %></p>
+			<p><%= link_to "Cancel Account", edit_user_registration_path %></p>
+			<p><%= link_to "Contact Us", about_path %></p>
+		</div><!-- end col #2 -->
+	</div><!-- end row -->
+</div><!--end panel div -->
 
-<p>All posts</p>
-
-<p>Advertising $ summary</p>
-
-<p><%= link_to 'Log Out', destroy_user_session_path %></p>
-<p><%= link_to "Cancel Account", edit_user_registration_path %></p>
-<p><%= link_to "Contact Us", about_path %></p>
+<br>
