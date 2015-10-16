@@ -84,16 +84,17 @@ nav ul li {
 .pages-links {
 	display: inline-block;
 	margin-top: -5px;
-	padding: -10px;
+	padding: 10px;
 	font-weight: bold;
 	text-decoration: none;
 }
 
 .pages-links:hover {
-	color: rgba(131,52,11,1);
-	transition: color 0.1s ease-in;
+	transition: all 0.1s ease-in;
 	text-decoration: none;
-	border-bottom: 1px solid;
+	color: rgba(112,17,18,1);
+	background-color: rgba(215,215,215,0.4);
+	border-radius: 2px;
 }
 
 .pages-links a {
