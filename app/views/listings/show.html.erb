@@ -4,6 +4,7 @@
   <strong>Name:</strong>
   <%= @listing.name %>
 </p>
-
+<% if user_signed_in? %>
 <%= link_to 'Edit', edit_listing_path(@listing) %> |
+<% end %>
 <%= link_to 'Back', listings_path %>

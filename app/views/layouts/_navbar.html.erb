@@ -56,7 +56,10 @@
           </li>
           <li><%= link_to 'Sign Out', destroy_user_session_path, :method => :delete, class: 'nav-text'%></li>
           <% else %>
-          <li><%= link_to 'Sign In', new_user_session_path, class: 'nav-text' %></li>
+          <li><%= link_to new_user_session_path do %>
+           <span class="nav-text"><u>Sign In</u> or <u>Sign Up</u>
+           <% end %>
+         </li>
           <% end %>
 
 
