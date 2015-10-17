@@ -16,6 +16,17 @@
       <tr>
         <td><%= listing.name %></td>
         <td><%= listing.user_id %></td>
+
+            <strong>TODO: City:</strong>
+            <strong>State:</strong>
+            <strong>Specialties:</strong>
+            <strong>Email:</strong>
+            <strong>Phone:</strong>
+            <strong>Website:</strong>
+            <strong>Best way to see my current properties:</strong>
+            <strong>You should also know:</strong>
+
+
         <td><%= link_to 'Show', listing %></td>
         <% if user_signed_in? %>
           <td><%= link_to 'Edit', edit_listing_path(listing) %></td>

@@ -1,12 +1,31 @@
-<h2>Sign up</h2>
+<h2>Sign up as a Wholesaler</h2>
+
+<p>Enter your information below, as you would like your profile to display to buyers.</p>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
+          <p>TODO: checkbox wholesaler or trainer </p>
+
+          <div class="field">
+              <%= f.label :Wholesaler %><br />
+              <%= f.text_field :email, autofocus: true %>
+          </div>
+
+          <strong>TODO: City:</strong>
+          <strong>State:</strong>
+          <strong>Specialties:</strong>
+
+            <div class="field">
+              <%= f.label :email %><br />
+              <%= f.email_field :email, autofocus: true %>
+            </div>
+          
+          <strong>Phone:</strong>
+          <strong>Website:</strong>
+          <strong>Best way to see my current properties:</strong>
+          <strong>You should also know:</strong>
+
 
   <div class="field">
     <%= f.label :password %>
