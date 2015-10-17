@@ -12,7 +12,7 @@ class ListingsController < ApplicationController
 
  
   def new
-    @listing = Listing.new
+    @listing = current_user.listing.build
   end
 
   
@@ -21,7 +21,7 @@ class ListingsController < ApplicationController
 
  
   def create
-    @listing = Listing.new(listing_params)
+    @listing = current_user.listing.build(listing_params)
 
     respond_to do |format|
       if @listing.save
@@ -64,6 +64,6 @@ class ListingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def listing_params
-      params.require(:listing).permit(:name)
+      params.require(:listing).permit(:name, :category)
     end
 end

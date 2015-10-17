@@ -3,6 +3,8 @@
 <p>
   <strong>Name:</strong>
   <%= @listing.name %>
+  <strong>User ID:</strong>
+  <%= @listing.user_id %>
 </p>
 <% if user_signed_in? %>
 <%= link_to 'Edit', edit_listing_path(@listing) %> |

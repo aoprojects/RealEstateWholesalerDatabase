@@ -6,6 +6,7 @@
   <thead>
     <tr>
       <th>Name</th>
+      <th>User ID</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,6 +15,7 @@
     <% @listings.each do |listing| %>
       <tr>
         <td><%= listing.name %></td>
+        <td><%= listing.user_id %></td>
         <td><%= link_to 'Show', listing %></td>
         <% if user_signed_in? %>
           <td><%= link_to 'Edit', edit_listing_path(listing) %></td>
