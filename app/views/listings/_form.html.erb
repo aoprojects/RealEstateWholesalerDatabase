@@ -11,23 +11,28 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+
+<p>TODO: The only thing I should need on this page is category of location. FIx taht. Maybe also category of type of posting - either wholesaler or expert. Erase the name field of this form once I have the category. Then erase the name field and have only the category field for the listing inputs. I still need teh listing table, but the categories as a model that are listed in the listing table.</p>
+
+    <div class="field">
+      <%= f.label :name %><br>
+      <%= f.text_field :name %>
+    </div>
+
+ <p>Where would you like to list yourself as a wholesaler?</p>
+ <p>TODO: say something about pricing guides</p>
+
+    <strong>City: (I think this will be a string and I will alphebatize these in the state's display table.</strong>
+    <strong>State:(this will be a category) </strong>
+
+    <p>Note: To change any details about yourself, change your profile in your account settings.</p>
+
+    <div class="actions btn btn-success">
+      <%= f.submit %>
+    </div>
+
 <% end %>
   
-  <p>TODO: Also add these</p>
-  <strong>City:</strong>
-  <strong>State:</strong>
-  <strong>Specialties:</strong>
-  <strong>Email:</strong>
-  <strong>Phone:</strong>
-  <strong>Website:</strong>
-  <strong>Best way to see my current properties:</strong>
-  <strong>You should also know:</strong>
+  <p>TODO: Show them a preview of their post</p>
 
   
