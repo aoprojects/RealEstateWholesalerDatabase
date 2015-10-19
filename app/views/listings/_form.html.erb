@@ -12,27 +12,37 @@
   <% end %>
 
 
-<p>TODO: The only thing I should need on this page is category of location. FIx taht. Maybe also category of type of posting - either wholesaler or expert. Erase the name field of this form once I have the category. Then erase the name field and have only the category field for the listing inputs. I still need teh listing table, but the categories as a model that are listed in the listing table.</p>
+<p>TODO: Type of posting - either wholesaler or specialist</p>
+
+
+ <p>Where would you like to list yourself as a wholesaler?</p>
+ <p>TODO: say something about pricing guides</p>
+
 
     <div class="field">
       <%= f.label :name %><br>
       <%= f.text_field :name %>
     </div>
 
- <p>Where would you like to list yourself as a wholesaler?</p>
- <p>TODO: say something about pricing guides</p>
+    <p><strong>City: (I think this will be a string and I will alphebatize these in the state's display table.</strong></p>
+    <p><strong>State:(this will be a category) </strong></p>
 
-    <strong>City: (I think this will be a string and I will alphebatize these in the state's display table.</strong>
-    <strong>State:(this will be a category) </strong>
+    <p><strong>Company email:</strong> <%= current_user.email %></p>
+    <p><strong>Phone number:</strong> <%= current_user.phone %></p>
+    <p><strong>Wholesaler website:</strong> <%= current_user.url %></p>
+    <p><strong>Wholesaler's specialties:</strong> <%= current_user.specialties %></p>
+    <p><strong>Buyers should also know:</strong> <%= current_user.details %></p>
 
-    <p>Note: To change any details about yourself, change your profile in your account settings.</p>
 
-    <div class="actions btn btn-success">
+
+    <p>Note: Other than location, your profile (contact details, specialty, etc.) stays the same .  To change any of the above details about your profile, go to your account settings <%= link_to 'here', edit_user_registration_path %></p>
+
+    <div class="actions btn">
       <%= f.submit %>
     </div>
 
 <% end %>
   
-  <p>TODO: Show them a preview of their post</p>
+  <p>TODO: Show them a preview of their post, if possible. </p>
 
   
