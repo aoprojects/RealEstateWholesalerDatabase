@@ -18,7 +18,6 @@ ActiveRecord::Schema.define(version: 20151019194424) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.integer  "user_id"
-    t.string   "specialties"
   end
 
   add_index "listings", ["user_id"], name: "index_listings_on_user_id"
