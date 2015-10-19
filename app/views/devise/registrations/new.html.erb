@@ -24,19 +24,20 @@
                 <%= f.label :Phone_number %><br>
                 <%= f.text_field :phone %>
             </div>
-          
-          <div>
-          <strong>TODO: Website:</strong>
-          </div>
+
+            <div class="field">
+                <%= f.label :Wholesaler_website %><br>
+                <%= f.text_field :url %>
+            </div>
           
            <div class="field">
                 <%= f.label :Please_list_your_specialties %><br>
-                <%= f.text_field :specialties %>
+                <%= f.text_field :specialties, placeholder: 'eg. multifamily / single family / land...' %>
             </div>
 
           <div class="field">
                 <%= f.label :Buyers_should_also_know %><br>
-                <%= f.text_field :details %>
+                <%= f.text_field :details, placeholder: 'eg. Text me for fast response / Buy directly from my website.' %>
           </div>
           
 

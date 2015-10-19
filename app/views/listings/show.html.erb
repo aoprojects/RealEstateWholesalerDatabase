@@ -1,19 +1,19 @@
 <p id="notice"><%= notice %></p>
 
-<h3>Wholesaler: </h3>
+<h3>Show Listings</h3>
 <p>
   <p><strong>Wholesaler:</strong> <%= @listing.name %></p>
   <p><strong>User ID:</strong>  <%= @listing.user_id %></p>
   <p><strong>City:</strong></p>
   <p><strong>State:</strong></p>
-  <p><strong>Specialties:</strong></p>
-  <p><strong>Email:</strong></p>
+  <p><strong>Specialties:</strong></p> 
+  <p><strong>Email:</strong></p> 
   <p><strong>Phone:</strong></p>
   <p><strong>Website:</strong></p>
   <p><strong>You should also know:</strong></p>
 
 </p>
-<% if current_user && user_signed_in? %>
+<% if current_user == @listing.user && user_signed_in? %>
 <%= link_to 'Edit', edit_listing_path(@listing) %> |
 <% end %>
 <%= link_to 'Back to All Listings', listings_path %>
