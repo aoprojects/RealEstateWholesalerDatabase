@@ -11,13 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151019194424) do
+ActiveRecord::Schema.define(version: 20151020192624) do
 
   create_table "listings", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.integer  "user_id"
+    t.string   "city"
+    t.integer  "state_id"
+    t.integer  "category_id"
   end
 
   add_index "listings", ["user_id"], name: "index_listings_on_user_id"
