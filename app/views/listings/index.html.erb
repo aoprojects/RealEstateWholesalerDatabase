@@ -5,27 +5,31 @@
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>User ID</th>
+      <th>Wholesaling Company </th>
+      <th>TODO erase this: "Listing name"</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Email</th>
+      <th>Phone #</th>
+      <th>Website</th>
+      <th>Wholesaler Specialties</th>
+      <th>Buyers should also know</th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
     <% @listings.each do |listing| %>
-      <tr>
+
+        <td><%= current_user.company %></td>
         <td><%= listing.name %></td>
-        <td><%= listing.user_id %></td>
-
-            <strong>TODO: City:</strong>
-            <strong>State:</strong>
-            <strong>Specialties:</strong>
-            <strong>Email:</strong>
-            <strong>Phone:</strong>
-            <strong>Website:</strong>
-            <strong>Best way to see my current properties:</strong>
-            <strong>You should also know:</strong>
-
+        <td><%= listing.city %></td>
+        <td>list state here </td>
+        <td><%= current_user.email %></td>
+        <td><%= current_user.phone %></td>
+        <td><%= current_user.url %></td>
+        <td><%= current_user.specialties %></td>
+        <td><%= current_user.details %></td>
 
         <td><%= link_to 'Show', listing %></td>
         <% if user_signed_in? %>
