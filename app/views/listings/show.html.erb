@@ -1,10 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<h3>Show Listings</h3>
-	<p>Show state result </p>
-	<p><strong>City:</strong> <%= @listing.city %></p>
+<h3 class="align-center">Your New Listing</h3>
 	<p><strong>Wholesaler:</strong> <%= current_user.company %></p>
 	<p><strong>User ID:</strong>  <%= @listing.user_id %></p>
+	<p><strong>City:</strong> <%= @listing.city %></p>
+	<p><strong>State:</strong> <%= @listing.state_id %></p>
 	<p><strong>Company email:</strong> <%= current_user.email %></p>
 	<p><strong>Phone number:</strong> <%= current_user.phone %></p>
 	<p><strong>Wholesaler website:</strong> <%= current_user.url %></p>

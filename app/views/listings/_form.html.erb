@@ -12,8 +12,7 @@
   <% end %>
 
 
-<p>TODO: Type of posting - either wholesaler or specialist</p>
-<p>TODO: say something about pricing guides</p>
+<p>TODO: Category - Type of posting - either wholesaler or specialist</p>
 
 
     <div class="field">
@@ -21,6 +20,10 @@
       <%= f.text_field :city %>
     </div>
 
+    <div class="field">
+      <%= f.label :State %><br>
+      <%= f.collection_select(:state_id, State.order(:id), :id, :state) %>
+    </div>
     
    
     <p><strong>State:(this will be a category) </strong></p>
@@ -33,14 +36,15 @@
 
 
 
-    <p>Note: Other than location, your profile (contact details, specialty, etc.) stays the same .  To change any of the above details about your profile, go to your account settings <%= link_to 'here', edit_user_registration_path %></p>
+    <p>Note: Other than location, your profile (contact details, specialty, etc.) stays the same per each wholesaler listing.  To change any of the above details about your profile, go to your account settings <%= link_to 'here', edit_user_registration_path %></p>
 
     <div class="actions btn">
       <%= f.submit %>
     </div>
 
 <% end %>
-  
+
+  <p>TODO: See our pricing guidelines here</p>
   <p>TODO: Show them a preview of their post, if possible. </p>
 
   

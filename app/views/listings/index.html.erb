@@ -1,13 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<h1>All Listings</h1>
+<h1>All (TODO: display state name here) Listings</h1>
 
 <table>
   <thead>
     <tr>
       <th>Wholesaling Company </th>
-      <th>TODO erase this: "Listing name"</th>
       <th>City</th>
+      <th>TODO erase: State ID</th>
       <th>State</th>
       <th>Email</th>
       <th>Phone #</th>
@@ -22,9 +22,9 @@
     <% @listings.each do |listing| %>
 
         <td><%= current_user.company %></td>
-        <td><%= listing.name %></td>
         <td><%= listing.city %></td>
-        <td>list state here </td>
+        <td><%= listing.state_id %></td>
+        <td>Display state name here</td>
         <td><%= current_user.email %></td>
         <td><%= current_user.phone %></td>
         <td><%= current_user.url %></td>
