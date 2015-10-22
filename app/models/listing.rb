@@ -1,4 +1,4 @@
 class Listing < ActiveRecord::Base
 	belongs_to :user
-	has_one :state
+	belongs_to :state
 end

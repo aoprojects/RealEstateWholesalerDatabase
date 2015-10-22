@@ -5,6 +5,21 @@
         <div class="clear"></div>
     
 
+<!-- begin experimental area for displaying only certain listings of certain states-->
+<div>
+    <% State.all.each do |state| %>
+        <%= link_to state.state, listings_path(state_id: state.state) %>
+        <% end %>
+
+
+
+
+
+
+
+
+</div>
+<!-- end experimental area for displaying only certain listings of certain states-->
         <br>
         <div class="wholesaler-areas">
 
@@ -20,7 +35,8 @@
                         <li><a>Alaska</a></li>
                         <li><a>Arizona</a></li>
                         <li><a>Arkansas</a></li>
-                        <li><a>California</a></li>
+                        <li><%= link_to 'California', listings_path { 
+                            listing.find_by  state_id: 55  } %></li>
                         <li><a>Colorado</a></li>
                         <li><a>Connecticut</a></li>
                         <li><a>Delaware</a></li>
