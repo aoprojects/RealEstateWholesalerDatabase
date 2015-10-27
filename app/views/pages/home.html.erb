@@ -7,10 +7,16 @@
 
 <!-- begin experimental area for displaying only certain listings of certain states-->
 <div>
-    <% State.all.each do |state| %>
-        <%= link_to state.state, listings_path(state_id: state.state) %>
-        <% end %>
+    <% State.all.each do |s| %>
+        <%= link_to s.state, listings_path { Listing.all.state_id == s.id } %>
 
+
+
+        
+    <% end %>
+</div>
+<hr>
+<div>
 
 
 
@@ -31,12 +37,11 @@
             
                 <div class="col-md-2 col-sm-4 col-xs-6 align-center">
                     <ul class="location-lists">
-                        <li><a>Alabama</a></li>
+                        <li> Alabama</li>
                         <li><a>Alaska</a></li>
                         <li><a>Arizona</a></li>
                         <li><a>Arkansas</a></li>
-                        <li><%= link_to 'California', listings_path { 
-                            listing.find_by  state_id: 55  } %></li>
+                        <li><%= link_to 'California', listings_path %></li>
                         <li><a>Colorado</a></li>
                         <li><a>Connecticut</a></li>
                         <li><a>Delaware</a></li>
@@ -112,8 +117,12 @@
                         <li><a>West Virginia</a></li>
                         <li><a>Wisconsin</a></li>
                         <li><a>Wyoming</a></li>
+                        <br>
+                        <li><strong><%= link_to 'All US States', listings_path %></strong></li>
                     </ul>
                  </div>
+
+
                 
             </div><!--end row of states -->
 

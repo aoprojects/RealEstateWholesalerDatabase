@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20151021173756) do
     t.string   "city"
     t.integer  "state_id"
     t.integer  "category_id"
-    t.string   "state"
+   
   end
 
   add_index "listings", ["user_id"], name: "index_listings_on_user_id"

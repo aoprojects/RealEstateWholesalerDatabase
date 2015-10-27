@@ -6,7 +6,7 @@ class ListingsController < ApplicationController
     if params[:state_id].blank?
       @listings = Listing.all.order('state_id')
     else
-      # @state_id = State.find_by(state: params[:state]).id
+      @state_id = State.find_by(state: params[:state]).id
       @lisitngs = Listing.where(state_id: @state_id)
     end
   end
