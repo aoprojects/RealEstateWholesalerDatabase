@@ -20,14 +20,14 @@
   <tbody>
     <% @listings.each do |listing| %>
 
-        <td><%= current_user.company %></td>
+        <td><%= listing.user.company %></td>
         <td><%= listing.city %></td>
         <td>TODO: state will go here </td>
-        <td><%= current_user.email %></td>
-        <td><%= current_user.phone %></td>
-        <td><%= current_user.url %></td>
-        <td><%= current_user.specialties %></td>
-        <td><%= current_user.details %></td>
+        <td><%= listing.user.email %></td>
+        <td><%= listing.user.phone %></td>
+        <td><%= listing.user.url %></td>
+        <td><%= listing.user.specialties %></td>
+        <td><%= listing.user.details %></td>
 
         <td><%= link_to 'Show', listing %></td>
         <% if user_signed_in? %>

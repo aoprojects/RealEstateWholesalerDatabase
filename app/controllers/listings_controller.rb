@@ -1,7 +1,9 @@
 class ListingsController < ApplicationController
   before_action :set_listing, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!, only: [:new, :edit, :update, :destroy]
   
+
+
   def index
     
       @listings = Listing.all
@@ -14,7 +16,11 @@ class ListingsController < ApplicationController
 
  
   def new
-    @listing = current_user.listing.build
+    if user_signed_in?
+      @listing = current_user.listing.build
+    else
+      redirect_to user_session_path
+    end
   end
 
   
@@ -68,4 +74,6 @@ class ListingsController < ApplicationController
     def listing_params
       params.require(:listing).permit(:city, :category_id)
     end
+
+
 end
