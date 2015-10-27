@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get "wholesaling" => "pages#wholesaling"
   get "about" => "pages#about"
   get "my_account" => "pages#my_account"
+  get "my_profile" => "pages#my_profile"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

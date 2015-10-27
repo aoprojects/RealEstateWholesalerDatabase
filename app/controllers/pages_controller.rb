@@ -10,4 +10,7 @@ class PagesController < ApplicationController
 
   def my_account
   end
+
+  def my_profile
+  end
 end
