@@ -3,12 +3,9 @@ class ListingsController < ApplicationController
 
   
   def index
-    if params[:state_id].blank?
-      @listings = Listing.all.order('state_id')
-    else
-      @state_id = State.find_by(state: params[:state]).id
-      @lisitngs = Listing.where(state_id: @state_id)
-    end
+    
+      @listings = Listing.all
+    
   end
 
  
@@ -69,6 +66,6 @@ class ListingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def listing_params
-      params.require(:listing).permit(:city, :state_id, :state, :category_id)
+      params.require(:listing).permit(:city, :category_id)
     end
 end

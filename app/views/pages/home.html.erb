@@ -7,13 +7,7 @@
 
 <!-- begin experimental area for displaying only certain listings of certain states-->
 <div>
-    <% State.all.each do |s| %>
-        <%= link_to s.state, listings_path { Listing.all.state_id == s.id } %>
 
-
-
-        
-    <% end %>
 </div>
 <hr>
 <div>
