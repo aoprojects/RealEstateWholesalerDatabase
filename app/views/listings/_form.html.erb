@@ -12,23 +12,16 @@
   <% end %>
 
 
-<p>TODO: Category - Type of posting - either wholesaler or specialist</p>
+  
 
+    <p>TODO: Type of listing - this will be a category to select that will render this particular form.</p>
 
     <div class="field">
       <%= f.label :City %><br>
       <%= f.text_field :city %>
     </div>
 
-    <p>state will go below</p>
-<!--
-    <div class="field">
-      <%= f.label :State %><br>
-      <%= f.collection_select(:state_id, State.order(:id), :id, :state) %>
-    </div>
--->
-   
-    <p><strong>State:(this will be a category) </strong></p>
+    <p>state selections will go below</p>
 
     <p><strong>Company email:</strong> <%= current_user.email %></p>
     <p><strong>Phone number:</strong> <%= current_user.phone %></p>
