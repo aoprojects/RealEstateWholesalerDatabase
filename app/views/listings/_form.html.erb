@@ -13,15 +13,17 @@
 
 
   
-
+<!--
     <p>TODO: Type of listing - this will be a category to select that will render this particular form.</p>
+-->
+    <p><strong>New Wholesaler Listing</strong></p>
 
     <div class="field">
       <%= f.label :City %><br>
       <%= f.text_field :city %>
     </div>
 
-    <p>state selections will go below</p>
+    <p>TODO: state selections drop down will go here</p>
 
     <p><strong>Company email:</strong> <%= current_user.email %></p>
     <p><strong>Phone number:</strong> <%= current_user.phone %></p>
@@ -31,7 +33,7 @@
 
 
 
-    <p>Note: Other than location, your profile (contact details, specialty, etc.) stays the same per each wholesaler listing.  To change any of the above details about your profile, go to your account settings <%= link_to 'here', edit_user_registration_path %></p>
+    <p>Note: Other than location, your company profile (contact details, specialty, etc.) stays the same per each wholesaler listing.  To change any of the above company details, go to your account settings <%= link_to 'here', edit_user_registration_path %>, and then return to this page to create your listing.</p>
 
     <div class="actions btn">
       <%= f.submit %>
@@ -39,7 +41,9 @@
 
 <% end %>
 
-  <p>TODO: See our pricing guidelines here</p>
+<!-- Dev note - there should not be any pricing charges on this form itself. Refer to new listing pages for payment request code. -->
+
+
   <p>TODO: Show them a preview of their post, if possible. </p>
 
   

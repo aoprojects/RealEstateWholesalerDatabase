@@ -16,11 +16,7 @@ class ListingsController < ApplicationController
 
  
   def new
-    if user_signed_in?
       @listing = current_user.listing.build
-    else
-      redirect_to user_session_path
-    end
   end
 
   
@@ -69,6 +65,11 @@ class ListingsController < ApplicationController
     def set_listing
       @listing = Listing.find(params[:id])
     end
+
+    def correct_user
+        @listing = current_user.listings.find_by(id: params[:id])
+        redirect_to listings_path, notice: "You are not authorized to edit this listing" if @listing.nil?
+    end   
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def listing_params
