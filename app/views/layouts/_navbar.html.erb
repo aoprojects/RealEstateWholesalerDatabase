@@ -44,7 +44,15 @@
           <hr/>
           <li><%= link_to 'Contact Us', about_path, class: 'nav-text' %></li>
 -->
-          <li><a href ="#" class="nav-text">Newsletter</a></li>
+        
+
+          <li><%= link_to newsletter_path, class: 'nav-text' do %>
+              <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+                Newsletter
+          <% end %></li>
+
+
+
 
           <li><a href="https://www.facebook.com/REWholesalerDatabase" target="_none" class="nav-text"><%= image_tag('facebook.png', alt: "facebook", class: 'icon-small') %></a></li>
 
