@@ -5,7 +5,7 @@ class ListingsController < ApplicationController
 
 
   def index
-      @listings = Listings.all.order(:state_id)
+      @listings = Listings.all
   end
 
  
@@ -14,11 +14,11 @@ class ListingsController < ApplicationController
 
  
   def new
-    @listing = current_user.listing.build
+    @listing = current_user.listings.build
   end
  
   def create
-    @listing = current_user.listing.build
+    @listing = current_user.listings.build(listing_params)
 
     respond_to do |format|
       if @listing.save
