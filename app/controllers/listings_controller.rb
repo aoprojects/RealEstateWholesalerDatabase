@@ -1,11 +1,11 @@
 class ListingsController < ApplicationController
   before_action :set_listing, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, only: [:edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
   
 
 
   def index
-      @listings = Listing.all.order(:state_id)
+      @listings = Listings.all.order(:state_id)
   end
 
  
@@ -14,7 +14,7 @@ class ListingsController < ApplicationController
 
  
   def new
-      @listing = current_user.listing.build
+    @listing = current_user.listing.build
   end
  
   def create
@@ -23,10 +23,10 @@ class ListingsController < ApplicationController
     respond_to do |format|
       if @listing.save
         format.html { redirect_to @listing, notice: 'Listing was successfully created.' }
-        # format.json { render :show, status: :created, location: @listing }
+        
       else
         format.html { render :new }
-        # format.json { render json: @listing.errors, status: :unprocessable_entity }
+        
       end
     end
   end
@@ -68,7 +68,7 @@ class ListingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def listing_params
-      params.require(:listing).permit(:city, :state_id)
+      params.require(:listing).permit(:city, :state_id, :user_id)
     end
 
 

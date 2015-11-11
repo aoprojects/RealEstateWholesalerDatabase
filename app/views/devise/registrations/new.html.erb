@@ -16,7 +16,7 @@
 
 
             <div class="field">
-              <%= f.label :Company_email %><br />
+              <%= f.label :Company_email %>  (You will log in with this email)<br />
               <%= f.email_field :email, autofocus: true %>
             </div>
 
@@ -40,24 +40,24 @@
                 <%= f.text_field :details, placeholder: 'eg. Text me for fast response / Buy directly from my website.' %>
           </div>
           
+    <hr>
 
+      <div class="field">
+        <%= f.label :Password %>
+        <% if @minimum_password_length %>
+        <em>(<%= @minimum_password_length %> characters minimum)</em>
+        <% end %><br />
+        <%= f.password_field :password, autocomplete: "off" %>
+      </div>
 
-  <div class="field">
-    <%= f.label :New_password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
+      <div class="field">
+        <%= f.label :Password_confirmation %><br />
+        <%= f.password_field :password_confirmation, autocomplete: "off" %>
+      </div>
 
-  <div class="field">
-    <%= f.label :New_password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
+      <div class="actions">
+        <%= f.submit "Sign up" %>
+      </div>
+    <% end %>
 
 <%= render "devise/shared/links" %>
