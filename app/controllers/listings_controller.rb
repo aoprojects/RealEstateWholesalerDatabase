@@ -5,7 +5,7 @@ class ListingsController < ApplicationController
 
 
   def index
-      @listings = Listings.all
+      @listings = Listing.all
   end
 
  
