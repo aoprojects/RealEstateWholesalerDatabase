@@ -10,18 +10,18 @@ class ResourcesController < ApplicationController
   end
  
   def new
-      @resource = current_user.Resource.build
+    @resource = current_user.resources.build
   end
 
   def edit
   end
 
   def create
-    @resource = current_user.Resource.build(resource_params)
+    @resource = current_user.resources.build(resource_params)
 
     respond_to do |format|
       if @resource.save
-        format.html { redirect_to @resource, notice: 'Resource was successfully created.' }
+        format.html { redirect_to @resource, notice: 'Educational resource was successfully created.' }
       else
         format.html { render :new }
       end
@@ -32,7 +32,7 @@ class ResourcesController < ApplicationController
   def update
     respond_to do |format|
       if @resource.update(resource_params)
-        format.html { redirect_to @resource, notice: 'Resource was successfully updated.' }
+        format.html { redirect_to @resource, notice: 'Educational resource was successfully updated.' }
         
       else
         format.html { render :edit }
@@ -44,7 +44,7 @@ class ResourcesController < ApplicationController
   def destroy
     @resource.destroy
     respond_to do |format|
-      format.html { redirect_to resources_url, notice: 'Resource was successfully destroyed.' }
+      format.html { redirect_to resources_url, notice: 'Educational resource was successfully destroyed.' }
      
     end
   end

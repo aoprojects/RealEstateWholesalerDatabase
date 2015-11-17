@@ -23,10 +23,8 @@ class ListingsController < ApplicationController
     respond_to do |format|
       if @listing.save
         format.html { redirect_to @listing, notice: 'Listing was successfully created.' }
-        
       else
         format.html { render :new }
-        
       end
     end
   end
