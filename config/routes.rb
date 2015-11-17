@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :resources
   resources :listings
   devise_for :users
   root 'pages#home'
