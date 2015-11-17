@@ -1,14 +1,26 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>resource_name:</strong>
+  <strong>Wholesaler Educational Resource:</strong>
   <%= @resource.resource_name %>
 </p>
 
 <p>
-  <strong>User:</strong>
-  <%= @resource.user_id %>
+  <strong>Specialties:</strong>
+  <%= @resource.specialties %>
 </p>
 
-<%= link_to 'Edit', edit_resource_path(@resource) %> |
-<%= link_to 'Back', resources_path %>
+<p>
+  <strong>Website:</strong>
+  <%= @resource.url %>
+</p>
+
+<div class="align-right">
+	<%= link_to 'See all Educational Resources', resources_path %>
+	<% if user_signed_in? && current_user == resource.user %>
+		| <%= link_to 'Edit This Resource', edit_resource_path(@resource) %> |
+		<%= link_to 'Create New Educational Resource', new_resource_path %>
+	<% end %>
+</div>
+
+
