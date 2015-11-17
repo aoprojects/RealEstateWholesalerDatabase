@@ -1,25 +1,21 @@
 class ResourcesController < ApplicationController
   before_action :set_resource, only: [:show, :edit, :update, :destroy]
+   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 
-  # GET /resources
   def index
     @resources = Resource.all
   end
 
-  # GET /resources/1
   def show
   end
-
-  # GET /resources/new
+ 
   def new
-    @resource = current_user.resources.build
+      @resource = current_user.resources.build
   end
 
-  # GET /resources/1/edit
   def edit
   end
 
-  # POST /resources
   def create
     @resource = current_user.resources.build(resource_params)
 
@@ -45,7 +41,6 @@ class ResourcesController < ApplicationController
     end
   end
 
-  # DELETE /resources/1
   def destroy
     @resource.destroy
     respond_to do |format|
@@ -62,6 +57,6 @@ class ResourcesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def resource_params
-      params.require(:resource).permit(:resource_name, :user_id)
+      params.require(:resource).permit(:resource_name, :user_id, :specialties, :url)
     end
 end

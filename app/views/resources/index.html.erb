@@ -1,12 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Resources</h1>
+<h1>Wholesaler Education Resources</h1>
 
 <table>
   <thead>
     <tr>
       <th>resource_name</th>
-      <th>User</th>
+      <th>Specialties</th>
+      <th>Website</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -15,7 +16,8 @@
     <% @resources.each do |resource| %>
       <tr>
         <td><%= resource.resource_name %></td>
-        <td><%= resource.user_id %></td>
+        <td><%= resource.specialties %></td>
+        <td><%= resource.url %></td>
         <td><%= link_to 'Show', resource %></td>
         <td><%= link_to 'Edit', edit_resource_path(resource) %></td>
         <td><%= link_to 'Destroy', resource, method: :delete, data: { confirm: 'Are you sure?' } %></td>
