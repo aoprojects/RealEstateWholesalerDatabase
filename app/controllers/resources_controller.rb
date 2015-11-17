@@ -10,14 +10,14 @@ class ResourcesController < ApplicationController
   end
  
   def new
-      @resource = current_user.resources.build
+      @resource = current_user.Resource.build
   end
 
   def edit
   end
 
   def create
-    @resource = current_user.resources.build(resource_params)
+    @resource = current_user.Resource.build(resource_params)
 
     respond_to do |format|
       if @resource.save
