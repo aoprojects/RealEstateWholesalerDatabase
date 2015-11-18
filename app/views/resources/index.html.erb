@@ -6,33 +6,35 @@
   Most training programs focus on the US as a whole, but if they are able to provide coaching for other areas of the country, they should say so in their profile. <br>
 Many of the trainers below also have expanded into coaching investors on more than just wholesaling. Refer to their websites for full details.</p>
 
-<br>
-<table>
-  <thead>
-    <tr>
-      <th>Resource</th>
-      <th>Specialties</th>
-      <th>Website</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div class="well">
+    <br>
+    <table>
+      <thead>
+        <tr>
+          <th>Resource</th>
+          <th>Specialties</th>
+          <th>Website</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
 
-  <tbody>
-    <% @resources.each do |resource| %>
-      <tr>
-        <td><%= resource.resource_name %></td>
-        <td><%= resource.specialties %></td>
-        <td><%= resource.url %></td>
-        <td><%= link_to 'Show', resource %></td>
-        <% if user_signed_in? && current_user == resource.user %>
-          <td><%= link_to 'Edit', edit_resource_path(resource) %></td>
-          <td><%= link_to 'Destroy', resource, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <tbody>
+        <% @resources.each do |resource| %>
+          <tr>
+            <td><%= resource.resource_name %></td>
+            <td><%= resource.specialties %></td>
+            <td><%= resource.url %></td>
+            <td><%= link_to 'Show', resource %></td>
+            <% if user_signed_in? && current_user == resource.user %>
+              <td><%= link_to 'Edit', edit_resource_path(resource) %></td>
+              <td><%= link_to 'Destroy', resource, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <% end %>
+          </tr>
         <% end %>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      </tbody>
+    </table>
 
-<br>
+    <br>
 
-<%= link_to 'New Resource', new_resource_path %>
+    <%= link_to 'New Resource', new_resource_path %>
+</div><!-- end .well -->

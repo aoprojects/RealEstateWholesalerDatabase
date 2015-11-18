@@ -1,26 +1,24 @@
 <div class="clear">
 <br>
 
-<div class="account-settings">
+<div class="account-settings well">
 	<div class="row">
 		<div class="col-xs-12">
 			<h3 class="align-center">My Account Settings</h3>
+			<p class="align-center"> ~ You are currently signed in as <%= current_user.company %> ~ </p>
 		</div>
 	</div><!-- end panel header -->
 	<br>
 	<div class="row">
-		<div class="col-sm-6 col-xs-12 text-right">
+		<div class="col-xs-6 text-right">
 
 			<p><%= link_to 'Edit Account Settings', edit_user_registration_path %></p>
 			<p><%= link_to 'Change password', edit_user_password_path %></p>
-
 			<p><%= link_to 'View My Profile', my_profile_path %></p>
-
 			<p>All My Listings</p>
-
 			<p>Advertising $ Summary</p>
 			</div><!-- end col#1 -->
-		<div class="col-sm-6 col-xs-12">
+		<div class="col-xs-6">
 			<p><%= link_to 'Log Out', destroy_user_session_path %></p>
 			<p><%= link_to "Cancel Account", edit_user_registration_path %></p>
 			<p><%= link_to "Contact Us", about_path %></p>

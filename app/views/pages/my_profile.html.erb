@@ -1,28 +1,29 @@
+<div class="well">
+
+	<h3 class="align-center"><u>Your User Profile</u></h3>
+
+	<%= link_to 'Edit Your Profile', edit_user_registration_path, class: 'align-right-float' %>
+
+	<p><strong>Wholesaler:</strong> <%= current_user.company %></p>
+	<p><strong>Company email:</strong> <%= current_user.email %></p>
+	<p><strong>Phone number:</strong> <%= current_user.phone %></p>
+	<p><strong>Wholesaler website:</strong> <%= current_user.url %></p>
+	<p><strong>Wholesaler's specialties:</strong> <%= current_user.specialties %></p>
+	<p><strong>Buyers should also know:</strong> <%= current_user.details %></p>
 
 
-<h3 class="align-center"><u>Your User Profile</u></h3>
+	<hr>
 
-<%= link_to 'Edit Your Profile', edit_user_registration_path, class: 'align-right-float' %>
+	<div class="align-center">
+		<p>Please note: The above information is associated with your user account, and is posted along with each of your listings, as appropriate. <br>
+	</div><!-- end note div -->
 
-<p><strong>Wholesaler:</strong> <%= current_user.company %></p>
-<p><strong>Company email:</strong> <%= current_user.email %></p>
-<p><strong>Phone number:</strong> <%= current_user.phone %></p>
-<p><strong>Wholesaler website:</strong> <%= current_user.url %></p>
-<p><strong>Wholesaler's specialties:</strong> <%= current_user.specialties %></p>
-<p><strong>Buyers should also know:</strong> <%= current_user.details %></p>
-
-
-<hr>
-
-<div class="align-center">
-	<p>Please note: The above information is associated with your user account, and is posted along with each of your listings, as appropriate. <br>
-</div><!-- end note div -->
-
-<hr>
-<p class="align-right-float">TODO: INSERT LINK edit your listings.</p>
-<p>You are currently listing yourself as a TODO: (wholesaler) or (trainer).</p>
+	<hr>
+	<p class="align-right-float">TODO: INSERT LINK edit your listings.</p>
+	<p>You are currently listing yourself as a TODO: (wholesaler) or (trainer).</p>
 
 
-<%= link_to '<-- Back to Your Account Settings', my_account_path %>
-<br>
+	<%= link_to '<-- Back to Your Account Settings', my_account_path %>
+	<br>
 
+</div><!-- end .well -->

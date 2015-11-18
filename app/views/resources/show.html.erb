@@ -1,26 +1,27 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Wholesaler Educational Resource:</strong>
-  <%= @resource.resource_name %>
-</p>
+<div class="well">
+    <p>
+      <strong>Wholesaler Educational Resource:</strong>
+      <%= @resource.resource_name %>
+    </p>
 
-<p>
-  <strong>Specialties:</strong>
-  <%= @resource.specialties %>
-</p>
+    <p>
+      <strong>Specialties:</strong>
+      <%= @resource.specialties %>
+    </p>
 
-<p>
-  <strong>Website:</strong>
-  <%= @resource.url %>
-</p>
+    <p>
+      <strong>Website:</strong>
+      <%= @resource.url %>
+    </p>
 
-<div class="align-right">
-	<%= link_to 'See all Educational Resources', resources_path %>
-	<% if user_signed_in? && current_user == resource.user %>
-		| <%= link_to 'Edit This Resource', edit_resource_path(@resource) %> |
-		<%= link_to 'Create New Educational Resource', new_resource_path %>
-	<% end %>
-</div>
-
+    <div class="align-right">
+    	<%= link_to 'See all Educational Resources', resources_path %>
+    	<% if user_signed_in? && current_user == resource.user %>
+    		| <%= link_to 'Edit This Resource', edit_resource_path(@resource) %> |
+    		<%= link_to 'Create New Educational Resource', new_resource_path %>
+    	<% end %>
+    </div>
+</div><!-- end .well -->
 
