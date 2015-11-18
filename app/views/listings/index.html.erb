@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 <div class="well">
-    <h1>All (TODO: display state name here) Listings</h1>
+    <h2 class="align-center">All (TODO: state name here) Wholesaler Listings</h2>
 
-    <table>
+    <table class="table table-striped table-hover">
       <thead>
         <tr>
           <th>Wholesaling Company </th>
@@ -29,10 +29,10 @@
             <td><%= listing.user.specialties %></td>
             <td><%= listing.user.details %></td>
 
-            <td><%= link_to 'Show', listing %></td>
+            <td><%= link_to 'Show', listing, class: 'btn btn-success btn-sm' %></td>
             <% if user_signed_in? && listing.user == current_user %>
-              <td><%= link_to 'Edit', edit_listing_path(listing) %></td>
-              <td><%= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              <td><%= link_to 'Edit', edit_listing_path(listing), class: 'btn btn-info btn-sm' %></td>
+              <td><%= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm' %></td>
             <% end %>
           </tr>
         <% end %>
@@ -41,5 +41,7 @@
 
     <br>
 
-    <%= link_to 'Create New Listing', new_listing_path %>
+    <p>TODO: paginate</p>
+    <%= link_to 'Create New Listing', new_listing_path, class: 'btn btn-success align-right' %>
+
 </div><!-- end .well -->

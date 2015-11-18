@@ -17,18 +17,8 @@ $jumbotron-bg: rgb(255,255,255);
 
 button {
 	float: right;
-	border-radius: 5px;
-	background-color: #E0E0E0;
-	margin-top: 10px;
-	border: none;
-	padding: 8px;
-
 }
 
-button:hover {
-	color: blue;
-	transition: color 0.1s ease-in;
-}
 
 footer {
 	background-color: #F8F8F8;
@@ -90,17 +80,17 @@ nav ul li {
 }
 
 .pages-links:hover {
-	transition: all 0.1s ease-in;
-	text-decoration: none;
 	color: rgba(112,17,18,1);
-	background-color: rgba(215,215,215,0.4);
-	border-radius: 2px;
+	/* transition: all 0.1s ease-in;
+	background-color: rgba(215,215,215,0.4); 
+	border-radius: 2px; */
+	border-bottom: 1px solid;
+
 }
 
 .pages-links a {
 	text-decoration: none;
 }
-
 
 .account-settings {
 	padding: 20px;

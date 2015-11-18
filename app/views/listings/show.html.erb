@@ -5,25 +5,24 @@
 <div class="well">
 
 	<h3 class="align-center">Wholesaler Listing</h3>
-		<p><strong>Wholesaler:</strong> <%= @listing.user.company %></p>
-		<p><strong>User ID:</strong>  <%= @listing.user_id %></p>
-		<p><strong>City:</strong> <%= @listing.city %></p>
-		<p><strong>State:</strong> TODO: put state here. A param of listing.</p>
+		<p class='align-center'><strong><em> <%= @listing.city %>, TODO: State </em></strong></p>
 		<br>
+		<p><strong>Wholesaler:</strong> <%= @listing.user.company %></p>
 		<p><strong>Company email:</strong> <%= @listing.user.email %></p>
 		<p><strong>Phone number:</strong> <%= @listing.user.phone %></p>
 		<p><strong>Wholesaler website:</strong> <%= @listing.user.url %></p>
 		<p><strong>Wholesaler's specialties:</strong> <%= @listing.user.specialties %></p>
 		<p><strong>Buyers should also know:</strong> <%= @listing.user.details %></p>
-
 	</p>
 
+	TODO: make this following button a view all of that state button link --->
+
+	<%= link_to 'View All Listings', listings_path, class: 'btn btn-info' %>
 	<% if current_user == @listing.user && user_signed_in? %>
-	<%= link_to 'Edit', edit_listing_path(@listing) %> |
+		<%= link_to 'Edit This Listing', edit_listing_path(@listing), class: 'btn btn-warning' %>
 	<% end %>
 
-	<p>TODO: can I put something here about going back to state that was last viewed? Back to __ and make that a link that's intelligent.</p>
 
-	<%= link_to 'Back to All Listings', listings_path %>
+	<p class="align-center">TODO: paginate</p>
 
 </div><!-- end .well -->
