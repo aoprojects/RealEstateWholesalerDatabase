@@ -176,6 +176,10 @@ nav ul li {
 	color: black;
 }
 
+.no-wrap {
+	white-space: nowrap;
+}
+
 
 .social-media-container {
 	text-align: right;
@@ -186,6 +190,7 @@ nav ul li {
 
 .small-logo {
 	padding-left: 8px;
+	white-space: nowrap;
 }
 
 .tagline {
@@ -199,6 +204,7 @@ nav ul li {
 .title-footer {
 	font-family: 'Fjalla One', sans-serif;
 	font-size: 18px;
+	white-space: nowrap;
 }
 
 .vertical-line {
