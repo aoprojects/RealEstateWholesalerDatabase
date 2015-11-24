@@ -24,7 +24,10 @@
       <%= f.text_field :city %>
     </div>
 
-    <p>TODO: state selections drop down will go here</p>
+    <div class="field">
+      <%= f.label :State %><br>
+      <%= f.collection_select :state_id, State.all, :id, :state_name %>
+    </div>
 
     <p><strong>Company email:</strong> <%= current_user.email %></p>
     <p><strong>Phone number:</strong> <%= current_user.phone %></p>

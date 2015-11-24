@@ -4,8 +4,17 @@
 
 <div class="clear"></div>
     
+<!-- div for states loop through links -->
+
+<div>
+    <% State.all.each do |s| %>
+        <%= link_to s.state_name, listings_path(state: s.state_name) %>
+    <% end %>
 
 </div>
+
+
+
 <!-- end experimental area for displaying only certain listings of certain states-->
         <br>
         <div class="wholesaler-areas">
