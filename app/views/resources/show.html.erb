@@ -3,10 +3,11 @@
 <div class="well">
   <br>
   <div class="row">
-    <div class="col-xs-6">
+    <div class="col-xs-4">
+      DO I WANT TO HAVE A THICK BORDER AROUND EACH RESOURCE?
       <p>TODO: company logo goes here</p>
     </div><!-- end row for left -->
-    <div class="col-xs-6">
+    <div class="col-xs-8">
       <p><h4>
         <strong>Resource:</strong>
         <%= @resource.resource_name %>
@@ -25,11 +26,36 @@
   </div><!-- end row class -->
   <br>
     <div class="align-center">
-    	<%= link_to 'See all Educational Resources', resources_path, class: 'btn btn-sm btn-info' %>
+  
+      <%= link_to resources_path, class: 'btn btn-default btn-md' do %>
+        <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
+                See All
+      <% end %>
+
     	<% if user_signed_in? && current_user == @resource.user %>
-    		| <%= link_to 'Edit This Resource', edit_resource_path(@resource), class: 'btn btn-sm btn-danger' %> |
-    		<%= link_to 'Create New Educational Resource', new_resource_path, class: 'btn btn-md btn-success' %>
+    		
+          <%= link_to edit_resource_path(@resource), class: 'btn btn-default btn-md' do %>
+              <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
+                Edit
+          <% end %>
+          
+    		  <%= link_to new_resource_path, class: 'btn btn-default btn-md' do %>
+              <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                New
+          <% end %>
+
     	<% end %>
+
+
+
+
+          
+        
+
+
+
+
+      
     </div>
 </div><!-- end .well -->
 
