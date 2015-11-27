@@ -18,7 +18,7 @@
 
     <div class="align-right">
     	<%= link_to 'See all Educational Resources', resources_path %>
-    	<% if user_signed_in? && current_user == resource.user %>
+    	<% if user_signed_in? && current_user == @resource.user %>
     		| <%= link_to 'Edit This Resource', edit_resource_path(@resource) %> |
     		<%= link_to 'Create New Educational Resource', new_resource_path %>
     	<% end %>
