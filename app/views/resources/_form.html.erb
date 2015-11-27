@@ -11,24 +11,32 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :Resource %><br>
-    <%= f.text_field :resource_name %>
-  </div>
+<div class="row">
+      <div class="col-md-4">
+        TODO: This form needs an input field for a company logo
+      </div>
+      <div class="col-md-6">
+          <div class="field">
+            <strong><%= f.label :Resource %></strong><br>
+            <%= f.text_field :resource_name %>
+          </div>
 
-  <div class="field">
-    <%= f.label :Specialties %><br>
-    <%= f.text_field :specialties %>
-  </div>
+          <div class="field">
+            <strong><%= f.label :Specialties %></strong><br>
+            <%= f.text_field :specialties %>
+          </div>
 
-  <div class="field">
-    <%= f.label :Website %><br>
-    <%= f.text_field :url %>
-  </div>
+          <div class="field">
+            <strong><%= f.label :Website %></strong><br>
+            <%= f.text_field :url %>
+          </div>
 
-  <p>Note: A Wholesaler Educational Resource does not pull anything from your user profile. You can make as many custom Expert listings as you like.</p> 
- 
-  <div class="btn btn-success">
-    <%= f.submit %>
-  </div>
+          <p>Note: A Wholesaler Educational Resource does not pull anything from your user profile. You can make as many custom Expert listings as you like.</p> 
+         
+          <div class="btn btn-success">
+            <%= f.submit %>
+          </div>
+          
+      </div><!-- end col div -->
+    </div><!-- end row div -->
 <% end %>

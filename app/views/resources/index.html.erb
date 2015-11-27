@@ -14,7 +14,7 @@ Many of the trainers below also have expanded into coaching investors on more th
           <th>Resource</th>
           <th>Specialties</th>
           <th>Website</th>
-          <th colspan="3"></th>
+          <th colspan="1"></th>
         </tr>
       </thead>
 
@@ -24,11 +24,19 @@ Many of the trainers below also have expanded into coaching investors on more th
             <td><%= resource.resource_name %></td>
             <td><%= resource.specialties %></td>
             <td><%= resource.url %></td>
-            <td><%= link_to 'Show', resource %></td>
-            <% if user_signed_in? && current_user == resource.user %>
-              <td><%= link_to 'Edit', edit_resource_path(resource) %></td>
-              <td><%= link_to 'Destroy', resource, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+            <td><%= link_to resource, class: 'btn btn-default btn-sm' do %>
+                <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Show
             <% end %>
+            <% if user_signed_in? && current_user == resource.user %>
+                <%= link_to edit_resource_path(resource), class: 'btn btn-default btn-sm' do %>
+                    <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> Edit
+                <% end %>
+
+                <%= link_to resource, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default btn-sm' do %>
+                    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Delete
+                <% end %></td>
+            <% end %><!-- end if user signed in -->
           </tr>
         <% end %>
       </tbody>
@@ -36,5 +44,11 @@ Many of the trainers below also have expanded into coaching investors on more th
 
     <br>
     <p> TODO: paginate </p>
-    <%= link_to 'New Resource', new_resource_path, class: "btn btn-success btn-sm" %>
+
+    <%= link_to new_resource_path, class: 'btn btn-success btn-lg' do %>
+      <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                New
+    <% end %>
+
+
 </div><!-- end .well -->
