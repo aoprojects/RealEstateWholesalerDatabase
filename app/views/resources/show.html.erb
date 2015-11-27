@@ -1,27 +1,36 @@
 <p id="notice"><%= notice %></p>
 
 <div class="well">
-    <p>
-      <strong>Wholesaler Educational Resource:</strong>
-      <%= @resource.resource_name %>
-    </p>
+  <br>
+  <div class="row">
+    <div class="col-xs-6">
+      <p>TODO: company logo goes here</p>
+    </div><!-- end row for left -->
+    <div class="col-xs-6">
+      <p><h4>
+        <strong>Resource:</strong>
+        <%= @resource.resource_name %>
+      </h4></p>
 
-    <p>
-      <strong>Specialties:</strong>
-      <%= @resource.specialties %>
-    </p>
+      <p>
+        <strong>Our Specialties:</strong>
+        <%= @resource.specialties %>
+      </p>
 
-    <p>
-      <strong>Website:</strong>
-      <%= @resource.url %>
-    </p>
-
-    <div class="align-right">
-    	<%= link_to 'See all Educational Resources', resources_path %>
+      <p>
+        <strong>Our Website:</strong>
+        <%= @resource.url %>
+      </p>
+    </div><!-- end div for col -->
+  </div><!-- end row class -->
+  <br>
+    <div class="align-center">
+    	<%= link_to 'See all Educational Resources', resources_path, class: 'btn btn-sm btn-info' %>
     	<% if user_signed_in? && current_user == @resource.user %>
-    		| <%= link_to 'Edit This Resource', edit_resource_path(@resource) %> |
-    		<%= link_to 'Create New Educational Resource', new_resource_path %>
+    		| <%= link_to 'Edit This Resource', edit_resource_path(@resource), class: 'btn btn-sm btn-danger' %> |
+    		<%= link_to 'Create New Educational Resource', new_resource_path, class: 'btn btn-md btn-success' %>
     	<% end %>
     </div>
 </div><!-- end .well -->
+
 
