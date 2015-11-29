@@ -1,21 +1,17 @@
 <div class="well">
-	<h2 class="align-center">Create a New Wholesaler Listing</h2><br>
-	<p><%= link_to 'Create New Educational Resource instead', new_resource_path, class: "align-right" %>
+	<h2 class="align-center">Create a New Wholesaler Listing</h2>
+	<p class="align-right"><%= link_to 'See All Listing Types', new_listing_choice_path, class: "btn btn-default btn-sm" %></p>
 
-	
-	<p>If they have chosen the wholesaler option, go to this form...</p>
-	<p>Once you complete this form and submit payment, cash buyers looking for off market properties in your market will be able to contact you directly.</p>
+	<p class="align-center">After you complete this form and submit payment, cash buyers looking for off market properties in your market will be able to view your profile and contact you directly.</p>
 
 	<%= render 'form' %>
 
+	<p>To create mutliple listings, add them one by one.</p>
+
 	<p>TODO: Next: Payment method</p>
 
-	<p> TODO: next it should link to the payment processing part of the form</p>
-
-	<br>
-
     <%= link_to root_path, class: 'btn btn-default btn-md align-center' do %>
-      <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
-                Home
+      <span class="glyphicon glyphicon-list align-center" aria-hidden="true"></span>
+                See All States
     <% end %>
 </div><!-- end .well -->
