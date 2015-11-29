@@ -1,7 +1,5 @@
 
 
-<button class="btn btn-success"><%= link_to 'List yourself as a wholesaler', new_listing_path %></button>
-
 <div class="clear"></div>
     
 <!-- div for states loop through links -->
@@ -13,13 +11,11 @@
 
 </div>
 
-
-
 <!-- end experimental area for displaying only certain listings of certain states-->
         <br>
         <div class="wholesaler-areas">
 
-                    <h4><span class="glyphicon glyphicon-search"></span><strong>    Where would you like to find wholesalers?</strong></h4>
+                    <h4><span class="glyphicon glyphicon-search align-center"></span><strong>    Where would you like to find wholesalers?</strong></h4>
             
             <br>
         
@@ -108,12 +104,16 @@
                         <li><a>Wisconsin</a></li>
                         <li><a>Wyoming</a></li>
                         <br>
-                        <li><strong><%= link_to 'All US States', listings_path %></strong></li>
+                        <li><strong><%= link_to 'All US States', listings_path %></strong></li><br>
+                        <li><%= link_to new_listing_path, class: 'btn btn-default btn-md align-right' do %>
+                            <span class="glyphicon glyphicon-plus align-right" aria-hidden="true"></span>
+                            New
+                            <% end %></li>
                     </ul>
                  </div>
 
-
                 
+
             </div><!--end row of states -->
 
             <h6>If you would like us to expand to Canada, please <%= link_to "contact us", about_path %> to let us know.</h6>

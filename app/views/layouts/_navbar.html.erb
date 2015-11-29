@@ -46,9 +46,8 @@
 -->
         
 
-          <li><%= link_to newsletter_path, class: 'nav-text' do %>
-              <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
-                Newsletter
+          <li><%= link_to newsletter_path, alt: 'newsletter' do %>
+              <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><span class="nav-text"> Newsletter</span>
           <% end %></li>
 
 
@@ -60,25 +59,26 @@
 
            <% if user_signed_in? %>
 
-              <li><%= link_to new_listing_choice_path, class: 'nav-text' do  %>
-                  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> List Your Company
+              <li><%= link_to new_listing_choice_path do  %>
+                  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span><span class="nav-text"> New</span>
               <% end %></li>
 
-              <li><%= link_to my_account_path, class: 'nav-text' do  %>
-                  <span class="glyphicon glyphicon-user" aria-hidden="true"></span> My Account
+              <li><%= link_to my_account_path do  %>
+                  <span class="glyphicon glyphicon-user" aria-hidden="true"></span><span class="nav-text"> My Account</span>
               <% end %></li>
 
 
-              <li><%= link_to 'Sign Out', destroy_user_session_path, :method => :delete, class: 'nav-text'%></li>
+              <li><%= link_to destroy_user_session_path, :method => :delete do %>
+                <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span><span class="nav-text"> Sign Out</span>
+              <% end %></li>
               
-              <% else %>
+            <% else %>
 
               <li><%= link_to new_user_session_path do %>
-               <span class="nav-text"><u>Sign In</u> or <u>Sign Up</u>
+                <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
+                <span class="nav-text">Sign In</span>
+              <% end %></li>
                
-               <% end %>
-               
-             </li>
           <% end %><!-- end for if user is signed in -->
 
 

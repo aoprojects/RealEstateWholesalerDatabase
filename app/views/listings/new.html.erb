@@ -1,6 +1,6 @@
 <div class="well">
 	<h2 class="align-center">Create a New Wholesaler Listing</h2><br>
-	<p><%= link_to 'Create New Educational Resource instead', new_resource_path %>
+	<p><%= link_to 'Create New Educational Resource instead', new_resource_path, class: "align-right" %>
 
 	
 	<p>If they have chosen the wholesaler option, go to this form...</p>
@@ -14,5 +14,8 @@
 
 	<br>
 
-	<%= link_to 'See All Wholesaler Listings', root_path, class: 'btn btn-info' %>
+    <%= link_to root_path, class: 'btn btn-default btn-md align-center' do %>
+      <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
+                Home
+    <% end %>
 </div><!-- end .well -->
