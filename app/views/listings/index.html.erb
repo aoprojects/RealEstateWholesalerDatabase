@@ -8,8 +8,8 @@
           <th>Wholesaler</th>
           <th>City</th>
           <th>State</th>
-          <th><span class="glyphicon glyphicon-send" aria-hidden="true"></span> Email</th>
-          <th><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> Phone #</th>
+          <th>Email</th>
+          <th>Phone #</th>
           <th>Website</th>
           <th>Wholesaler Specialties</th>
           <th>Buyers should also know</th>
@@ -17,7 +17,8 @@
         </tr>
       </thead>
 
-      <tbody>
+      <tbody> 
+TODO; something is wrong with displaying many listings.
         <% @listings.each do |listing| %>
 
             <td><%= listing.user.company %></td>
@@ -28,32 +29,31 @@
             <td><%= listing.user.url %></td>
             <td><%= listing.user.specialties %></td>
             <td><%= listing.user.details %></td>
-            <td>
-                <%= link_to listing, class: 'btn btn-default btn-sm' do %>
+            <td><%= link_to listing, class: 'btn btn-default btn-sm' do %>
                   <span class="glyphicon glyphicon-resize-full" aria-hidden="true"></span>
-                <% end %></td>
+            <% end %></td>
 
-              <% if user_signed_in? && listing.user == current_user %>
+            <% if user_signed_in? && listing.user == current_user %>
 
-                <td><%= link_to edit_listing_path(listing), class: 'btn btn-default btn-sm' do %>
-                  <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
-                <% end %></td>
+            <td><%= link_to edit_listing_path(listing), class: 'btn btn-default btn-sm' do %>
+              <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
+            <% end %></td>
               
-                <td><%= link_to listing, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default btn-sm' do %>
-                  <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-                <% end %></td>
+            <td><%= link_to listing, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default btn-sm' do %>
+              <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+            <% end %></td>
 
-              <% end %><!-- end for if user signed in -->
+            <% end %><!-- end for if user signed in -->
             
         <% end %><!-- end for display each listing -->
 
       </tbody>
     </table>
-TODO; something is wrong with displaying many listings.
+
     <br>
 
     <p>TODO: paginate</p>
-    <%= link_to 'Create New Listing', new_listing_path, class: 'btn btn-success align-right' %>
+    <%= link_to 'Create New Listing', new_listing_path, class: 'btn btn-default btn-lg' %>
 
 </div><!-- end .well -->
 

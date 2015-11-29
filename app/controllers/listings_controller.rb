@@ -5,7 +5,11 @@ class ListingsController < ApplicationController
 
 
   def index
+    if params[:state_id].blank?
       @listings = Listing.all
+    else
+      @state_id = State.find_by(state_name: aprams[:state]).id
+    end  
   end
 
  

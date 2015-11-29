@@ -19,9 +19,13 @@
 
 	TODO: make this following button a view all of that state button link --->
 
-	<%= link_to 'View All Listings', listings_path, class: 'btn btn-info' %>
+		<%= link_to listings_path, class: 'btn btn-default btn-md' do %>
+			<span class="glyphicon glyphicon-list" aria-hidden="true"></span> See All
+		<% end %>
 	<% if current_user == @listing.user && user_signed_in? %>
-		<%= link_to 'Edit This Listing', edit_listing_path(@listing), class: 'btn btn-warning' %>
+		<%= link_to edit_listing_path(@listing), class: 'btn btn-default btn-md' do %>
+			<span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> Edit
+		<% end %>
 	<% end %>
 
 
