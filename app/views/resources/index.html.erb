@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h2 class="align-center">Wholesaler Educational Resources</h2>
+<h2 class="align-center">Resources for Wholesalers</h2>
 <br>
 <p>In the resources below you'll find a wealth of information about real estate wholesaling. <br><br> Many of these experts have developed intense and well thought-out training programs inteded to coach anyone of any experience level into becoming a skilled real estate wholesaler. 
   Most training programs focus on the US as a whole, but if they are able to provide coaching for other areas of the country, they should say so in their profile. <br>
@@ -26,7 +26,7 @@ Many of the trainers below also have expanded into coaching investors on more th
             <td><%= resource.url %></td>
 
             <td><%= link_to resource, class: 'btn btn-default btn-sm' do %>
-                <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Show
+                <span class="glyphicon glyphicon-search" aria-hidden="true"></span> View
             <% end %>
             <% if user_signed_in? && current_user == resource.user %>
                 <%= link_to edit_resource_path(resource), class: 'btn btn-default btn-sm' do %>
