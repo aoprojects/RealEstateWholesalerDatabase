@@ -2,7 +2,8 @@
 
 <h2 class="align-center">Resources for Wholesalers</h2>
 <br>
-<p>In the resources below you'll find a wealth of information about real estate wholesaling. <br><br> Many of these experts have developed intense and well thought-out training programs inteded to coach anyone of any experience level into becoming a skilled real estate wholesaler. 
+<p>Browse the resources listed below to learn more about real estate wholesaling. <br>
+  <br> Many of these experts have developed intense and well thought-out training programs inteded to coach anyone of any experience level into becoming a skilled real estate wholesaler. 
   Most training programs focus on the US as a whole, but if they are able to provide coaching for other areas of the country, they should say so in their profile. <br>
 Many of the trainers below also have expanded into coaching investors on more than just wholesaling. Refer to their websites for full details.</p><br>
 
@@ -25,16 +26,16 @@ Many of the trainers below also have expanded into coaching investors on more th
             <td><%= resource.specialties %></td>
             <td><%= resource.url %></td>
 
-            <td><%= link_to resource, class: 'btn btn-default btn-sm' do %>
-                <span class="glyphicon glyphicon-search" aria-hidden="true"></span> View
+            <td><%= link_to resource, class: 'btn btn-default btn-md' do %>
+                <span class="glyphicon glyphicon-resize-full" aria-hidden="true"></span>
             <% end %>
             <% if user_signed_in? && current_user == resource.user %>
-                <%= link_to edit_resource_path(resource), class: 'btn btn-default btn-sm' do %>
-                    <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> Edit
+                <%= link_to edit_resource_path(resource), class: 'btn btn-default btn-md' do %>
+                    <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
                 <% end %>
 
-                <%= link_to resource, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default btn-sm' do %>
-                    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Delete
+                <%= link_to resource, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default btn-md' do %>
+                    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
                 <% end %></td>
             <% end %><!-- end if user signed in -->
           </tr>
@@ -45,7 +46,7 @@ Many of the trainers below also have expanded into coaching investors on more th
     <br>
     <p> TODO: paginate </p>
 
-    <%= link_to new_resource_path, class: 'btn btn-success btn-lg' do %>
+    <%= link_to new_resource_path, class: 'btn btn-default btn-lg' do %>
       <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
                 New
     <% end %>
