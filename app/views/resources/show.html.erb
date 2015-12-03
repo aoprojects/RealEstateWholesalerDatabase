@@ -1,27 +1,52 @@
 <p id="notice"><%= notice %></p>
 
 <div class="well">
-    <p>
-      <strong>Wholesaler Educational Resource:</strong>
-      <%= @resource.resource_name %>
-    </p>
+  <br>
+  <div class="row">
+    <div class="col-xs-4">
+      DO I WANT TO HAVE A THICK BORDER AROUND EACH RESOURCE?
+      <p>TODO: company logo goes here</p>
+    </div><!-- end row for left -->
+    <div class="col-xs-8">
+      <p><h4>
+        <strong>Resource:</strong>
+        <%= @resource.resource_name %>
+      </h4></p>
 
-    <p>
-      <strong>Specialties:</strong>
-      <%= @resource.specialties %>
-    </p>
+      <p>
+        <strong>Our Specialties:</strong>
+        <%= @resource.specialties %>
+      </p>
 
-    <p>
-      <strong>Website:</strong>
-      <%= @resource.url %>
-    </p>
+      <p>
+        <strong>Our Website:</strong>
+        <%= @resource.url %>
+      </p>
+    </div><!-- end div for col -->
+  </div><!-- end row class -->
+  <br>
+    <div class="align-center">
+  
+      <%= link_to resources_path, class: 'btn btn-default btn-md' do %>
+        <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
+                See All
+      <% end %>
 
-    <div class="align-right">
-    	<%= link_to 'See all Educational Resources', resources_path %>
-    	<% if user_signed_in? && current_user == resource.user %>
-    		| <%= link_to 'Edit This Resource', edit_resource_path(@resource) %> |
-    		<%= link_to 'Create New Educational Resource', new_resource_path %>
+    	<% if user_signed_in? && current_user == @resource.user %>
+    		
+          <%= link_to edit_resource_path(@resource), class: 'btn btn-default btn-md' do %>
+              <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
+                Edit
+          <% end %>
+          
+    		  <%= link_to new_resource_path, class: 'btn btn-default btn-md' do %>
+              <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                New
+          <% end %>
+
     	<% end %>
+      
     </div>
 </div><!-- end .well -->
+
 

@@ -41,11 +41,11 @@ h3 {
 
 
 h4 {
-	text-align: center;
+
 }
 
 h5 {
-	text-align: right;
+	
 }
 
 h6 {
@@ -96,6 +96,10 @@ nav ul li {
 
 .align-center {
 	text-align: center;
+}
+
+.align-center-important {
+	text-align: center !important;
 }
 
 .align-right {

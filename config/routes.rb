@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get "my_profile" => "pages#my_profile"
   get "newsletter" => "pages#newsletter"
   get "new_listing_choice" => "pages#new_listing_choice"
+  get "privacy_policy" => "pages#privacy_policy"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

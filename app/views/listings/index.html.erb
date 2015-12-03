@@ -5,9 +5,9 @@
     <table class="table table-striped table-hover">
       <thead>
         <tr>
-          <th>Wholesaling Company </th>
+          <th>Wholesaler</th>
           <th>City</th>
-          <th>TODO: State</th>
+          <th>State</th>
           <th>Email</th>
           <th>Phone #</th>
           <th>Website</th>
@@ -17,31 +17,43 @@
         </tr>
       </thead>
 
-      <tbody>
+      <tbody> 
+TODO; something is wrong with displaying many listings.
         <% @listings.each do |listing| %>
 
             <td><%= listing.user.company %></td>
             <td><%= listing.city %></td>
-            <td>TODO: state will go here </td>
+            <td><%= listing.state %></td>
             <td><%= listing.user.email %></td>
             <td><%= listing.user.phone %></td>
             <td><%= listing.user.url %></td>
             <td><%= listing.user.specialties %></td>
             <td><%= listing.user.details %></td>
+            <td><%= link_to listing, class: 'btn btn-default btn-sm' do %>
+                  <span class="glyphicon glyphicon-resize-full" aria-hidden="true"></span>
+            <% end %></td>
 
-            <td><%= link_to 'Show', listing, class: 'btn btn-success btn-sm' %></td>
             <% if user_signed_in? && listing.user == current_user %>
-              <td><%= link_to 'Edit', edit_listing_path(listing), class: 'btn btn-info btn-sm' %></td>
-              <td><%= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm' %></td>
-            <% end %>
-          </tr>
-        <% end %>
+
+            <td><%= link_to edit_listing_path(listing), class: 'btn btn-default btn-sm' do %>
+              <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
+            <% end %></td>
+              
+            <td><%= link_to listing, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default btn-sm' do %>
+              <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+            <% end %></td>
+
+            <% end %><!-- end for if user signed in -->
+            
+        <% end %><!-- end for display each listing -->
+
       </tbody>
     </table>
 
     <br>
 
     <p>TODO: paginate</p>
-    <%= link_to 'Create New Listing', new_listing_path, class: 'btn btn-success align-right' %>
+    <%= link_to 'Create New Listing', new_listing_path, class: 'btn btn-default btn-lg' %>
 
 </div><!-- end .well -->
+

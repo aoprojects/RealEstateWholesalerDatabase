@@ -1,8 +1,20 @@
 <div class="well">
-	<h1>Editing Resource</h1>
-
+	<h1>Edit Resource Details</h1>
+	<br>
 	<%= render 'form' %>
 
-	<%= link_to 'Show', @resource %> |
-	<%= link_to 'Back', resources_path %>
+	<%= link_to @resource, class: 'btn btn-default btn-md' do %>
+        <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Back
+    <% end %>
+
+	<%= link_to resources_path, class: 'btn btn-default btn-md' do %>
+        <span class="glyphicon glyphicon-search" aria-hidden="true"></span> See All
+    <% end %>
+
+	TODO: add a delete resource option
+	TODO: add new resource option
+
 </div><!-- end .well -->
+
+
+	
