@@ -44,7 +44,8 @@ Many of the trainers below also have expanded into coaching investors on more th
     </table>
 
     <br>
-    <p> TODO: paginate </p>
+    <p> TODO: edit how paginations look. Center. Make smaller. </p>
+    <p><%= will_paginate @resources, renderer: BootstrapPagination::Rails, class: 'align-center' %></p>
 
     <%= link_to new_resource_path, class: 'btn btn-default btn-lg' do %>
       <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>

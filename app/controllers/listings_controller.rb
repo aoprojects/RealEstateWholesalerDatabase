@@ -6,7 +6,7 @@ class ListingsController < ApplicationController
 
   def index
     if params[:state_id].blank?
-      @listings = Listing.all
+      @listings = Listing.all.paginate(:page => params[:page], :per_page => 25)
     else
       @state_id = State.find_by(state_name: aprams[:state]).id
     end  

@@ -52,7 +52,8 @@ TODO; something is wrong with displaying many listings.
 
     <br>
 
-    <p>TODO: paginate</p>
+    <p>TODO: edit how paginations look. Center. Make smaller. </p>
+    <p><%= will_paginate @listings, renderer: BootstrapPagination::Rails, class: 'align-center' %></p>
     <%= link_to 'Create New Listing', new_listing_path, class: 'btn btn-default btn-lg' %>
 
 </div><!-- end .well -->
