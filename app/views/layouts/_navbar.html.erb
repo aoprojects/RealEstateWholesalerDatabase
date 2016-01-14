@@ -47,7 +47,7 @@
         
 
           <li><%= link_to newsletter_path, alt: 'newsletter' do %>
-              <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><span class="nav-text"> Newsletter</span>
+              <span class="glyphicon glyphicon-envelope" aria-hidden="true" title="Newsletter"></span>
           <% end %></li>
 
           <li><a href="https://www.facebook.com/REWholesalerDatabase" target="_none" class="nav-text"><%= image_tag('facebook.png', alt: "facebook", class: 'icon-small') %></a></li>
@@ -61,19 +61,18 @@
               <% end %></li>
 
               <li><%= link_to my_account_path do  %>
-                  <span class="glyphicon glyphicon-user" aria-hidden="true"></span><span class="nav-text"> My Account</span>
+                  <span title="My Account" class="glyphicon glyphicon-user" aria-hidden="true"></span>
               <% end %></li>
 
 
               <li><%= link_to destroy_user_session_path, :method => :delete do %>
-                <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span><span class="nav-text"> Sign Out</span>
+                <span title="Sign Out" class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
               <% end %></li>
               
             <% else %>
 
               <li><%= link_to new_user_session_path do %>
-                <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
-                <span class="nav-text">Sign In</span>
+                <span title="Sign In" class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
               <% end %></li>
                
           <% end %><!-- end for if user is signed in -->
