@@ -36,7 +36,6 @@
 
     <%= render 'layouts/navbar' %>
 
-
     <div class="container" id="main-container">  
    
         <div><!-- begin div for internal page content -->
@@ -44,18 +43,14 @@
             <% content_tag(:div, msg, class: "alert alert-#{name}") %>
             <% end %>
            
-
            <%= render 'layouts/jumbotron' %>
 
             <%= yield %>
-
-
     
         </div><!-- end div for internal page content -->
 </div><!--end #main-container -->
 
 <br>
-
 
     <footer class="footer">
         <div class="container">
