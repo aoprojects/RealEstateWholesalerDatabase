@@ -63,16 +63,15 @@ nav {
 	padding: 10px;
 	font-weight: bold;
 	text-decoration: none;
-	font-size: 18px;
+	font-size: 1em;
 
 }
 
 .pages-links:hover {
-	color: black;
-	/* transition: all 0.1s ease-in;
-	background-color: rgba(215,215,215,0.4); 
-	border-radius: 2px; */
+	color: #FE2020;
 	font-weight: heavy;
+	font-size: 1.1em;
+	transition: 0.1s ease-in;
 }
 
 .pages-links a {
@@ -146,6 +145,16 @@ nav {
 	padding: 10px;
 }
 
+.list-yourself {
+	font-size: 1.2em;
+	color: black;
+}
+
+.list-yourself:hover {
+	transition: 0.1s ease-in;
+	font-weight: bold;
+}
+
 .location-lists {
 	list-style: none;
 	padding-left: 5px;
@@ -157,7 +166,16 @@ nav {
 }
 
 .nav-glyph {
-	
+	font-size: 0.7em;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin: 5px;
+}
+
+.nav-glyph:hover {
+	color: black;
+	font-size: 0.8em;
+	transition: 0.1s ease-in;
 }
 
 .nav-text {
