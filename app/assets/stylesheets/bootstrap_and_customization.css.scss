@@ -8,6 +8,8 @@ Project name: Real Estate Wholesaler Database
 $navbar-default-toggle-hover-bg: rgb(193,34,44);
 $jumbotron-padding: 20px;
 $jumbotron-bg: rgb(255,255,255);
+$btn-default-border: #111;
+
 
 
 @import 'bootstrap-sprockets';
@@ -153,15 +155,14 @@ nav {
 }
 
 .list-yourself:hover {
-	transition: 0.1s ease-in;
-	font-weight: bold;
+	text-decoration: none;
 }
 
 .listing-outline {
 	border: solid blue 1px;
 	border-radius: 10px;
-	color: #7E7E7E;
-	margin-top: 10px;
+	color: rgb(19,19,70);
+	margin-top: 15px;
 
 }
 
@@ -188,8 +189,6 @@ nav {
 
 .nav-glyph:hover {
 	color: black;
-	font-size: 0.8em;
-	transition: 0.1s ease-in;
 }
 
 .nav-text {

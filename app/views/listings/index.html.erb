@@ -32,15 +32,14 @@
          <% end %> <!-- link to each listing -->
      </div><!-- end row(s) -->
 
-
     <br>
 
-    <p>TODO: edit how paginations look. Center. Make smaller. </p>
-    <p><%= will_paginate @listings, renderer: BootstrapPagination::Rails, class: 'align-center' %></p>
+    <p>TODO: edit how paginations look.  Make smaller. </p>
+    <p class="align-center"><%= will_paginate @listings, renderer: BootstrapPagination::Rails, class: 'align-center' %></p>
 
     <div class="row">
-      <div class="col-xs-12">
-        <%= link_to 'Create New Listing', new_listing_path, class: 'btn btn-default btn-lg align-center' %>
+      <div class="col-xs-12 align-center">
+        <%= link_to 'Create New Listing', new_listing_path, class: 'btn btn-default btn-lg' %>
       </div><!-- end div for col-xs-12 -->
     </div><!-- end row for new listing button -->
 
