@@ -5,18 +5,20 @@
 
   <div class="row">
         <% @listings.each do |listing| %>
-          
-            <div class="col-sm-6 col-xs-12">
+          <%= link_to listing do %>
+            <div class="col-sm-6 col-xs-12 well listing-outline">
             
-                <p>Wholesaler: <%= listing.user.company %></p>
-                <p>Location: <%= listing.city %>, <%= listing.state %></p>
-                <p>Contact: <%= listing.user.email %>, Phone: <%= listing.user.phone %></p>
-                <p>Website: <%= listing.user.url %></p>
-                <p>Specialties: <%= listing.user.specialties %></p>
+                <p><b>Wholesaler:</b> <%= listing.user.company %></p>
+                <p><b>Location:</b> <%= listing.city %>, <%= listing.state %></p>
+                <p><b>Email:</b> <%= listing.user.email %></p>
+                <p><b>Phone:</b> <%= listing.user.phone %></p>
+                <p><b>Website:</b> <%= listing.user.url %></p>
+
+                <p><b>Specialties:</b> <%= listing.user.specialties %></p>
       
-                <%= link_to listing, class: 'btn btn-default btn-sm' do %>
-                      <span class="glyphicon glyphicon-resize-full" aria-hidden="true"></span>
-                <% end %> &nbsp;
+                
+                      
+                
 
                 <% if user_signed_in? && listing.user == current_user %>
 
@@ -30,7 +32,8 @@
                 <% end %><!-- end for if user signed in -->
             </div><!-- end each col-sm-6 col-xs-12-->
             
-         <% end %><!-- end for display each listing -->
+          <% end %><!-- end for display each listing -->
+         <% end %> <!-- link to each listing -->
      </div><!-- end row(s) -->
 
 
@@ -38,7 +41,12 @@
 
     <p>TODO: edit how paginations look. Center. Make smaller. </p>
     <p><%= will_paginate @listings, renderer: BootstrapPagination::Rails, class: 'align-center' %></p>
-    <%= link_to 'Create New Listing', new_listing_path, class: 'btn btn-default btn-lg' %>
+
+    <div class="row">
+      <div class="col-xs-12">
+        <%= link_to 'Create New Listing', new_listing_path, class: 'btn btn-default btn-lg align-center' %>
+      </div><!-- end div for col-xs-12 -->
+    </div><!-- end row for new listing button -->
 
 </div><!-- end .well -->
 

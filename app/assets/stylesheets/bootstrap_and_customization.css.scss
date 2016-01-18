@@ -115,7 +115,6 @@ nav {
 	padding-left: 10px;
 	padding-right: 10px;
 	/*this is changing the bootstrap padding for col 2, I am doing this to fit the states better into lists with one line per state */
-
 }
 
 .container {
@@ -126,7 +125,6 @@ nav {
 	padding: 25px;
 	border-radius: 15px;
 }
-
 
 .footer-lists {
 	padding: 10px;
@@ -156,9 +154,13 @@ nav {
 }
 
 .listing-outline {
-	border: solid black 1px;
+	border: solid green 1px;
 	border-radius: 2px;
-	background: yellow;
+
+}
+
+.listing-outline:hover {
+	background-color: #E8E8E8;
 }
 
 .location-lists {
