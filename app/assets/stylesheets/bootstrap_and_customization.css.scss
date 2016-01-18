@@ -9,7 +9,7 @@ $navbar-default-toggle-hover-bg: rgb(193,34,44);
 $jumbotron-padding: 20px;
 $jumbotron-bg: rgb(255,255,255);
 $btn-default-border: #111;
-$btn-info-color: black;
+$btn-info-color: #337AB7;
 $btn-info-border: black;
 $btn-info-bg: white;
 
@@ -79,9 +79,10 @@ nav {
 
 .pages-links a {
 	text-decoration: none;
-	border: solid 1px #B2ACAB;
+	border: solid 2px black;
 	padding: 15px;
 	border-radius: 5px;
+	background: #F6F6F6;
 }
 
 .pages-links a:hover {
@@ -152,7 +153,7 @@ nav {
 
 .list-yourself {
 	font-size: 1.2em;
-	color: black;
+	color: #337AB7;
 }
 
 .list-yourself:hover {
