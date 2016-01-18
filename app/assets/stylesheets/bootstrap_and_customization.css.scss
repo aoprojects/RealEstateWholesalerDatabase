@@ -135,6 +135,10 @@ nav {
 	margin: -8px;
 }
 
+.indent {
+	text-indent: 1em;
+}
+
 .inline {
 	display: inline;
 }
@@ -154,13 +158,15 @@ nav {
 }
 
 .listing-outline {
-	border: solid green 1px;
-	border-radius: 2px;
+	border: solid blue 1px;
+	border-radius: 10px;
+	color: #7E7E7E;
+	margin-top: 10px;
 
 }
 
 .listing-outline:hover {
-	background-color: #E8E8E8;
+	background-color: #F6F6F6;
 }
 
 .location-lists {

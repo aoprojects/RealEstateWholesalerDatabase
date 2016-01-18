@@ -5,33 +5,29 @@
 
   <div class="row">
         <% @listings.each do |listing| %>
-          <%= link_to listing do %>
-            <div class="col-sm-6 col-xs-12 well listing-outline">
-            
-                <p><b>Wholesaler:</b> <%= listing.user.company %></p>
+          <%= link_to listing , class: 'no-decoration' do %>
+            <div class="col-sm-6 col-xs-12 align-center">
+              <div class="listing-outline">
+                <br>
+                <h4><b>Wholesaler:</b> <%= listing.user.company %></h4>
                 <p><b>Location:</b> <%= listing.city %>, <%= listing.state %></p>
                 <p><b>Email:</b> <%= listing.user.email %></p>
                 <p><b>Phone:</b> <%= listing.user.phone %></p>
                 <p><b>Website:</b> <%= listing.user.url %></p>
-
                 <p><b>Specialties:</b> <%= listing.user.specialties %></p>
-      
-                
-                      
-                
-
+              
                 <% if user_signed_in? && listing.user == current_user %>
 
-                    <p><%= link_to edit_listing_path(listing), class: 'btn btn-default btn-sm' do %>
-                       <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
+                    <p class="align-center"><%= link_to edit_listing_path(listing), class: 'btn btn-default btn-sm' do %>
+                       <!-- <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> --> Edit
                     <% end %> &nbsp;
                   
                     <%= link_to listing, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default btn-sm' do %>
-                        <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                        <!-- <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> --> Delete
                     <% end %></p>
                 <% end %><!-- end for if user signed in -->
+              </div><!--end listing-outline -->
             </div><!-- end each col-sm-6 col-xs-12-->
-            
           <% end %><!-- end for display each listing -->
          <% end %> <!-- link to each listing -->
      </div><!-- end row(s) -->
