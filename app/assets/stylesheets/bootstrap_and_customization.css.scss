@@ -9,6 +9,9 @@ $navbar-default-toggle-hover-bg: rgb(193,34,44);
 $jumbotron-padding: 20px;
 $jumbotron-bg: rgb(255,255,255);
 $btn-default-border: #111;
+$btn-info-color: black;
+$btn-info-border: black;
+$btn-info-bg: white;
 
 
 
@@ -66,13 +69,11 @@ nav {
 	font-weight: bold;
 	text-decoration: none;
 	font-size: 1em;
-
 }
 
 .pages-links:hover {
-	color: #FE2020;
-	font-weight: heavy;
-	font-size: 1.1em;
+	color: black;
+	font-weight: bold;
 	transition: 0.1s ease-in;
 }
 
