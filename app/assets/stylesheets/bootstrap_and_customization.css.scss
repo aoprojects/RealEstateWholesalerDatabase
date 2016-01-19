@@ -10,7 +10,7 @@ $jumbotron-padding: 20px;
 $jumbotron-bg: rgb(255,255,255);
 $btn-default-border: #111;
 $btn-info-color: #337AB7;
-$btn-info-border: black;
+$btn-info-border: #337AB7;
 $btn-info-bg: white;
 
 
@@ -79,14 +79,15 @@ nav {
 
 .pages-links a {
 	text-decoration: none;
-	border: solid 2px black;
+	border: solid 2px #337AB7;
 	padding: 15px;
 	border-radius: 5px;
 	background: #F6F6F6;
 }
 
 .pages-links a:hover {
-	border: solid 3px #B2ACAB;
+	border: solid 3px #333;
+	color: #333;
 }
 
 .account-settings {
