@@ -5,6 +5,8 @@ aostendorf@gmail.com
 Project name: Real Estate Wholesaler Database
 */
 
+
+/* Below are edits to the Bootstrap defaults, and must be placed before the Bootstrap import */
 $navbar-default-toggle-hover-bg: rgb(193,34,44);
 $jumbotron-padding: 20px;
 $jumbotron-bg: rgb(255,255,255);
@@ -12,6 +14,8 @@ $btn-default-border: #111;
 $btn-info-color: #337AB7;
 $btn-info-border: #337AB7;
 $btn-info-bg: white;
+/* @link-color:       @brand-primary;
+@link-hover-color: darken(@link-color, 15%); */
 
 
 
@@ -26,7 +30,8 @@ button {
 
 footer {
 	background-color: #F8F8F8;
-	padding-top: 10px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 
 footer ul li{
@@ -157,7 +162,7 @@ nav {
 }
 
 .jumbotron {
-	margin-top: -4em;
+	margin-top: -3em;
 }
 
 .list-yourself {
@@ -174,7 +179,6 @@ nav {
 	border-radius: 10px;
 	color: #337AB7;
 	margin-top: 15px;
-
 }
 
 .listing-outline:hover {
@@ -185,7 +189,6 @@ nav {
 	list-style: none;
 	padding-left: 5px;
 }
-
 
 .navbar {
 	font-size: 30px;
@@ -279,4 +282,30 @@ nav {
 	border-radius: 15px;
 	padding: 12px;
 }
+
+/* Begin navbar glyph hover descriptions */
+
+
+#nav ul li:hover ul li { 
+	display: block;
+}
+
+#nav ul ul li {
+	display: none;
+	position: absolute; 
+	top: 110%; 
+	right: 15%;
+	list-style: none;
+	white-space: nowrap;
+	text-align: left;
+	padding: 10px;
+	border: 1px solid;
+	border-radius: 5px;
+}
+
+
+
+
+
+
 
