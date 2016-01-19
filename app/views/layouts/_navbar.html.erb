@@ -35,40 +35,43 @@
 -->
 
       <ul class="nav navbar-nav navbar-right">
-<!--
-          <li><div class="fb-like" data-href="https://www.facebook.com/REWholesalerDatabase" data-width="50" data-layout="button" data-action="like" data-show-faces="false"></div></li>
--->
-<!--
-           <li><%= link_to 'Wholesaler Database', root_path, class: 'nav-text' %></li>
-          <li><%= link_to 'Learn Wholesaling', wholesaling_path, class: 'nav-text' %></li>
-          <hr/>
-          <li><%= link_to 'Contact Us', about_path, class: 'nav-text' %></li>
--->
-        
+
+          <li class="visible-xs-inline"><%= link_to "Wholesaler Database", root_path, class: 'nav-text indent' %></li>
+
+          <li class="visible-xs-inline"><%= link_to "Learn Wholesaling", resources_path, class: 'nav-text indent' %></li>
+
+          <li class="visible-xs-inline"><%= link_to "Contact Us", about_path, class: 'nav-text indent' %></li>
+
+          <hr class="visible-xs-inline">
 
           <li><%= link_to newsletter_path, alt: 'newsletter' do %>
               <span class="glyphicon glyphicon-envelope nav-glyph" aria-hidden="true" title="Newsletter"></span>
+              <span class="visible-xs-inline nav-text">Newsletter</span>
           <% end %></li>
 
            <% if user_signed_in? %>
 
               <li><%= link_to new_listing_choice_path do  %>
                   <span title="New Listing" class="glyphicon glyphicon-pencil nav-glyph" aria-hidden="true"></span><span class="nav-text"></span>
+                  <span class="visible-xs-inline nav-text">New Listing</span>
               <% end %></li>
 
               <li><%= link_to my_account_path do  %>
                   <span title="My Account" class="glyphicon glyphicon-user nav-glyph" aria-hidden="true"></span>
+                  <span class="visible-xs-inline nav-text">My Account</span>
               <% end %></li>
 
 
               <li><%= link_to destroy_user_session_path, :method => :delete do %>
                 <span title="Sign Out" class="glyphicon glyphicon-log-out nav-glyph" aria-hidden="true"></span>
+                <span class="visible-xs-inline nav-text">Sign Out</span>
               <% end %></li>
               
             <% else %>
 
               <li><%= link_to new_user_session_path do %>
                 <span title="Sign In" class="glyphicon glyphicon-log-in nav-glyph" aria-hidden="true"></span>
+                <span class="visible-xs-inline nav-text">Sign In</span>
               <% end %></li>
                
           <% end %><!-- end for if user is signed in -->
