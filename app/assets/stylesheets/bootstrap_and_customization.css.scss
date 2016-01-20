@@ -169,6 +169,10 @@ h6 {
 	color: black;
 }
 
+.navbar-header {
+	
+}
+
 .nav-text {
 	font-size: 0.6em;
 	text-decoration: none;
@@ -242,11 +246,6 @@ h6 {
 	padding-top: 0.2em;
 }
 
-.small-logo:hover {
-	transform: scale(1.05);
-	transition: 0.1s ease-in-out;
-}
-
 .tab-center {
 	text-indent: 40%;
 }
@@ -291,7 +290,7 @@ h6 {
 /* Begin navbar glyph hover descriptions */
 
 
-#nav ul li:hover ul li { 
+#nav ul li:hover ul li {
 	display: block;
 }
 
@@ -303,9 +302,12 @@ h6 {
 	list-style: none;
 	white-space: nowrap;
 	text-align: left;
-	padding: 13px;
+	margin: 4px;
+	padding: 9px;
 	background: #FFF;
 }
+
+/* End navbar glyph hover descriptions */
 
 
 
