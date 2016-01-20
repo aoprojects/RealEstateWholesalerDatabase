@@ -37,7 +37,7 @@
           <hr class="visible-xs-inline">
 
           <li><%= link_to newsletter_path, alt: 'newsletter' do %>
-              <span class="glyphicon glyphicon-envelope nav-glyph" aria-hidden="true" title="Newsletter"></span>
+              <span class="glyphicon glyphicon-envelope nav-glyph" aria-hidden="true" alt="Newsletter"></span>
               <span class="visible-xs-inline nav-text">Newsletter</span>
                 <ul class="hidden-xs">
                     <li class="nav-text">Newsletter</li>
@@ -47,7 +47,7 @@
            <% if user_signed_in? %>
 
               <li><%= link_to new_listing_choice_path do  %>
-                  <span title="New Listing" class="glyphicon glyphicon-pencil nav-glyph" aria-hidden="true"></span><span class="nav-text"></span>
+                  <span alt="New Listing" class="glyphicon glyphicon-pencil nav-glyph" aria-hidden="true"></span><span class="nav-text"></span>
                   <span class="visible-xs-inline nav-text">New Listing</span>
                     <ul class="hidden-xs">
                        <li class="nav-text">New Listing</li>
@@ -55,7 +55,7 @@
               <% end %></li>
 
               <li><%= link_to my_account_path do  %>
-                  <span title="My Account" class="glyphicon glyphicon-user nav-glyph" aria-hidden="true"></span>
+                  <span alt="My Account" class="glyphicon glyphicon-user nav-glyph" aria-hidden="true"></span>
                   <span class="visible-xs-inline nav-text">My Account</span>
                     <ul class="hidden-xs">
                        <li class="nav-text">My Account</li>
@@ -65,7 +65,7 @@
 
 
               <li><%= link_to destroy_user_session_path, :method => :delete do %>
-                <span title="Sign Out" class="glyphicon glyphicon-log-out nav-glyph" aria-hidden="true"></span>
+                <span alt="Sign Out" class="glyphicon glyphicon-log-out nav-glyph" aria-hidden="true"></span>
                 <span class="visible-xs-inline nav-text">Sign Out</span>
                     <ul class="hidden-xs">
                        <li class="nav-text">Sign Out</li>
@@ -75,7 +75,7 @@
             <% else %>
 
               <li><%= link_to new_user_session_path do %>
-                <span title="Sign In" class="glyphicon glyphicon-log-in nav-glyph" aria-hidden="true"></span>
+                <span alt="Sign In" class="glyphicon glyphicon-log-in nav-glyph" aria-hidden="true"></span>
                 <span class="visible-xs-inline nav-text">Sign In</span>
                     <ul class="hidden-xs">
                        <li class="nav-text">Sign In</li>
