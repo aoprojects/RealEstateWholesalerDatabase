@@ -1,26 +1,26 @@
 <h2>Sign in</h2>
-TODO edit views
+
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+  <div class="field form-group">
+    <h4><%= f.label :email %></h4><br>
+    <%= f.email_field :email, autofocus: true, class: 'form-control' %>
   </div>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+  <div class="field form-group">
+    <h4><%= f.label :password %></h4><br>
+    <%= f.password_field :password, autocomplete: "off", class: 'form-control' %>
   </div>
 
   <% if devise_mapping.rememberable? -%>
-    <div class="field">
+    <div class="field checkbox">
       <%= f.check_box :remember_me %>
       <%= f.label :remember_me %>
     </div>
   <% end -%>
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
+  <div class="actions btn btn-info btn-lg">
+    <%= f.submit "Sign in" %>
   </div>
 <% end %>
 
