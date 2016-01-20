@@ -24,6 +24,7 @@ $btn-info-bg: white;
 @import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css");
 
 
+
 button {
 	float: right;
 }
@@ -101,6 +102,14 @@ nav {
 
 .align-center {
 	text-align: center;
+}
+
+.arrow-up {
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 10px solid black;
 }
 
 .tab-center {
@@ -293,14 +302,12 @@ nav {
 #nav ul ul li {
 	display: none;
 	position: absolute; 
-	top: 110%; 
-	right: 15%;
+	top: 100%; 
+	right: 20%;
 	list-style: none;
 	white-space: nowrap;
 	text-align: left;
 	padding: 10px;
-	border: 1px solid;
-	border-radius: 5px;
 }
 
 
