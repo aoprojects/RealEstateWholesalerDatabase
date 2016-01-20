@@ -210,7 +210,10 @@ h6 {
 .pages-links:hover {
 	color: black;
 	font-weight: bold;
-	transition: 0.1s ease-in;
+	transition: 0.1s ease-in-out;
+	transform: scale(1.1);
+	
+
 }
 
 .pages-links a {
