@@ -8,85 +8,98 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
+
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        
-        <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
       </button>
+      
       <p class="small-logo"><%= link_to "Real Estate Wholesaler Database", root_path, class: 'title-footer no-decoration' %></p>
-    </div><!-- end navbar header div -->
+  
+    </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div id="nav" class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+<!--
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+-->
+      <span id="nav">
+        <ul class="nav navbar-nav navbar-right">
 
-      <ul class="nav navbar-nav navbar-right">
+            <li class="visible-xs-inline"><%= link_to "Wholesaler Database", root_path, class: 'nav-text indent' %></li>
 
-          <li class="visible-xs-inline"><%= link_to "Wholesaler Database", root_path, class: 'nav-text indent' %></li>
+            <li class="visible-xs-inline"><%= link_to "Learn Wholesaling", resources_path, class: 'nav-text indent' %></li>
 
-          <li class="visible-xs-inline"><%= link_to "Learn Wholesaling", resources_path, class: 'nav-text indent' %></li>
+            <li class="visible-xs-inline"><%= link_to "Contact Us", about_path, class: 'nav-text indent' %></li>
 
-          <li class="visible-xs-inline"><%= link_to "Contact Us", about_path, class: 'nav-text indent' %></li>
+            <hr class="visible-xs-inline">
 
-          <hr class="visible-xs-inline">
-
-          <li><%= link_to newsletter_path, alt: 'newsletter' do %>
-              <span class="glyphicon glyphicon-envelope nav-glyph grow" aria-hidden="true" alt="Newsletter"></span>
-              <span class="visible-xs-inline nav-text">Newsletter</span>
-
-
-                <ul class="hidden-xs">
-                    <li class="nav-text">Newsletter &#10548;</li>
-                </ul>
-            <% end %>
-          </li>
-
-           <% if user_signed_in? %>
-
-              <li><%= link_to new_listing_choice_path do  %>
-                  <span alt="New Listing" class="glyphicon glyphicon-pencil nav-glyph grow" aria-hidden="true"></span><span class="nav-text"></span>
-                  <span class="visible-xs-inline nav-text">New Listing</span>
-                    <ul class="hidden-xs">
-                       <li class="nav-text">New Listing &#10548; </li>
-                    </ul>
-                <% end %>
-              </li>
-
-              <li><%= link_to my_account_path do  %>
-                  <span alt="My Account" class="glyphicon glyphicon-user nav-glyph grow" aria-hidden="true"></span>
-                  <span class="visible-xs-inline nav-text">My Account</span>
-                    <ul class="hidden-xs">
-                       <li class="nav-text">My Account &#10548;</li>
-                    </ul>              
-                <% end %>
-              </li>
+                <li><%= link_to newsletter_path, alt: 'newsletter' do %>
+                    <span class="glyphicon glyphicon-envelope nav-glyph grow" aria-hidden="true" alt="Newsletter"></span>
+                    <span class="visible-xs-inline nav-text">Newsletter</span>
 
 
-              <li><%= link_to destroy_user_session_path, :method => :delete do %>
-                <span alt="Sign Out" class="glyphicon glyphicon-log-out nav-glyph grpw" aria-hidden="true"></span>
-                <span class="visible-xs-inline nav-text">Sign Out</span>
-                    <ul class="hidden-xs">
-                       <li class="nav-text">Sign Out &#10548;</li>
-                    </ul>          
-                <% end %>
-              </li>
-              
-            <% else %>
+                      <ul class="hidden-xs">
+                          <li class="nav-text">Newsletter &#10548;</li>
+                      </ul>
+                  <% end %>
+                </li>
 
-              <li><%= link_to new_user_session_path do %>
-                <span alt="Sign In" class="glyphicon glyphicon-log-in nav-glyph grow" aria-hidden="true"></span>
-                <span class="visible-xs-inline nav-text">Sign In</span>
-                    <ul class="hidden-xs">
-                       <li class="nav-text">Sign In &#10548;</li>
-                    </ul>
-                <% end %>
-              </li>
-               
-          <% end %><!-- end for if user is signed in -->
+                 <% if user_signed_in? %>
 
-      </ul>
+                    <li><%= link_to new_listing_choice_path do  %>
+                        <span alt="New Listing" class="glyphicon glyphicon-pencil nav-glyph grow" aria-hidden="true"></span><span class="nav-text"></span>
+                        <span class="visible-xs-inline nav-text">New Listing</span>
+                          <ul class="hidden-xs">
+                             <li class="nav-text">New Listing &#10548; </li>
+                          </ul>
+                      <% end %>
+                    </li>
+
+                    <li><%= link_to my_account_path do  %>
+                        <span alt="My Account" class="glyphicon glyphicon-user nav-glyph grow" aria-hidden="true"></span>
+                        <span class="visible-xs-inline nav-text">My Account</span>
+                          <ul class="hidden-xs">
+                             <li class="nav-text">My Account &#10548;</li>
+                          </ul>              
+                      <% end %>
+                    </li>
+
+
+                    <li><%= link_to destroy_user_session_path, :method => :delete do %>
+                      <span alt="Sign Out" class="glyphicon glyphicon-log-out nav-glyph grpw" aria-hidden="true"></span>
+                      <span class="visible-xs-inline nav-text">Sign Out</span>
+                          <ul class="hidden-xs">
+                             <li class="nav-text">Sign Out &#10548;</li>
+                          </ul>          
+                      <% end %>
+                    </li>
+                    
+                  <% else %>
+
+                    <li><%= link_to new_user_session_path do %>
+                      <span alt="Sign In" class="glyphicon glyphicon-log-in nav-glyph grow" aria-hidden="true"></span>
+                      <span class="visible-xs-inline nav-text">Sign In</span>
+                          <ul class="hidden-xs">
+                             <li class="nav-text">Sign In &#10548;</li>
+                          </ul>
+                      <% end %>
+                    </li>
+                <% end %><!-- end for if user is signed in -->
+
+        </ul>
+      </span><!-- end span for #nav for hover labels -->
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav><!-- navbar -->
