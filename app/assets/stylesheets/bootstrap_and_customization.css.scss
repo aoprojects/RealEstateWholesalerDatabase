@@ -239,6 +239,12 @@ h6 {
 .small-logo {
 	padding-left: 8px;
 	white-space: nowrap;
+	padding-top: 0.2em;
+}
+
+.small-logo:hover {
+	transform: scale(1.05);
+	transition: 0.1s ease-in-out;
 }
 
 .tab-center {
