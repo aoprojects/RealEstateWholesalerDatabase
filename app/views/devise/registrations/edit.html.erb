@@ -1,74 +1,76 @@
-<h2>Edit Your Wholesaler Profile</h2>
-<p>Leave blank anything you do not want to update.</p>
 
+
+
+<h2 class="blue align-center">Edit Your Wholesaler Profile</h2>
+<p class="align-center">Leave blank anything you do not want to update.</p>
+
+
+<span class="form-inline">
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
 
       <div class="field">
-          <%= f.label :Wholesaling_Company %><br />
-          <%= f.text_field :company, autofocus: true %>
+          <h4 class="blue"><%= f.label :Wholesaling_Company %>
+          <%= f.text_field :company, autofocus: true, class: 'form-control' %></h4>
       </div>
 
       <div class="field">
-        <%= f.label :Company_email %><br />
-        <%= f.email_field :email, autofocus: true %>
+        <h4 class="blue"><%= f.label :Company_email %>
+        <%= f.email_field :email, autofocus: true, class: 'form-control' %></h4>
       </div>
 
       <div class="field">
-          <%= f.label :Phone_number %><br>
-          <%= f.text_field :phone %>
+          <h4 class="blue"><%= f.label :Phone_number %>
+          <%= f.text_field :phone, class: 'form-control' %></h4>
       </div>
 
       <div class="field">
-          <%= f.label :Wholesaler_website %><br>
-          <%= f.text_field :url %>
+          <h4 class="blue"><%= f.label :Wholesaler_website %>
+          <%= f.text_field :url, class: 'form-control' %></h4>
       </div>
 
       <div class="field">
-          <%= f.label :Please_list_your_specialties %><br>
-          <%= f.text_field :specialties, placeholder: 'eg. multifamily, single family, land...' %>
+          <h4 class="blue"><%= f.label :Please_list_your_specialties %>
+          <%= f.text_field :specialties, placeholder: 'eg. multifamily, single family, land...', class: 'form-control' %></h4>
       </div>
 
       <div class="field">
-            <%= f.label :Buyers_should_also_know %><br>
-            <%= f.text_field :details, placeholder: 'eg. Text me for fast response / Buy directly from my website.' %>
+            <h4 class="blue"><%= f.label :Buyers_should_also_know %>
+            <%= f.text_field :details, placeholder: 'eg. Text me for fast response / Buy directly from my website.', class: 'form-control' %></h4>
       </div>
 
-      <br>
+      <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+        <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+      <% end %>
 
-      <div>
-          <strong><p> You are currently listing yourself as a wholesaler in
-          (List where they're currently listing here, and let them change it.)</p></strong>
+      <div class="field">
+        <h4 class="blue"><%= f.label :New_password %> <i>(leave blank if you don't want to change it)</i>
+        <%= f.password_field :password, autocomplete: "off", class: 'form-control' %></h4>
+      </div>
+
+      <div class="field">
+        <h4 class="blue"><%= f.label :New_password_confirmation %>
+        <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control' %></h4>
       </div>
 
       <hr>
 
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
+      <div class="field">
+        <h4 class="blue"><%= f.label :current_password_ %><i> ( &#42; required)</i>
+        <%= f.password_field :current_password, autocomplete: "off", class: 'form-control' %></h4>
+      </div>
 
-  <div class="field">
-    <%= f.label :New_password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
+      <br>
+      <div class="actions align-center">
+        <%= f.submit "Update Profile", class: 'btn btn-info btn-lg align-center' %>
+      </div>
+    <% end %>
 
-  <div class="field">
-    <%= f.label :New_password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
+</span>
+<hr>
+<h3 class="blue align-center">Cancel my account</h3>
 
-  <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "off" %>
-  </div>
+<p class="align-center"><b>Unhappy?</b></p> 
+  <p class="align-center"><%= link_to 'Tell Us About It', about_path, class: 'btn btn-info' %>&nbsp;...or...&nbsp;<%= link_to "Cancel My Account", registration_path(resource_name), data: { confirm: "Are you sure? Your profile info and all your listings will be deleted." }, method: :delete, class: 'btn btn-info' %></p>
 
-  <div class="actions">
-    <%= f.submit "Update" %>
-  </div>
-<% end %>
-
-<h3>Cancel my account</h3>
-
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-<%= link_to "Back", :back %>
+<br><%= link_to "Back to My Account", :back %>
