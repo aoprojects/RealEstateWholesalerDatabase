@@ -14,31 +14,28 @@
 <div class="row">
       <div class="col-md-4">
         TODO: This form needs an input field for a company logo
-      </div>
+      </div><!-- end col -->
+
       <div class="col-md-6">
           <div class="field">
-            <strong><%= f.label :Resource %></strong>
-            <%= f.text_field :resource_name %>
+            <h4><strong class="blue"><%= f.label :Resource %></strong></h4>
+            <%= f.text_field :resource_name, class: 'form-control', placeholder: 'Your Product Name' %>
           </div>
-          TODO: how to indent in this form?
-          TODO: increase font size of this field?
 
           <div class="field">
-            <strong><%= f.label :Specialties %></strong>
-            <%= f.text_field :specialties %>
+            <h4><strong class="blue"><%= f.label :Specialties %></strong></h4>
+            <%= f.text_field :specialties, class: 'form-control', placeholder: 'List a bio, specific training programs, or reasons why your product is unique.' %>
           </div>
-          TODO: tell them they can list all other trainings here, or a bio, etc.
-          TODO: Make this input field look bigger so they can see what paragraphs they're typing.
 
           <div class="field">
-            <strong><%= f.label :Website %></strong>
-            <%= f.text_field :url %>
+            <h4><strong class="blue"><%= f.label :Website %></strong></h4>
+            <%= f.text_field :url, class: 'form-control', placeholder: 'Product Website Here' %>
           </div>
 
           <p>Note: A Wholesaler Educational Resource does not pull anything from your user profile. You can make as many custom Expert listings as you like.</p> 
          
-          <div class="btn btn-default">
-            <%= f.submit %>
+          <div class="align-center">
+            <%= f.submit class: 'btn btn-info btn-lg' %>
           </div>
           
       </div><!-- end col div -->

@@ -3,7 +3,7 @@ class ResourcesController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 
   def index
-    @resources = Resource.all.paginate(:page => params[:page], :per_page => 25)
+    @resources = Resource.all.paginate(:page => params[:page], :per_page => 2)
     else
   end
 
