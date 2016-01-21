@@ -57,14 +57,18 @@
             <div class="row align-center">
                 <div class="col-sm-4 col-xs-12 align-center">
                     <p><%= link_to 'List Yourself On This Site', new_listing_choice_path %></p>
+                    <p><%= link_to "Terms, Conditions, & Privacy", privacy_policy_path %></p>
                 </div><!-- end col -->
 
                 <div class="col-sm-4 col-xs-12 align-center vertical-center">
-                    <p><%= link_to "Terms, Conditions, & Privacy", privacy_policy_path %></p>
+                    
                 </div>
 
                 <div class="col-sm-4 col-xs-12 align-center">
                     <p class="vertical-center"><%= link_to "Real Estate Wholesaler Database", root_path, class: 'title-footer no-decoration no-wrap' %></p>
+                    <p class="indent"><a href="https://www.facebook.com/REWholesalerDatabase" target="_none" class="nav-text"><%= image_tag('facebook.png', alt: "facebook", class: 'icon-small grow') %></a> &nbsp; &nbsp; &nbsp;
+
+                    <a href="https://twitter.com/REWholesalerDb" alt="twitter" target="_none" class="nav-text"><%= image_tag('twitter.png', alt: 'twitter', class: 'icon-small bottom grow') %></a></p>
 
                 </div><!-- col -->
             </div><!-- row -->
