@@ -16,32 +16,33 @@
         
         <div class="col-sm-6 align-center">
           <div class="field">
-            <%= f.label :City %><br>
-            <%= f.text_field :city %>
+            <h4 class="blue"><%= f.label :City %></h4>
+            <%= f.text_field :city, class: 'form-control', placeholder: 'Wholesaling City' %>
           </div><!-- end field -->
         </div><!-- end col -->
 
         <div class="col-sm-6 align-center">
           <div class="field">
-            <%= f.label :State %><br>
-            <%= f.collection_select :state_id, State.all, :id, :state_name %>
+            <h4 class="blue"><%= f.label :State %></h4>
+            <h4 class="drop-down"><%= f.collection_select :state_id, State.all, :id, :state_name, class: 'drop-down' %></h4>
           </div><!-- end field -->
         </div><!-- end col -->
 
       </div><!-- end row -->
     <hr>
-    <h5 class="align-center"><i>~ The following data is pulled from your company profile and will be listed within your Wholesaler Listing. ~</i></h5><br>
+    <h5 class="align-center"><i>~ The following data is pulled from your company profile and will be listed within your Wholesaler Listing automatically.  To change it, change your <%= link_to 'profile settings', my_profile_path %>. ~</i></h5><br>
 
     <div class="align-center">
-      <p><strong>Company email:</strong> <%= current_user.email %></p>
-      <p><strong>Phone number:</strong> <%= current_user.phone %></p>
-      <p><strong>Wholesaler website:</strong> <%= current_user.url %></p>
-      <p><strong>Wholesaler's specialties:</strong> <%= current_user.specialties %></p>
-      <p><strong>Buyers should also know:</strong> <%= current_user.details %></p>
+      <h4><strong class="blue">Company email:</strong> <%= current_user.email %></h4>
+      <h4><strong class="blue">Phone number:</strong> <%= current_user.phone %></h4>
+      <h4><strong class="blue">Wholesaler website:</strong> <%= current_user.url %></h4>
+      <h4><strong class="blue">Wholesaler's specialties:</strong> <%= current_user.specialties %></h4>
+      <h4><strong class="blue">Buyers should also know:</strong> <%= current_user.details %></h4>
     </div>
 
-    <div class="btn btn-default align-center-important">
-      <%= f.submit %>
+    <br>
+    <div class="align-center-important">
+      <%= f.submit class: 'btn btn-info btn-lg'%>
     </div>
 
 <% end %>

@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 <div class="container">
-    <h2 class="align-center">All (TODO: state name here) Wholesaler Listings</h2>
+    <h2 class="align-center">All <span class="blue">(TODO: state name here)</span> Wholesaler Listings</h2>
     <h4 class="align-center">Click on a wholesaler to see their full profile</h4>
     
 
@@ -11,12 +11,12 @@
             <div class="col-sm-6 col-xs-12 align-center">
               <div class="listing-outline">
                 <br>
-                <h4><b>Wholesaler:</b> <%= listing.user.company %></h4>
-                <p><b>Location:</b> <%= listing.city %>, <%= listing.state %></p>
-                <p><b>Email:</b> <%= listing.user.email %></p>
-                <p><b>Phone:</b> <%= listing.user.phone %></p>
-                <p><b>Website:</b> <%= listing.user.url %></p>
-                <p><b>Specialties:</b> <%= listing.user.specialties %></p>
+                <h4><b class="blue">Wholesaler:</b> <%= listing.user.company %></h4>
+                <p><b class="blue">Location:</b> <%= listing.city %>, <%= listing.state %></p>
+                <p><b class="blue">Email:</b> <%= listing.user.email %></p>
+                <p><b class="blue">Phone:</b> <%= listing.user.phone %></p>
+                <p><b class="blue">Website:</b> <%= listing.user.url %></p>
+                <p><b class="blue">Specialties:</b> <%= listing.user.specialties %></p>
               
                 <% if user_signed_in? && listing.user == current_user %>
 
