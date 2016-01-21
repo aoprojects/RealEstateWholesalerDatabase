@@ -1,29 +1,24 @@
 <div class="well">
 
-	<h3 class="align-center"><u>Your User Profile</u></h3>
-
-	<%= link_to 'Edit Your Profile', edit_user_registration_path, class: 'align-right-float' %>
-
-	<p><strong>Wholesaler:</strong> <%= current_user.company %></p>
-	<p><strong>Company email:</strong> <%= current_user.email %></p>
-	<p><strong>Phone number:</strong> <%= current_user.phone %></p>
-	<p><strong>Wholesaler website:</strong> <%= current_user.url %></p>
-	<p><strong>Wholesaler's specialties:</strong> <%= current_user.specialties %></p>
-	<p><strong>Buyers should also know:</strong> <%= current_user.details %></p>
+	<h3 class="align-center blue double-space">Your User Profile</h3>
 
 
-	<hr>
+	<h4 class="double-space"><strong class="blue">Wholesaling Company:</strong> <%= current_user.company %></h4>
+	<h4 class="double-space"><strong class="blue">Company email:</strong> <%= current_user.email %></h4>
+	<h4 class="double-space"><strong class="blue">Phone number:</strong> <%= current_user.phone %></h4>
+	<h4 class="double-space"><strong class="blue">Wholesaler website:</strong> <%= current_user.url %></h4>
+	<h4 class="double-space"><strong class="blue">Wholesaler's specialties:</strong> <%= current_user.specialties %></h4>
+	<h4 class="double-space"><strong class="blue">Buyers should also know:</strong> <%= current_user.details %></h4>
 
-	<div class="align-center">
-		<p>Please note: The above information is associated with your user account, and is posted along with each of your listings, as appropriate. <br>
-	</div><!-- end note div -->
-
-	<hr>
-	<p class="align-right-float">TODO: INSERT LINK edit your listings.</p>
-	<p>You are currently listing yourself as a TODO: (wholesaler) or (trainer).</p>
+	<br>
+	
+	<p class="align-center"><i>Your profile information is posted along with each of your listings, as relevant.</i></p>
 
 
-	<%= link_to '<-- Back to Your Account Settings', my_account_path %>
+	
+	<h5 class="align-right"><%= link_to 'Edit Your Profile', edit_user_registration_path %></h5>
+	<h5 class="align-right"><%= link_to 'View Your Listings', advert_summary_path %></h5>
+	<h5 class="align-right"><%= link_to 'Your Account Settings', my_account_path %></h5>
 	<br>
 
 </div><!-- end .well -->
