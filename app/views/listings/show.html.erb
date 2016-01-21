@@ -4,31 +4,34 @@
 
 <div class="well">
 
-	<h3 class="align-center">Wholesaler Listing</h3>
-		<p class='align-center'><strong><em><%= @listing.city %>, <%= @listing.state.state_name %></em></strong></p>
-		<br>
-		<p><strong>Wholesaler:</strong> <%= @listing.user.company %></p>
-		<p><strong>Company email:</strong> <%= @listing.user.email %></p>
-		<p><strong>Phone number:</strong> <%= @listing.user.phone %></p>
-		<p><strong>Wholesaler website:</strong> <%= @listing.user.url %></p>
-		<p><strong>Wholesaler's specialties:</strong> <%= @listing.user.specialties %></p>
-		<p><strong>Buyers should also know:</strong> <%= @listing.user.details %></p>
-	</p>
+	<h3 class="align-center"><%= @listing.user.company %>, <span class="blue">Real Estate Wholesaler</span></h3>
+		<h4 class='align-center'><strong><em><%= @listing.city %>, <%= @listing.state.state_name %></em></strong></h4>
 
-	<p>TODO: <%= @listing.user.company %> is also listed as a wholesaler in the following areas... (add an if listings.count >= 1 , display this list.) </p>
-
-	TODO: make this following button a view all of that state button link --->
-
-		<%= link_to listings_path, class: 'btn btn-default btn-md' do %>
-			<span class="glyphicon glyphicon-list" aria-hidden="true"></span> See All
-		<% end %>
 	<% if current_user == @listing.user && user_signed_in? %>
-		<%= link_to edit_listing_path(@listing), class: 'btn btn-default btn-md' do %>
-			<span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> Edit
-		<% end %>
+		<h4 class="align-right"><%= link_to edit_listing_path(@listing), class: 'btn btn-info btn-sm' do %>
+			<span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> Edit Listing
+		<% end %></h4>
 	<% end %>
 
+		<h4><strong class="blue">Email:</strong> <%= @listing.user.email %></h4>
+		<h4><strong class="blue">Phone number:</strong> <%= @listing.user.phone %></h4>
+		<h4><strong class="blue">Website:</strong> <%= @listing.user.url %></h4>
+		<h4><strong class="blue">Wholesaler's specialties:</strong> <%= @listing.user.specialties %></h4>
+		<h4><strong class="blue">Buyers should also know:</strong> <%= @listing.user.details %></h4>
+	</p>
 
-	<p class="align-center">TODO paginate</p>
+	<h5 class="indent"><i><%= @listing.user.company %> is also listed as a wholesaler in the following areas... (TODO: add an if listings.count >= 1 , display this list.)</i></h5>
+
+	
+	<h5 class="align-center">
+		TODO: button -><%= link_to listings_path(@listing), 'View #{@listing.state.state_name} Listings', class: 'btn btn-info btn-md' %>
+
+		<%= link_to listings_path, class: 'btn btn-info btn-md' do %>
+			<span class="glyphicon glyphicon-list" aria-hidden="true"></span> View All Listings
+		<% end %>
+	</h5>
+
+
+	<h4 class="align-center">TODO: paginate</h4>
 
 </div><!-- end .well -->
