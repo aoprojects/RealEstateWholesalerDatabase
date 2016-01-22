@@ -65,10 +65,10 @@ TODO: add and orgaize page with Resources info vs wholesaler info
             <h4 class="blue"><%= f.label :Buyers_should_also_know %>
         </div>
         <div class="col-sm-8">
-            <%= f.text_field :details, placeholder: 'eg. Text me for fast response / Buy directly from my website.', class: 'form-control' %></h4>
+            <%= f.text_area :details, placeholder: 'eg. Text me for fast response / Buy directly from my website.', class: 'form-control', cols: "5", rows: "5" %></h4>
         </div>
       </div><!-- end field -->
-  </div><!-- end row -->
+  </div><!-- end row --><br>
   
       <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
         <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
