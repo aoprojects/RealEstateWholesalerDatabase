@@ -9,7 +9,7 @@
 <div class="row">
           <div class="field">
             <div class="col-sm-3">
-              <h4><%= f.label :Company_name %></h4>
+              <h4 class="no-wrap"><%= f.label :Company_name %></h4>
             </div>
             <div class="col-md-9">
               <%= f.text_field :company, autofocus: true, class: 'form-control' %>
@@ -19,7 +19,7 @@
 <div class="row">
           <div class="field">
             <div class="col-sm-3">
-              <h4><%= f.label :Company_email %></h4>
+              <h4 class="no-wrap"><%= f.label :Company_email %></h4>
             </div>
             <div class="col-md-9">          
               <%= f.email_field :email, autofocus: true, class: 'form-control', placeholder: 'You will log in with this email' %>
@@ -29,7 +29,7 @@
 <div class="row">
            <div class="field">
             <div class="col-sm-3">
-              <h4><%= f.label :Phone_number %></h4>
+              <h4 class="no-wrap"><%= f.label :Phone_number %></h4>
             </div>
             <div class="col-md-9">
               <%= f.text_field :phone, class: 'form-control' %>
@@ -39,7 +39,7 @@
 <div class="row">
           <div class="field">
             <div class="col-sm-3">
-              <h4><%= f.label :Wholesaler_website %></h4>
+              <h4 class="no-wrap"><%= f.label :Wholesaler_website %></h4>
             </div>
             <div class="col-md-9">              
               <%= f.text_field :url, class: 'form-control' %>
@@ -49,7 +49,7 @@
  <div class="row">       
           <div class="field">
             <div class="col-sm-3">
-                <h4><%= f.label :Please_list_your_specialties %></h4>
+                <h4 class="no-wrap"><%= f.label :Please_list_your_specialties %></h4>
             </div>
             <div class="col-md-9">                
                 <%= f.text_field :specialties, placeholder: 'eg. multifamily / single family / land...', class: 'form-control' %>
@@ -59,7 +59,7 @@
 <div class="row">
           <div class="field">
             <div class="col-sm-3">
-                <h4><%= f.label :Buyers_should_also_know %></h4>
+                <h4 class="no-wrap"><%= f.label :Buyers_should_also_know %></h4>
             </div>
             <div class="col-md-9">                
                 <%= f.text_field :details, placeholder: 'eg. Text me for fast response / Buy directly from my website.', class: 'form-control' %>
@@ -98,7 +98,7 @@
 
       <br>
       <div class="actions align-center">
-        <%= f.submit "Sign up", class: 'btn btn-info btn-lg' %>
+        <%= f.submit "Free Sign up", class: 'btn btn-info btn-lg' %>
       </div>
     <% end %>
 
