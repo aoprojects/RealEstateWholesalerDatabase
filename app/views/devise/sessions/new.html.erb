@@ -1,9 +1,11 @@
 <div class="well">
 
-    <h2 class="margin-bottom blue">Sign in</h2>
+    <h2 class="margin-bottom blue align-center">Sign in</h2>
 
 
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+     
+
       <div class="field form-group">
         <h4 class="blue"><%= f.label :email %></h4>
         <%= f.email_field :email, autofocus: true, class: 'form-control' %>
@@ -16,15 +18,15 @@
 
       <% if devise_mapping.rememberable? -%>
         <h4><div class="field blue">
-          <%= f.check_box :remember_me %>
+          <span class="indent"><%= f.check_box :remember_me %></span>
           <%= f.label :remember_me %>
         </div>
       <% end -%></h4>
 
-      <div class="actions">
+      <div class="actions align-center">
         <h4 class="button-normalize"><b><%= f.submit "Sign in", class: 'btn btn-info btn-lg' %></b></h4>
       </div>
     <% end %>
 
-    <h4><%= render "devise/shared/links" %></h4>
+    <h4 class="align-right"><%= render "devise/shared/links" %></h4>
 </div><!-- end well -->
