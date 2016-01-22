@@ -1,72 +1,118 @@
 
 
 
-<h2 class="blue align-center">Edit Your Wholesaler Profile</h2>
-<p class="align-center">Leave blank anything you do not want to update.</p>
+<h2 class="blue align-center">Edit Your Profile</h2>
+<p class="align-center"><i>Leave blank anything you do not wish to update.</i></p>
+<br>
 
+TODO: add and orgaize page with Resources info vs wholesaler info
 
-<span class="form-inline">
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
-
+  <div class="row">
       <div class="field">
-          <h4 class="blue"><%= f.label :Wholesaling_Company %>
+        <div class="col-sm-4">
+          <h4 class="blue"><%= f.label :Company_name %>
+        </div>
+        <div class="col-sm-8">
           <%= f.text_field :company, autofocus: true, class: 'form-control' %></h4>
-      </div>
-
+        </div>
+      </div><!-- end field -->
+  </div><!-- end row -->
+  <div class="row">
       <div class="field">
-        <h4 class="blue"><%= f.label :Company_email %>
-        <%= f.email_field :email, autofocus: true, class: 'form-control' %></h4>
-      </div>
-
+          <div class="col-sm-4">        
+            <h4 class="blue"><%= f.label :Company_email %>
+          </div>
+          <div class="col-sm-8">            
+            <%= f.email_field :email, autofocus: true, class: 'form-control' %></h4>
+          </div>
+      </div><!-- end field -->
+  </div><!-- end row -->
+  <div class="row">
       <div class="field">
+        <div class="col-sm-4">        
           <h4 class="blue"><%= f.label :Phone_number %>
+        </div>
+        <div class="col-sm-8">
           <%= f.text_field :phone, class: 'form-control' %></h4>
-      </div>
-
+        </div>
+      </div><!-- end field -->
+  </div><!-- end row -->
+  <div class="row">
       <div class="field">
+        <div class="col-sm-4">        
           <h4 class="blue"><%= f.label :Wholesaler_website %>
+        </div>
+        <div class="col-sm-8">            
           <%= f.text_field :url, class: 'form-control' %></h4>
-      </div>
-
+        </div>  
+      </div><!-- end field -->
+  </div><!-- end row -->
+  <div class="row">
       <div class="field">
+        <div class="col-sm-4">        
           <h4 class="blue"><%= f.label :Please_list_your_specialties %>
+        </div>
+        <div class="col-sm-8">
           <%= f.text_field :specialties, placeholder: 'eg. multifamily, single family, land...', class: 'form-control' %></h4>
-      </div>
-
+        </div>
+      </div><!-- end field -->
+  </div><!-- end row -->
+  <div class="row">
       <div class="field">
+        <div class="col-sm-4">        
             <h4 class="blue"><%= f.label :Buyers_should_also_know %>
+        </div>
+        <div class="col-sm-8">
             <%= f.text_field :details, placeholder: 'eg. Text me for fast response / Buy directly from my website.', class: 'form-control' %></h4>
-      </div>
-
+        </div>
+      </div><!-- end field -->
+  </div><!-- end row -->
+  
       <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
         <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
       <% end %>
-
+  <div class="row">
       <div class="field">
-        <h4 class="blue"><%= f.label :New_password %> <i>(leave blank if you don't want to change it)</i>
-        <%= f.password_field :password, autocomplete: "off", class: 'form-control' %></h4>
-      </div>
-
+        <div class="col-sm-4">        
+            <h4 class="blue"><%= f.label :New_password %> <i>(leave blank if you don't want to change it)</i>
+        </div>
+        <div class="col-sm-8">
+          <%= f.password_field :password, autocomplete: "off", class: 'form-control' %></h4>
+        </div>
+      </div><!-- end field -->
+  </div><!-- end row -->
+  <div class="row">
       <div class="field">
-        <h4 class="blue"><%= f.label :New_password_confirmation %>
-        <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control' %></h4>
-      </div>
-
+        <div class="col-sm-4">        
+            <h4 class="blue"><%= f.label :New_password_confirmation %>
+        </div>
+        <div class="col-sm-8">              
+          <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control' %></h4>
+        </div>
+      </div><!-- end field -->
+  </div><!-- end row -->
       <hr>
-
+  <div class="row">
       <div class="field">
-        <h4 class="blue"><%= f.label :current_password_ %><i> ( &#42; required)</i>
-        <%= f.password_field :current_password, autocomplete: "off", class: 'form-control' %></h4>
-      </div>
+        <div class="col-sm-4">        
+            <h4 class="blue"><%= f.label :current_password_ %><i> ( &#42; required)</i>
+        </div>
+        <div class="col-sm-8">
+            <%= f.password_field :current_password, autocomplete: "off", class: 'form-control' %></h4>
+        </div>
+      </div><!-- end field -->
+  </div><!-- end row --> 
 
+  <div class="row">
       <br>
       <div class="actions align-center">
         <%= f.submit "Update Profile", class: 'btn btn-info btn-lg align-center' %>
       </div>
-    <% end %>
+  </div><!-- end row -->
+<% end %><!-- end each form do -->
 
-</span>
 <hr>
 <h3 class="blue align-center">Cancel my account</h3>
 
