@@ -7,17 +7,17 @@
      
 
       <div class="field form-group">
-        <h4 class="blue"><%= f.label :email %></h4>
+        <h4 class="align-center"><%= f.label :email %></h4>
         <%= f.email_field :email, autofocus: true, class: 'form-control' %>
       </div>
 
       <div class="field form-group">
-        <h4 class="blue"><%= f.label :password %></h4>
+        <h4 class="align-center"><%= f.label :password %></h4>
         <%= f.password_field :password, autocomplete: "off", class: 'form-control' %>
       </div>
 
       <% if devise_mapping.rememberable? -%>
-        <h4><div class="field blue">
+        <h4><div class="field align-center">
           <span class="indent"><%= f.check_box :remember_me %></span>
           <%= f.label :remember_me %>
         </div>

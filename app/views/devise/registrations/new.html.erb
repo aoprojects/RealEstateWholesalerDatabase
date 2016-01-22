@@ -1,63 +1,105 @@
-<h2>Sign up as a Wholesaler</h2>
+<h2 class="blue align-center">New Account Sign Up</h2>
 
-<p>Enter your information below, as you would like your profile to display to buyers. You may post in more than one area, but the data below will be posted in each location you post to with this account.</p>
+<p class="align-center"><i>Your profile info will be used to complete each Wholesaler listing location associated with this account.</i></p>
+<br>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
-          <p>TODO: checkbox wholesaler or trainer, and then have this somehow redirect approrpiately.</p>
-
+<div class="row">
           <div class="field">
-              <%= f.label :Wholesaling_Company %><br />
-              <%= f.text_field :company, autofocus: true %>
+            <div class="col-sm-3">
+              <h4><%= f.label :Company_name %></h4>
+            </div>
+            <div class="col-md-9">
+              <%= f.text_field :company, autofocus: true, class: 'form-control' %>
+            </div>              
           </div>
-
-          <p>Once you have a free account, you will be able to post as a wholesaler in the locations of your choice. <br> Your profile information will remain unlisted until you choose a location to list it in.</p>
-
-
-            <div class="field">
-              <%= f.label :Company_email %>  (You will log in with this email)<br />
-              <%= f.email_field :email, autofocus: true %>
+</div><!-- end row -->          
+<div class="row">
+          <div class="field">
+            <div class="col-sm-3">
+              <h4><%= f.label :Company_email %></h4>
             </div>
-
-             <div class="field">
-                <%= f.label :Phone_number %><br>
-                <%= f.text_field :phone %>
-            </div>
-
-            <div class="field">
-                <%= f.label :Wholesaler_website %><br>
-                <%= f.text_field :url %>
-            </div>
-          
+            <div class="col-md-9">          
+              <%= f.email_field :email, autofocus: true, class: 'form-control', placeholder: 'You will log in with this email' %>
+            </div>              
+          </div>
+</div><!-- end row -->          
+<div class="row">
            <div class="field">
-                <%= f.label :Please_list_your_specialties %><br>
-                <%= f.text_field :specialties, placeholder: 'eg. multifamily / single family / land...' %>
+            <div class="col-sm-3">
+              <h4><%= f.label :Phone_number %></h4>
             </div>
-
-          <div class="field">
-                <%= f.label :Buyers_should_also_know %><br>
-                <%= f.text_field :details, placeholder: 'eg. Text me for fast response / Buy directly from my website.' %>
+            <div class="col-md-9">
+              <%= f.text_field :phone, class: 'form-control' %>
+            </div>              
           </div>
-          
+</div><!-- end row -->          
+<div class="row">
+          <div class="field">
+            <div class="col-sm-3">
+              <h4><%= f.label :Wholesaler_website %></h4>
+            </div>
+            <div class="col-md-9">              
+              <%= f.text_field :url, class: 'form-control' %>
+            </div>              
+          </div>
+</div><!-- end row -->          
+ <div class="row">       
+          <div class="field">
+            <div class="col-sm-3">
+                <h4><%= f.label :Please_list_your_specialties %></h4>
+            </div>
+            <div class="col-md-9">                
+                <%= f.text_field :specialties, placeholder: 'eg. multifamily / single family / land...', class: 'form-control' %>
+            </div>
+          </div>
+</div><!-- end row -->
+<div class="row">
+          <div class="field">
+            <div class="col-sm-3">
+                <h4><%= f.label :Buyers_should_also_know %></h4>
+            </div>
+            <div class="col-md-9">                
+                <%= f.text_field :details, placeholder: 'eg. Text me for fast response / Buy directly from my website.', class: 'form-control' %>
+            </div>
+          </div><!-- end field div -->
+</div><!-- end row -->          
     <hr>
 
-      <div class="field">
-        <%= f.label :Password %>
+
+<div class="row">
+    <div class="field">
+      <div class="col-sm-3">
+        <h4><%= f.label :Password %></h4>
+      </div><!-- end col div -->
+  
+      <div class="col-sm-9">
         <% if @minimum_password_length %>
         <em>(<%= @minimum_password_length %> characters minimum)</em>
         <% end %><br />
-        <%= f.password_field :password, autocomplete: "off" %>
-      </div>
+        <%= f.password_field :password, autocomplete: "off", class: 'form-control' %>
+      </div><!-- end col div -->
+    </div><!-- end field div -->
+</div><!-- end row div -->
 
+<br>
+<div class="row">      
       <div class="field">
-        <%= f.label :Password_confirmation %><br />
-        <%= f.password_field :password_confirmation, autocomplete: "off" %>
-      </div>
+         <div class="col-sm-3">
+            <h4><%= f.label :Password_confirmation %></h4>
+          </div><!-- end col div -->
+          <div class="col-sm-9">
+            <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control', placeholder: 'same as above' %>
+          </div><!-- end col div -->
+      </div><!-- end field div -->
+</div><!-- end div row -->    
 
-      <div class="actions">
-        <%= f.submit "Sign up" %>
+      <br>
+      <div class="actions align-center">
+        <%= f.submit "Sign up", class: 'btn btn-info btn-lg' %>
       </div>
     <% end %>
 
-<%= render "devise/shared/links" %>
+<div class="align-right blue"><h4><%= render "devise/shared/links" %></h4></div>
