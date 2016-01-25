@@ -6,7 +6,7 @@ Project name: Real Estate Wholesaler Database
 */
 
 
-/* Below are edits to the Bootstrap defaults, and must be placed before the Bootstrap import */
+/* Below are edits to the Bootstrap SASS defaults, and my edits to them. They must be placed before the Bootstrap import */
 $navbar-default-toggle-hover-bg: rgb(193,34,44);
 $jumbotron-padding: 20px;
 $jumbotron-bg: rgb(255,255,255);
@@ -14,15 +14,21 @@ $btn-default-border: #111;
 $btn-info-color: #337AB7;
 $btn-info-border: #337AB7;
 $btn-info-bg: white;
-/* @link-color:       @brand-primary;
-@link-hover-color: darken(@link-color, 15%); */
-
+$btn-border-radius-base: 1px;
+$btn-border-radius-small: 1px;
+$btn-border-radius-large: 1px;
+$grid-float-breakpoint: 768px;
+// End boostrap SASS edits
 
 
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 @import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css");
 
+// begin test area 
+
+
+// test area
 
 .account-settings {
 	padding: 20px;
@@ -243,27 +249,24 @@ h6 {
 	display: inline-block;
 	margin-top: 5px;
 	padding: 10px;
-	font-weight: bold;
 	text-decoration: none;
-	font-size: 1em;
+	font-size: 0.8em;
 }
 
 .pages-links:hover {
-	color: black;
-	font-weight: bold;
-	transition: 0.1s ease-in-out;
+	color: #777;
 }
 
 .pages-links a {
 	text-decoration: none;
-	border: solid 2px #337AB7;
-	padding: 15px;
-	border-radius: 5px;
+	border: solid 1px #337AB7;
+	padding: 12px;
+	border-radius: 1px;
 	background: #F6F6F6;
 }
 
 .pages-links a:hover {
-	border: solid 3px #333;
+	border: solid 1px #333;
 	color: #333;
 }
 
