@@ -1,0 +1,27 @@
+
+
+<h2 class="align-center blue">Contact us</h2>
+
+<%= form_for @contact do |f|  %>
+
+	<h4 class="blue"><%= f.label :name %></h4>
+	<%= f.text_field :name, required: true, placeholder: 'Your Name', class: 'form-control' %>
+	<br>
+	<h4 class="blue"><%= f.label :email %></h4>
+	<%= f.email_field :name, required: true, placeholder: 'Your Email', class: 'form-control' %>
+	<br>
+	<h4 class="blue"><%= f.label :message %></h4>
+	<%= f.text_area :message, required: true, as: :text, placeholder: 'Your comment, question, inquiry, proposal, suggestion, etc.', class: 'form-control', rows: '10' %>
+
+	<div class="hidden">
+		<%= f.label :nickname %>
+		<%= f.text_field :nickname, hint: 'Leave this blank.', class: 'form-control' %>
+	</div><!-- end hidden field. This is so that bots will get caught by filling this in but people own't see this. -->	
+	<br>
+
+	<div class="align-center">
+		<%= f.submit "Send message", class: 'btn btn-info btn-md' %>
+	</div>
+
+	<br><br>
+<% end %>

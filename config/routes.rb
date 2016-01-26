@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :resources
   resources :listings
+  resources :contacts, only: [:new, :create]
   root 'pages#home'
   get "wholesaling" => "pages#wholesaling"
   get "about" => "pages#about"
