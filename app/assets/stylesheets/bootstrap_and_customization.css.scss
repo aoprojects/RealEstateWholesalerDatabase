@@ -82,6 +82,10 @@ button {
 	/*this is changing the bootstrap padding for col 2, I am doing this to fit the states better into lists with one line per state */
 }
 
+.collapse {
+	display: none;
+}
+
 .container {
 	width: 90%;
 }
@@ -275,6 +279,12 @@ h6 {
 .pages-links a:hover {
 	border: solid 1px #333;
 	color: #333;
+}
+
+.question {
+	background: #E7E7E7;
+	padding: 5px;
+	margin: 5px;
 }
 
 
