@@ -85,6 +85,10 @@ $grid-float-breakpoint: 768px;
 	padding-bottom: 15px;
 }
 
+.answer {
+	margin: 10px 5%;
+}
+
 button {
 	float: right;
 }
@@ -107,7 +111,7 @@ button {
 	/*this is changing the bootstrap padding for col 2, I am doing this to fit the states better into lists with one line per state */
 }
 
-// .collapse {
+// .collapsejs {
 // 	display: none;
 // }
 
