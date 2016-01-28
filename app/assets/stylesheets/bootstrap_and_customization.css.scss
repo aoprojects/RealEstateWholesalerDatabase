@@ -25,8 +25,33 @@ $grid-float-breakpoint: 768px;
 @import 'bootstrap';
 @import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css");
 
-// begin test area 
-
+// begin test area for collapsing the nav at sm instead of xs
+@media (max-width: 990px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin: 7.5px -15px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
 
 // test area
 
@@ -82,9 +107,9 @@ button {
 	/*this is changing the bootstrap padding for col 2, I am doing this to fit the states better into lists with one line per state */
 }
 
-.collapse {
-	display: none;
-}
+// .collapse {
+// 	display: none;
+// }
 
 .container {
 	width: 90%;
