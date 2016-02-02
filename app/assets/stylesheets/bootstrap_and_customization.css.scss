@@ -25,8 +25,11 @@ $grid-float-breakpoint: 768px;
 @import 'bootstrap';
 @import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css");
 
-// begin test area for collapsing the nav at sm instead of xs
-@media (max-width: 990px) {
+// test again
+
+
+// begin another test
+@media (max-width: 991px) {
     .navbar-header {
         float: none;
     }
@@ -51,9 +54,27 @@ $grid-float-breakpoint: 768px;
         padding-top: 10px;
         padding-bottom: 10px;
     }
+    .navbar-text {
+        float: none;
+        margin: 15px 0;
+    }
+    /* since 3.1.0 */
+    .navbar-collapse.collapse.in { 
+        display: block!important;
+    }
+    .collapsing {
+        overflow: hidden!important;
+    }
 }
 
+
+// begin test area for collapsing the nav at sm instead of xs
+
 // test area
+
+body {
+	background-image: url('assets/linedpaper.png');
+}
 
 .account-settings {
 	padding: 20px;
@@ -320,6 +341,21 @@ h6 {
 
 .padding {
 	padding: 8px;
+}
+
+#privacy_page h5 {
+	margin-top: 30px;
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: bold;
+}
+
+#privacy_page p {
+	
+}
+
+#privacy_page ul {
+	line-height: 1;
 }
 
 .question {
