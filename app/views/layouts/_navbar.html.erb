@@ -11,7 +11,11 @@
         <span class="icon-bar"></span>
       </button>
       
-      <p class="small-logo"><%= link_to image_tag('rewd_logo_v1_small.png'), root_path, class: 'logo-image-small' %></p>
+      <p class="small-logo"><%= link_to root_path do %>
+        <%= image_tag('rewd_logo_v1_small.png', class: 'logo-image-small') %>
+        <span class="title-footer no-decoration no-wrap">Real Estate Wholesaler Database</span>
+        <% end %>
+      </p>
   
     </div>
 
