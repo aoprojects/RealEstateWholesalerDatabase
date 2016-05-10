@@ -12,13 +12,13 @@
       </button>
       
       <p class="small-logo"><%= link_to root_path do %>
-        <%= image_tag('rewd_logo_v1_small.png', class: 'logo-image-small') %>
-        
-          <% unless current_page?(root_path) %>
-            <span class="title-footer no-decoration no-wrap">Real Estate Wholesaler Database</span>
-          <% end %>
-        <% end %>
+        <%= image_tag('rewd_logo_v1_small.png', class: 'logo-image-small') %>   
+      <% end %>
       </p>
+      
+        <%= link_to "Wholesaler Database", root_path %>
+        <%= link_to "Learn Wholesaling", resources_path %>
+        <%= link_to "Contact Us", about_path %>
   
     </div>
 
