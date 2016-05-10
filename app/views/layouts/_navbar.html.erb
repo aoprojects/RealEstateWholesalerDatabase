@@ -13,7 +13,10 @@
       
       <p class="small-logo"><%= link_to root_path do %>
         <%= image_tag('rewd_logo_v1_small.png', class: 'logo-image-small') %>
-        <span class="title-footer no-decoration no-wrap">Real Estate Wholesaler Database</span>
+        
+          <% unless current_page?(root_path) %>
+            <span class="title-footer no-decoration no-wrap">Real Estate Wholesaler Database</span>
+          <% end %>
         <% end %>
       </p>
   
