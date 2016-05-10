@@ -383,6 +383,7 @@ h6 {
 	text-decoration: none;
 }
 
+
 .tab-center {
 	text-indent: 40%;
 }
@@ -452,6 +453,14 @@ h6 {
 
 /* End navbar glyph hover descriptions */
 
+// For small nav, self-craeted, not bootstrap
+
+@media only screen and (min-width: 992px) {
+	.small-nav-only {
+		display: none;
+
+	}
+}
 
 
 
