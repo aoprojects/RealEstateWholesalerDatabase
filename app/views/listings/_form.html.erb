@@ -24,7 +24,7 @@
         <div class="col-sm-6 align-center">
           <div class="field">
             <h4 class="blue"><%= f.label :State %></h4>
-            <h4 class="drop-down"><%= f.collection_select :state_id, State.all, :id, :state_name, class: 'drop-down' %></h4>
+            <h4 class="drop-down"><%= f.select :state_name, Listing::STATES, prompt: "Choose a US State", class: 'drop-down' %></h4>
           </div><!-- end field -->
         </div><!-- end col -->
 

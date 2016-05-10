@@ -1,18 +1,18 @@
 <p id="notice"><%= notice %></p>
 <div class="container">
-    <h2 class="align-center">All <span class="blue">(TODO: state name here)</span> Wholesaler Listings</h2>
+    <h2 class="align-center">All <span class="blue">TODO listing.state_name</span> Wholesaler Listings</h2>
     <h4 class="align-center">Click on a wholesaler to see their full profile</h4>
     
 
 
   <div class="row">
         <% @listings.each do |listing| %>
-          <%= link_to listing , class: 'no-decoration' do %>
+          <%= link_to listing, class: 'no-decoration' do %>
             <div class="col-sm-6 col-xs-12 align-center">
               <div class="listing-outline">
                 <br>
                 <h4><b class="blue">Wholesaler:</b> <%= listing.user.company %></h4>
-                <p><b class="blue">Location:</b> <%= listing.city %>, <%= listing.state %></p>
+                <p><b class="blue">Location:</b> <%= listing.city %>, <%= listing.state_name %></p>
                 <p><b class="blue">Email:</b> <%= listing.user.email %></p>
                 <p><b class="blue">Phone:</b> <%= listing.user.phone %></p>
                 <p><b class="blue">Website:</b> <%= listing.user.url %></p>
@@ -37,7 +37,7 @@
     <br>
 
     <p>TODO: edit how paginations look.  Make smaller. </p>
-    <p class="align-center"><%= will_paginate @listings, renderer: BootstrapPagination::Rails, class: 'align-center' %></p>
+    <p class="align-center">TODO: paginate</p>
 
     <div class="row">
       <div class="col-xs-12 align-center">

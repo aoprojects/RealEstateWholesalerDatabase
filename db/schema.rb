@@ -11,17 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151124034149) do
+ActiveRecord::Schema.define(version: 20160427021603) do
 
   create_table "listings", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "user_id"
     t.string   "city"
-    t.integer  "state_id"
+    t.string   "state_name"
   end
 
-  add_index "listings", ["state_id"], name: "index_listings_on_state_id"
   add_index "listings", ["user_id"], name: "index_listings_on_user_id"
 
   create_table "resources", force: :cascade do |t|
@@ -34,13 +33,6 @@ ActiveRecord::Schema.define(version: 20151124034149) do
   end
 
   add_index "resources", ["user_id"], name: "index_resources_on_user_id"
-
-  create_table "states", force: :cascade do |t|
-    t.string   "state_name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer  "state_id"
-  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

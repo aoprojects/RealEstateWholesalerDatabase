@@ -5,16 +5,11 @@ class ListingsController < ApplicationController
 
 
   def index
-    if params[:state_id].blank?
-      @listings = Listing.all.paginate(:page => params[:page], :per_page => 25)
-    else
-      @state_id = State.find_by(state_name: params[:state_name]).id
-    end  
+      @listings = Listing.all
   end
 
  
   def show
-    
   end
 
  
@@ -70,7 +65,7 @@ class ListingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def listing_params
-      params.require(:listing).permit(:city, :state_id, :user_id)
+      params.require(:listing).permit(:city, :state_name, :user_id)
     end
 
 
