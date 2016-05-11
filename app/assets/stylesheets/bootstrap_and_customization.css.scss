@@ -97,6 +97,8 @@ button {
 
 .container {
 	width: 90%;
+	position: relative;
+	top: 80px;
 }
 
 .double-space {
@@ -231,13 +233,6 @@ h6 {
 
 .logo-image-small {
 	position: relative;
-}
-
-.navbar {
-	font-size: 30px;
-	position: fixed;
-	top: 0;
-	background: yellow;
 }
 
 .nav-glyph {
@@ -422,14 +417,27 @@ h6 {
 
 /* End navbar glyph hover descriptions */
 
+// nav area
+
+nav {
+	width: 100%;
+	position: fixed;
+	top:0;
+	height: 60px;
+	background: yellow;
+	z-index:10;
+}
+
+
+
 // Hamburger nav area 
 
 #hamburger-menu-area {
-	position: absolute;
-	right: 15px;
-	top: 15px;
-	width: 50px;
-	height: 55px;
+	position: fixed;
+	right: 0px;
+	top: 0px;
+	width: 65px;
+	height: 60px;
 }
 
 #hamburger-menu-area:hover{
@@ -438,16 +446,19 @@ h6 {
 }
 
 #nav-hamburger {
-	position: relative;
-	right: -12px;
+	position: fixed;
+	font-size: 30px;
+	right: 20px;
+	top: 5px;
 
 }
 
 #hamburger-menu-label {
 	font-size: 10px;
-	position: relative;
-	top: -30px;
-	right: -12px;
+	position: fixed;
+	top: 38px;
+	right: 22px;
+
 }
 
 
