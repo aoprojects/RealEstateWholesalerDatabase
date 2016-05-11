@@ -418,14 +418,27 @@ nav {
 	border-bottom: 1px solid #DEDEDE;
 }
 
+nav :hover {
+	background: #eee;
+}
+
 .small-logo {
+	position: fixed;
+	top:0px;
+	left:0px;
+	height: 59px;
+	width: 60px;
+}
+
+.small-logo img {
 	position: fixed;
 	top:15px;
 	left:15px;
 }
 
-.small-logo :hover {
+.small-logo:hover {
 	text-decoration: none;
+	background: #eee;
 }
 
 
@@ -436,7 +449,7 @@ nav {
 	right: 0px;
 	top: 0px;
 	width: 65px;
-	height: 60px;
+	height: 59px;
 	color: $gray;
 }
 
