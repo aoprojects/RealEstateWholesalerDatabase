@@ -337,17 +337,6 @@ h6 {
 
 }
 
-.small-logo {
-	padding-left: 8px;
-	white-space: nowrap;
-	padding-top: 0.2em;
-}
-
-.small-logo :hover {
-	text-decoration: none;
-}
-
-
 .tab-center {
 	text-indent: 40%;
 }
@@ -417,20 +406,30 @@ h6 {
 
 /* End navbar glyph hover descriptions */
 
-// nav area
+// Begin nav area
 
 nav {
 	width: 100%;
 	position: fixed;
 	top:0;
 	height: 60px;
-	background: yellow;
+	background: white;
 	z-index:10;
+	border-bottom: 1px solid #DEDEDE;
+}
+
+.small-logo {
+	position: fixed;
+	top:15px;
+	left:15px;
+}
+
+.small-logo :hover {
+	text-decoration: none;
 }
 
 
-
-// Hamburger nav area 
+// Begin Hamburger nav area 
 
 #hamburger-menu-area {
 	position: fixed;
@@ -438,6 +437,7 @@ nav {
 	top: 0px;
 	width: 65px;
 	height: 60px;
+	color: $gray;
 }
 
 #hamburger-menu-area:hover{
@@ -462,7 +462,7 @@ nav {
 }
 
 
-// For small nav, self-craeted, not bootstrap
+// For small nav, self-craeted, not Bootstrap
 
 @media only screen and (min-width: 992px) {
 	.small-nav-only {
