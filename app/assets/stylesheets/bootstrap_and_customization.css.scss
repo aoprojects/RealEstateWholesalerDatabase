@@ -19,7 +19,8 @@ $btn-border-radius-small: 1px;
 $btn-border-radius-large: 1px;
 $grid-float-breakpoint: 768px;
 // End boostrap SASS edits
-
+$gray: #777;
+$blue: #337ABA;
 
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
@@ -27,48 +28,6 @@ $grid-float-breakpoint: 768px;
 
 // test again
 
-
-// begin another test
-@media (max-width: 991px) {
-    .navbar-header {
-        float: none;
-    }
-    .navbar-toggle {
-        display: block;
-    }
-    .navbar-collapse {
-        border-top: 1px solid transparent;
-        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
-    }
-    .navbar-collapse.collapse {
-        display: none!important;
-    }
-    .navbar-nav {
-        float: none!important;
-        margin: 7.5px -15px;
-    }
-    .navbar-nav>li {
-        float: none;
-    }
-    .navbar-nav>li>a {
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-    .navbar-text {
-        float: none;
-        margin: 15px 0;
-    }
-    /* since 3.1.0 */
-    .navbar-collapse.collapse.in { 
-        display: block!important;
-    }
-    .collapsing {
-        overflow: hidden!important;
-    }
-}
-
-
-// begin test area for collapsing the nav at sm instead of xs
 
 // test area
 
@@ -155,6 +114,13 @@ button {
 	border-radius: 15px;
 }
 
+// .flash-messages {
+// 	background: $blue;
+// 	border-radius: 25px;
+// 	padding: 20px;
+// 	text-align: center;
+// }
+
 footer {
 	background-color: #F8F8F8;
 	padding-top: 20px;
@@ -184,10 +150,6 @@ footer ul li{
 .grow:hover {
 	transform: scale(1.2);
 	transition: 0.1s ease-in-out;
-}
-
-#hamburger-menu-area {
-
 }
 
 .helvetica {
@@ -273,6 +235,9 @@ h6 {
 
 .navbar {
 	font-size: 30px;
+	position: fixed;
+	top: 0;
+	background: yellow;
 }
 
 .nav-glyph {
@@ -456,6 +421,35 @@ h6 {
 }
 
 /* End navbar glyph hover descriptions */
+
+// Hamburger nav area 
+
+#hamburger-menu-area {
+	position: absolute;
+	right: 15px;
+	top: 15px;
+	width: 50px;
+	height: 55px;
+}
+
+#hamburger-menu-area:hover{
+	background-color: #eee;
+	border: 1px solid #fff;
+}
+
+#nav-hamburger {
+	position: relative;
+	right: -12px;
+
+}
+
+#hamburger-menu-label {
+	font-size: 10px;
+	position: relative;
+	top: -30px;
+	right: -12px;
+}
+
 
 // For small nav, self-craeted, not bootstrap
 

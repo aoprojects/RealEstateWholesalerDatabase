@@ -27,9 +27,7 @@
     <link href='https://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
-    <!-- below is for modals -->
-    <script type="text/javascript"> $(function ()
-        { $("#myModal").modal({show:false }); </script>
+
         
     <%= javascript_include_tag('application') %>
 
@@ -41,7 +39,10 @@
     <div class="container" id="main-container">  
    
         <div><!-- begin div for internal page content -->
-            <% flash.each do |name, msg| %>
+    
+                <% flash.each do |name, msg| %>
+      
+
             <% content_tag(:div, msg, class: "alert alert-#{name}") %>
             <% end %>
         
