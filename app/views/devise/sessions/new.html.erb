@@ -1,6 +1,6 @@
 <div class="well">
 
-    <h2 class="margin-bottom blue align-center">Sign in</h2>
+    <h2 class="margin-bottom align-center">Sign in</h2>
 
 
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -16,6 +16,7 @@
         <%= f.password_field :password, autocomplete: "off", class: 'form-control' %>
       </div>
 
+      <br>
       <% if devise_mapping.rememberable? -%>
         <h4><div class="field align-center">
           <span class="indent"><%= f.check_box :remember_me %></span>
@@ -24,9 +25,13 @@
       <% end -%></h4>
 
       <div class="actions align-center">
-        <h4 class="button-normalize"><b><%= f.submit "Sign in", class: 'btn btn-info btn-lg' %></b></h4>
+        <h4 class="button-normalize"><b><%= f.submit "Sign in", class: 'btn btn-primary btn-lg' %></b></h4>
       </div>
     <% end %>
 
-    <h4 class="align-right"><%= render "devise/shared/links" %></h4>
+   
+      <h4 class="align-right"><%= render "devise/shared/links" %></h4>
+
 </div><!-- end well -->
+
+<br><br>
