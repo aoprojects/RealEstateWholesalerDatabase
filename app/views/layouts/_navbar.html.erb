@@ -5,6 +5,7 @@
       <% end %>
   </section><!-- end logo -->
 
+
   <section id="main-nav-options">
       <ul>
       	<li><%= link_to root_path do %>
@@ -22,6 +23,7 @@
   	</ul>
   </section><!-- end #main-nav on large screens -->
   
+  <span class="hidden-xs">
   <section id="nav-options-inline">
         <ul>
           <li><%= link_to newsletter_path, alt: 'newsletter' do %>
@@ -72,7 +74,9 @@
 
         </ul>
   </section>
+  </span>
 
+  <span class="hidden-sm hidden-md hidden-lg">
 	<section id="nav-options-dropped">
         <ul>
           <li><%= link_to newsletter_path, alt: 'newsletter' do %>
@@ -128,13 +132,15 @@
           <% end %><!-- end for if user is signed in -->
 
         </ul>
-      </section><!-- end span for section for nav options -->
+    </section><!-- end span for section for nav options -->
+    </span>
 
-
+  <span class="hidden-sm hidden-md hidden-lg">
 	<section id="hamburger-menu-area" class"small-nav-only">
 	  <span id="nav-hamburger">&#9776;</span><br>
 	  <span id="hamburger-menu-label">More</span>
 	</section><!-- end #hamburger-menu-area -->
+  </span>
 
 </nav>
 <br>
