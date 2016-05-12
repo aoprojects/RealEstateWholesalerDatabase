@@ -21,6 +21,7 @@ $grid-float-breakpoint: 768px;
 // End boostrap SASS edits
 $gray: #777;
 $blue: #337ABA;
+$border-color: #DEDEDE;
 
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
@@ -414,7 +415,7 @@ nav {
 	height: 60px;
 	background: white;
 	z-index:10;
-	border-bottom: 1px solid #DEDEDE;
+	border-bottom: 1px solid $border-color;
 	color: $gray;
 }
 
@@ -472,7 +473,7 @@ nav :hover {
 	left:0px;
 	height: 59px;
 	width: 60px;
-	border-right: 1px solid #DEDEDE;
+	border-right: 1px solid $border-color;
 }
 
 .small-logo img {
@@ -529,8 +530,39 @@ nav :hover {
 	}
 }
 
+// nav options area - will collapse into hamburger on sm and xs
 
+#nav-options {
+	position: fixed;
+	top: 60px;
+	right: 0;
+	padding: 10px;
+}
 
+#nav-options ul li {
+	text-decoration: none;
+	font-size: 25px;
+	list-style: none;
+	padding: 8px;
+	z-index: 9;
+	border-left: 1px solid $border-color;
+	background: white;
+	width: 100%;
+	padding-right: 30px;
+}
+
+#nav-options ul li:hover {
+	background: #eee;
+	text-decoration: none;
+}
+
+#nav-options ul li a {
+	color: $gray;
+}
+
+#nav-options ul li a:hover {
+	text-decoration: none;
+}
 
 
 
