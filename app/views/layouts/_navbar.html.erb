@@ -3,39 +3,32 @@
 	<section class="small-logo"><%= link_to root_path do %>
         <%= image_tag('rewd_logo_v1_small.png', class: 'logo-image-small') %>   
       <% end %>
-    </section><!-- end logo -->
+  </section><!-- end logo -->
 
-    <section id="main-nav-options">
-        <ul>
-        	<li><%= link_to root_path do %>
-        		<span class="hidden-xs hidden-sm">Wholesaler&nbsp;Database</span>
-        		<span class="hidden-md hidden-lg">Database</span>
-        		<% end %>
+  <section id="main-nav-options">
+      <ul>
+      	<li><%= link_to root_path do %>
+      		<span>Database</span>
+      		<% end %>
 
-        	</li><li><%= link_to resources_path do %>
-        		<span class="hidden-xs hidden-sm">Wholesaling&nbsp;Resources</span>
-        		<span class="hidden-md hidden-lg">Resources</span>
-        		<% end %>
+      	</li><li><%= link_to resources_path do %>
+      		<span>Resources</span>
+      		<% end %>
 
-        	</li><li><%= link_to about_path do %>
-        		<span class="hidden-xs hidden-sm">Contact&nbsp;Us</span>
-        		<span class="hidden-md hidden-lg">Contact</span>
-        		<% end %>
-        	</li>
-    	</ul>
-    </section><!-- end #main-nav on large screens -->
-
-
-	<section id="nav-options">
+      	</li><li><%= link_to about_path do %>
+      		<span>Contact</span>
+      		<% end %>
+      	</li>
+  	</ul>
+  </section><!-- end #main-nav on large screens -->
+  
+  <section id="nav-options-inline">
         <ul>
           <li><%= link_to newsletter_path, alt: 'newsletter' do %>
               <span class="glyphicon glyphicon-envelope nav-glyph grow" aria-hidden="true" alt="Newsletter"></span>
-              <span class="visible-xs-inline visible-sm-inline nav-text">Newsletter</span>
-
-
-                <ul class="hidden-xs hidden-sm">
+              <!--   <ul class="hidden-xs hidden-sm">
                     <li class="nav-text">Newsletter &#10548;</li>
-                </ul>
+                </ul> -->
             <% end %>
           </li>
 
@@ -43,29 +36,26 @@
 
               <li><%= link_to new_listing_choice_path do  %>
                   <span alt="New Listing" class="glyphicon glyphicon-pencil nav-glyph grow" aria-hidden="true"></span><span class="nav-text"></span>
-                  <span class="visible-xs-inline visible-sm-inline nav-text">New Listing</span>
-                    <ul class="hidden-xs hidden-sm">
+                   <!--  <ul class="hidden-xs hidden-sm">
                        <li class="nav-text">New Listing &#10548; </li>
-                    </ul>
+                    </ul> -->
                 <% end %>
               </li>
 
               <li><%= link_to my_account_path do  %>
                   <span alt="My Account" class="glyphicon glyphicon-user nav-glyph grow" aria-hidden="true"></span>
-                  <span class="visible-xs-inline visible-sm-inline nav-text">My Account</span>
-                    <ul class="hidden-xs hidden-sm">
+                   <!--  <ul class="hidden-xs hidden-sm">
                        <li class="nav-text">My Account &#10548;</li>
-                    </ul>              
+                    </ul> -->              
                 <% end %>
               </li>
 
 
               <li><%= link_to destroy_user_session_path, :method => :delete do %>
                 <span alt="Sign Out" class="glyphicon glyphicon-log-out nav-glyph grpw" aria-hidden="true"></span>
-                <span class="visible-xs-inline visible-sm-inline nav-text">Sign Out</span>
-                    <ul class="hidden-xs hidden-sm">
+                  <!--   <ul class="hidden-xs hidden-sm">
                        <li class="nav-text">Sign Out &#10548;</li>
-                    </ul>          
+                    </ul>  -->         
                 <% end %>
               </li>
               
@@ -73,10 +63,66 @@
 
               <li><%= link_to new_user_session_path do %>
                 <span alt="Sign In" class="glyphicon glyphicon-log-in nav-glyph grow" aria-hidden="true"></span>
-                <span class="visible-xs-inline visible-sm-inline nav-text">Sign In</span>
-                    <ul class="hidden-xs hidden-sm">
+                  <!--   <ul class="hidden-xs hidden-sm">
                        <li class="nav-text">Sign In / Up &#10548;</li>
-                    </ul>
+                    </ul> -->
+                <% end %>
+              </li>
+          <% end %><!-- end for if user is signed in -->
+
+        </ul>
+  </section>
+
+	<section id="nav-options-dropped">
+        <ul>
+          <li><%= link_to newsletter_path, alt: 'newsletter' do %>
+              <span class="glyphicon glyphicon-envelope nav-glyph grow" aria-hidden="true" alt="Newsletter"></span>
+              <span class="nav-text">Newsletter</span>
+
+              <!--   <ul class="hidden-xs hidden-sm">
+                    <li class="nav-text">Newsletter &#10548;</li>
+                </ul> -->
+            <% end %>
+          </li>
+
+           <% if user_signed_in? %>
+
+              <li><%= link_to new_listing_choice_path do  %>
+                  <span alt="New Listing" class="glyphicon glyphicon-pencil nav-glyph grow" aria-hidden="true"></span><span class="nav-text"></span>
+                  <span class="nav-text">New Listing</span>
+                   <!--  <ul class="hidden-xs hidden-sm">
+                       <li class="nav-text">New Listing &#10548; </li>
+                    </ul> -->
+                <% end %>
+              </li>
+
+              <li><%= link_to my_account_path do  %>
+                  <span alt="My Account" class="glyphicon glyphicon-user nav-glyph grow" aria-hidden="true"></span>
+                  <span class="nav-text">My Account</span>
+                   <!--  <ul class="hidden-xs hidden-sm">
+                       <li class="nav-text">My Account &#10548;</li>
+                    </ul> -->              
+                <% end %>
+              </li>
+
+
+              <li><%= link_to destroy_user_session_path, :method => :delete do %>
+                <span alt="Sign Out" class="glyphicon glyphicon-log-out nav-glyph grpw" aria-hidden="true"></span>
+                <span class="nav-text">Sign Out</span>
+                  <!--   <ul class="hidden-xs hidden-sm">
+                       <li class="nav-text">Sign Out &#10548;</li>
+                    </ul>  -->         
+                <% end %>
+              </li>
+              
+            <% else %>
+
+              <li><%= link_to new_user_session_path do %>
+                <span alt="Sign In" class="glyphicon glyphicon-log-in nav-glyph grow" aria-hidden="true"></span>
+                <span class="nav-text">Sign In</span>
+                  <!--   <ul class="hidden-xs hidden-sm">
+                       <li class="nav-text">Sign In / Up &#10548;</li>
+                    </ul> -->
                 <% end %>
               </li>
           <% end %><!-- end for if user is signed in -->

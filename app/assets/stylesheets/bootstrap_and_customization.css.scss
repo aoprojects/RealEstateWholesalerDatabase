@@ -22,6 +22,8 @@ $grid-float-breakpoint: 768px;
 $gray: #777;
 $blue: #337ABA;
 $border-color: #DEDEDE;
+$xswidth: 472px;
+$hover-color: #eee;
 
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
@@ -383,14 +385,15 @@ h6 {
 	padding: 12px;
 }
 
-// BEGIN SPECIAL AREAS
+// BEGIN STYLING FOR SPECIAL AREAS
+
 /* Begin navbar glyph hover descriptions */
 
-#nav-options ul li:hover ul li {
+#nav-options-dropped ul li:hover ul li {
 	display: block;
 }
 
-#nav-options ul ul li {
+#nav-options-dropped ul ul li {
 	display: none;
 	position: absolute; 
 	top: 100%; 
@@ -404,9 +407,7 @@ h6 {
 	background: #FFF;
 }
 
-/* End navbar glyph hover descriptions */
-
-// Begin nav area
+// Nav area in general
 
 nav {
 	width: 100%;
@@ -454,13 +455,12 @@ nav :hover {
 #main-nav-options ul li:hover {
 	text-decoration: none;
 	color: $gray;
-	background: #eee;
+	background: $hover-color;
 }
 
 #main-nav-options ul li a {
 	position: relative;
 	color: $gray;
-
 }
 
 #main-nav-options ul li a {
@@ -468,7 +468,8 @@ nav :hover {
 }
 
 
-// logo area
+// logo area in nav
+
 .small-logo {
 	position: fixed;
 	top:0px;
@@ -486,12 +487,17 @@ nav :hover {
 
 .small-logo:hover {
 	text-decoration: none;
-	background: #eee;
+	background: $hover-color;
+}
+
+@media screen only and (max-width: 472px) {
+	.small-logo {
+		display: none;
+	}
 }
 
 
-
-// Begin Hamburger nav area 
+// Hamburger for drop down nav area 
 
 #hamburger-menu-area {
 	position: fixed;
@@ -503,7 +509,7 @@ nav :hover {
 }
 
 #hamburger-menu-area:hover{
-	background-color: #eee;
+	background-color: $hover-color;
 	border: 1px solid #fff;
 }
 
@@ -523,25 +529,60 @@ nav :hover {
 
 }
 
-// For small nav, self-craeted, not Bootstrap
+// For small nav, self-created, not Bootstrap
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: $xswidth) {
 	.small-nav-only {
 		display: none;
 
 	}
 }
 
-// nav options area - will collapse into hamburger on sm and xs
+// nav options inline - will display on desktop sizes only
 
-#nav-options {
+#nav-options-inline {
+	position: fixed;
+	top:0;
+	right: 66px;
+
+}
+
+#nav-options-inline ul {
+	list-style: none;
+}
+
+#nav-options-inline ul li {
+	float: left;
+	display: block;
+	padding: 8px;
+	font-size: 25px;
+	height: 59px;
+}
+#nav-options-inline ul li:hover {
+	background: $hover-color;
+}
+
+#nav-options-inline ul li a {
+	color: $gray;
+	position: relative;
+	top: 5px;
+}
+
+
+
+
+
+
+// nav options dropped area - will collapse into hamburger on sm and xs
+
+#nav-options-dropped {
 	position: fixed;
 	top: 60px;
 	right: 0;
 	padding: 10px;
 }
 
-#nav-options ul li {
+#nav-options-dropped ul li {
 	text-decoration: none;
 	font-size: 25px;
 	list-style: none;
@@ -553,16 +594,16 @@ nav :hover {
 	padding-right: 30px;
 }
 
-#nav-options ul li:hover {
-	background: #eee;
+#nav-options-dropped ul li:hover {
+	background: $hover-color;
 	text-decoration: none;
 }
 
-#nav-options ul li a {
+#nav-options-dropped ul li a {
 	color: $gray;
 }
 
-#nav-options ul li a:hover {
+#nav-options-dropped ul li a:hover {
 	text-decoration: none;
 }
 
