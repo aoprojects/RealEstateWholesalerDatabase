@@ -234,31 +234,6 @@ h6 {
 	bottom: 13px;
 }
 
-.logo-image-small {
-	position: relative;
-}
-
-.nav-glyph {
-	font-size: 0.7em;
-	padding-left: 5px;
-	padding-right: 5px;
-	margin: 5px;
-}
-
-.nav-glyph:hover {
-	color: black;
-}
-
-.nav-text {
-	font-size: 0.6em;
-	text-decoration: none;
-	font-weight: bold;
-}
-
-.nav-text:hover {
-	border-bottom: none;
-}
-
 .no-decoration {
 	text-decoration: none;
 	color: black;
@@ -539,6 +514,17 @@ nav :hover {
 
 // nav options inline - will display on desktop sizes only
 
+
+.nav-text {
+	font-size: 0.6em;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.nav-text:hover {
+	border-bottom: none;
+}
+
 #nav-options-inline {
 	position: fixed;
 	top:0;
@@ -567,6 +553,13 @@ nav :hover {
 }
 
 // nav options dropped area - will collapse into hamburger on sm and xs
+
+.nav-glyph {
+	font-size: 0.7em;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin: 5px;
+}
 
 #nav-options-dropped {
 	position: fixed;
