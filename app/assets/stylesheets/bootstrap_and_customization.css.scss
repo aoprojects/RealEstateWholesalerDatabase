@@ -382,9 +382,8 @@ h6 {
 	padding: 12px;
 }
 
-
+// BEGIN SPECIAL AREAS
 /* Begin navbar glyph hover descriptions */
-
 
 #nav-options ul li:hover ul li {
 	display: block;
@@ -416,18 +415,64 @@ nav {
 	background: white;
 	z-index:10;
 	border-bottom: 1px solid #DEDEDE;
+	color: $gray;
 }
 
 nav :hover {
+
+}
+
+
+// main-nav-options
+
+#main-nav-options {
+	position: fixed;
+	left: 60px;
+	top: 0px;
+}
+
+#main-nav-options ul {
+	color: $gray;
+}
+
+#main-nav-options ul li {
+	position: relative;
+	left: -40px;
+	list-style: none;
+	float: left;
+	display: block;
+	padding: 20px;
+	font-size: 18px;
+	color: $gray;
+	text-decoration: none;
+	height: 59px;
+}
+
+#main-nav-options ul li:hover {
+	text-decoration: none;
+	color: $gray;
 	background: #eee;
 }
 
+#main-nav-options ul li a {
+	position: relative;
+	color: $gray;
+
+}
+
+#main-nav-options ul li a {
+	text-decoration: none;
+}
+
+
+// logo area
 .small-logo {
 	position: fixed;
 	top:0px;
 	left:0px;
 	height: 59px;
 	width: 60px;
+	border-right: 1px solid #DEDEDE;
 }
 
 .small-logo img {
@@ -440,6 +485,7 @@ nav :hover {
 	text-decoration: none;
 	background: #eee;
 }
+
 
 
 // Begin Hamburger nav area 
@@ -473,7 +519,6 @@ nav :hover {
 	right: 22px;
 
 }
-
 
 // For small nav, self-craeted, not Bootstrap
 

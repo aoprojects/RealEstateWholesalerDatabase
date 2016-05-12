@@ -1,9 +1,17 @@
 <nav>
 
-	<div class="small-logo"><%= link_to root_path do %>
+	<section class="small-logo"><%= link_to root_path do %>
         <%= image_tag('rewd_logo_v1_small.png', class: 'logo-image-small') %>   
       <% end %>
-    </div><!-- end logo -->
+    </section><!-- end logo -->
+
+    <section id="main-nav-options">
+        <ul>
+        	<li><%= link_to "Wholesaler Database", root_path %></li>
+        	<li><%= link_to "Learn Wholesaling", resources_path %></li>
+        	<li><%= link_to "Contact Us", about_path %></li>
+    	</ul>
+    </section><!-- end #main-nav on large screens -->
 
 
 
