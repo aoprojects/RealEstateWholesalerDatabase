@@ -496,7 +496,6 @@ nav :hover {
 	}
 }
 
-
 // Hamburger for drop down nav area 
 
 #hamburger-menu-area {
@@ -544,7 +543,6 @@ nav :hover {
 	position: fixed;
 	top:0;
 	right:0;
-
 }
 
 #nav-options-inline ul {
@@ -568,11 +566,6 @@ nav :hover {
 	top: 5px;
 }
 
-
-
-
-
-
 // nav options dropped area - will collapse into hamburger on sm and xs
 
 #nav-options-dropped {
@@ -592,10 +585,11 @@ nav :hover {
 	background: white;
 	width: 100%;
 	padding-right: 30px;
+	background: #F7F7F7;
 }
 
 #nav-options-dropped ul li:hover {
-	background: $hover-color;
+	background: #EBEBEB;
 	text-decoration: none;
 }
 
