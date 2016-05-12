@@ -1,105 +1,106 @@
-<h2 class="blue align-center">New Account Sign Up</h2>
+ 
+  <h2 class="align-center">New Wholesaler Sign Up</h2>
 
-<p class="align-center"><i>Your profile info will be used to complete each Wholesaler listing location associated with this account.</i></p>
-<br>
+  <p class="align-center"><i>Your profile info will be used to complete each Wholesaler listing location associated with this account.</i></p>
+  <br>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= devise_error_messages! %>
 
-<div class="row">
-          <div class="field">
-            <div class="col-sm-3">
-              <h4 class="no-wrap"><%= f.label :Company_name %></h4>
+  <div class="row">
+            <div class="field">
+              <div class="col-sm-3">
+                <h4 class="no-wrap"><%= f.label :Company_name %></h4>
+              </div>
+              <div class="col-md-9">
+                <%= f.text_field :company, autofocus: true, class: 'form-control', placeholder: "My Wholesaling Company LLC" %>
+              </div>              
             </div>
-            <div class="col-md-9">
-              <%= f.text_field :company, autofocus: true, class: 'form-control' %>
-            </div>              
-          </div>
-</div><!-- end row -->          
-<div class="row">
-          <div class="field">
-            <div class="col-sm-3">
-              <h4 class="no-wrap"><%= f.label :Company_email %></h4>
+  </div><!-- end row -->          
+  <div class="row">
+            <div class="field">
+              <div class="col-sm-3">
+                <h4 class="no-wrap"><%= f.label :Company_email %></h4>
+              </div>
+              <div class="col-md-9">          
+                <%= f.email_field :email, autofocus: true, class: 'form-control', placeholder: 'Me@MyAwesomeCompany.com' %>
+              </div>              
             </div>
-            <div class="col-md-9">          
-              <%= f.email_field :email, autofocus: true, class: 'form-control', placeholder: 'You will log in with this email' %>
-            </div>              
-          </div>
-</div><!-- end row -->          
-<div class="row">
-           <div class="field">
-            <div class="col-sm-3">
-              <h4 class="no-wrap"><%= f.label :Phone_number %></h4>
+  </div><!-- end row -->          
+  <div class="row">
+             <div class="field">
+              <div class="col-sm-3">
+                <h4 class="no-wrap"><%= f.label :Phone_number %></h4>
+              </div>
+              <div class="col-md-9">
+                <%= f.text_field :phone, class: 'form-control', placeholder: "###.###.####" %>
+              </div>              
             </div>
-            <div class="col-md-9">
-              <%= f.text_field :phone, class: 'form-control' %>
-            </div>              
-          </div>
-</div><!-- end row -->          
-<div class="row">
-          <div class="field">
-            <div class="col-sm-3">
-              <h4 class="no-wrap"><%= f.label :Wholesaler_website %></h4>
+  </div><!-- end row -->          
+  <div class="row">
+            <div class="field">
+              <div class="col-sm-3">
+                <h4 class="no-wrap"><%= f.label :Wholesaler_website %></h4>
+              </div>
+              <div class="col-md-9">              
+                <%= f.text_field :url, class: 'form-control', placeholder: "MyAwesomeCompany.com" %>
+              </div>              
             </div>
-            <div class="col-md-9">              
-              <%= f.text_field :url, class: 'form-control' %>
-            </div>              
-          </div>
-</div><!-- end row -->          
- <div class="row">       
-          <div class="field">
-            <div class="col-sm-3">
-                <h4 class="no-wrap"><%= f.label :Please_list_your_specialties %></h4>
+  </div><!-- end row -->          
+   <div class="row">       
+            <div class="field">
+              <div class="col-sm-3">
+                  <h4 class="no-wrap"><%= f.label :Please_list_your_specialties %></h4>
+              </div>
+              <div class="col-md-9">                
+                  <%= f.text_field :specialties, placeholder: 'multifamily / single family / land...', class: 'form-control' %>
+              </div>
             </div>
-            <div class="col-md-9">                
-                <%= f.text_field :specialties, placeholder: 'eg. multifamily / single family / land...', class: 'form-control' %>
-            </div>
-          </div>
-</div><!-- end row -->
-<div class="row">
-          <div class="field">
-            <div class="col-sm-3">
-                <h4 class="no-wrap"><%= f.label :Buyers_should_also_know %></h4>
-            </div>
-            <div class="col-md-9">                
-                <%= f.text_field :details, placeholder: 'eg. Text me for fast response / Buy directly from my website.', class: 'form-control' %>
-            </div>
-          </div><!-- end field div -->
-</div><!-- end row -->          
-    <hr>
+  </div><!-- end row -->
+  <div class="row">
+            <div class="field">
+              <div class="col-sm-3">
+                  <h4 class="no-wrap"><%= f.label :Buyers_should_also_know %></h4>
+              </div>
+              <div class="col-md-9">                
+                  <%= f.text_field :details, placeholder: 'I am best contacted by text. / You can view current properties on my website.', class: 'form-control', rows: 10 %>
+              </div>
+            </div><!-- end field div -->
+  </div><!-- end row -->          
+      <hr>
 
 
-<div class="row">
-    <div class="field">
-      <div class="col-sm-3">
-        <h4><%= f.label :Password %></h4>
-      </div><!-- end col div -->
-  
-      <div class="col-sm-9">
-        <% if @minimum_password_length %>
-        <em>(<%= @minimum_password_length %> characters minimum)</em>
-        <% end %><br />
-        <%= f.password_field :password, autocomplete: "off", class: 'form-control' %>
-      </div><!-- end col div -->
-    </div><!-- end field div -->
-</div><!-- end row div -->
-
-<br>
-<div class="row">      
+  <div class="row">
       <div class="field">
-         <div class="col-sm-3">
-            <h4><%= f.label :Password_confirmation %></h4>
-          </div><!-- end col div -->
-          <div class="col-sm-9">
-            <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control', placeholder: 'same as above' %>
-          </div><!-- end col div -->
+        <div class="col-sm-3">
+          <h4><%= f.label :Password %></h4>
+        </div><!-- end col div -->
+    
+        <div class="col-sm-9">
+          <% if @minimum_password_length %>
+          <em>(<%= @minimum_password_length %> characters minimum)</em>
+          <% end %><br />
+          <%= f.password_field :password, autocomplete: "off", class: 'form-control' %>
+        </div><!-- end col div -->
       </div><!-- end field div -->
-</div><!-- end div row -->    
+  </div><!-- end row div -->
 
-      <br>
-      <div class="actions align-center">
-        <%= f.submit "Free Sign up", class: 'btn btn-info btn-lg' %>
-      </div>
-    <% end %>
+  <br>
+  <div class="row">      
+        <div class="field">
+           <div class="col-sm-3">
+              <h4><%= f.label :Password_confirmation %></h4>
+            </div><!-- end col div -->
+            <div class="col-sm-9">
+              <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control', placeholder: 'same as above' %>
+            </div><!-- end col div -->
+        </div><!-- end field div -->
+  </div><!-- end div row -->    
 
-<div class="align-right blue"><h4><%= render "devise/shared/links" %></h4></div>
+        <br>
+        <div class="actions align-center">
+          <%= f.submit "Create Free Account", class: 'btn btn-primary btn-lg' %>
+        </div>
+      <% end %>
+
+  <div class="align-right blue"><h4><%= render "devise/shared/links" %></h4></div>
