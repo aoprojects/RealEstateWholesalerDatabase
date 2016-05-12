@@ -539,6 +539,7 @@ nav :hover {
 	float: left;
 	display: block;
 	padding: 8px;
+	padding-right: 15px;
 	font-size: 25px;
 	height: 59px;
 }
@@ -549,7 +550,15 @@ nav :hover {
 #nav-options-inline ul li a {
 	color: $gray;
 	position: relative;
-	top: 5px;
+
+}
+
+.nav-icon-label {
+	font-size: 9px;
+	position: absolute;
+	top: 30px;
+	left: 5px;
+
 }
 
 // nav options dropped area - will collapse into hamburger on sm and xs
