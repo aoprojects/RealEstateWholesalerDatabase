@@ -5,4 +5,9 @@ $(document).ready(function() {
 		$(this).children(".glyphicon").toggleClass("collapse");
 
 	});
+
+
+	$("#hamburger-menu-area").click(function() {
+		$("#nav-options-dropped").toggle("fast");
+	});
 )};
