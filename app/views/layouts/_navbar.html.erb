@@ -7,9 +7,21 @@
 
     <section id="main-nav-options">
         <ul>
-        	<li><%= link_to "Wholesaler Database", root_path %></li>
-        	<li><%= link_to "Learn Wholesaling", resources_path %></li>
-        	<li><%= link_to "Contact Us", about_path %></li>
+        	<li><%= link_to root_path do %>
+        		<span class="hidden-xs hidden-sm">Wholesaler&nbsp;Database</span>
+        		<span class="hidden-md hidden-lg">Database</span>
+        		<% end %>
+
+        	</li><li><%= link_to resources_path do %>
+        		<span class="hidden-xs hidden-sm">Wholesaling&nbsp;Resources</span>
+        		<span class="hidden-md hidden-lg">Resources</span>
+        		<% end %>
+
+        	</li><li><%= link_to about_path do %>
+        		<span class="hidden-xs hidden-sm">Contact&nbsp;Us</span>
+        		<span class="hidden-md hidden-lg">Contact</span>
+        		<% end %>
+        	</li>
     	</ul>
     </section><!-- end #main-nav on large screens -->
 
@@ -19,8 +31,9 @@
 
 	<section id="hamburger-menu-area" class"small-nav-only">
 	  <span id="nav-hamburger">&#9776;</span><br>
-	  <span id="hamburger-menu-label">Menu</span>
+	  <span id="hamburger-menu-label">More</span>
 	</section><!-- end #hamburger-menu-area -->
 
 </nav>
+<br>
 <br>
