@@ -7,22 +7,7 @@
 
 
   <section id="main-nav-options">
-      <ul>
-
-      	<li><%= link_to root_path do %>
-      		<span>Database</span>
-      		<% end %>
-      	</li>
-
-        <li><%= link_to resources_path do %>
-      		<span>Resources</span>
-      		<% end %>
-      	</li>
-
-        <li class="hidden-xs"><%= link_to about_path do %>
-      		<span>Contact</span>
-      		<% end %>
-      	</li>
+    <ul>
 
   	</ul>
   </section><!-- end #main-nav on large screens -->
@@ -30,11 +15,6 @@
   <span class="hidden-xs">
   <section id="nav-options-inline">
         <ul>
-          <li><%= link_to newsletter_path, alt: 'newsletter' do %>
-              <span class="glyphicon glyphicon-envelope nav-glyph grow" aria-hidden="true" alt="Newsletter"></span>
-              <span class="nav-icon-label">Updates</span>
-            <% end %>
-          </li>
 
            <% if user_signed_in? %>
 
@@ -66,6 +46,19 @@
               </li>
           <% end %><!-- end for if user is signed in -->
 
+          <li class="border-left"><%= link_to newsletter_path, alt: 'newsletter' do %>
+              <span class="glyphicon glyphicon-envelope nav-glyph grow" aria-hidden="true" alt="Newsletter"></span>
+              <span class="nav-icon-label">Updates</span>
+            <% end %>
+          </li>
+
+            <li><%= link_to about_path do %>
+                <span alt="Contact Us" class="glyphicon glyphicon-earphone nav-glyph grow" aria-hidden="true"></span>
+                <span class="nav-icon-label">Contact</span>
+                <% end %>
+            </li>
+
+
         </ul>
   </section>
   </span>
@@ -73,14 +66,6 @@
   <span class="hidden-sm hidden-md hidden-lg">
 	<section id="nav-options-dropped">
         <ul>
-          <li><%= link_to newsletter_path, alt: 'newsletter' do %>
-              <span class="glyphicon glyphicon-envelope nav-glyph grow" aria-hidden="true" alt="Newsletter"></span>
-              <span class="nav-text">Newsletter</span>
-
-             
-            <% end %>
-          </li>
-
            <% if user_signed_in? %>
 
               <li><%= link_to new_listing_choice_path do  %>
@@ -115,12 +100,18 @@
               </li>
           <% end %><!-- end for if user is signed in -->
 
-             <li><%= link_to about_path do %>
-                <span alt="Contact Us" class="glyphicon glyphicon-earphone nav-glyph grow" aria-hidden="true"></span>
-                <span class="nav-text">Contact Us</span>
-           
-                <% end %>
-              </li>
+          <li><%= link_to newsletter_path, alt: 'newsletter' do %>
+              <span class="glyphicon glyphicon-envelope nav-glyph grow" aria-hidden="true" alt="Newsletter"></span>
+              <span class="nav-text">Newsletter</span>
+            <% end %>
+          </li>
+
+           <li><%= link_to about_path do %>
+              <span alt="Contact Us" class="glyphicon glyphicon-earphone nav-glyph grow" aria-hidden="true"></span>
+              <span class="nav-text">Contact Us</span>
+         
+              <% end %>
+            </li>
 
 
         </ul>

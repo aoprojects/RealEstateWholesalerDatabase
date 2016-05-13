@@ -76,6 +76,10 @@ button {
 	float: right;
 }
 
+.border-left {
+	border-left: 1px solid $border-color;
+}
+
 .black {
 	color: #333;
 }
