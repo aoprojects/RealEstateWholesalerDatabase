@@ -1,49 +1,49 @@
+
 <p id="notice"><%= notice %></p>
-<div class="container">
-    <h2 class="align-center">All <span class="blue">TODO listing.state_name</span> Wholesaler Listings</h2>
-    <h4 class="align-center">Click on a wholesaler to see their full profile</h4>
-    
+
+  <h2 class="align-center">All <span>TODO listing.state_name</span> Wholesaler Listings</h2>
+  <h4 class="align-center">Click on a wholesaler to see their full profile</h4><br><br>
+
+     <b class="float-right"><%= link_to 'Create New Listing', new_listing_path, class: 'btn btn-primary btn-md' %></b>
+     <br>
 
 
-  <div class="row">
-        <% @listings.each do |listing| %>
-          <%= link_to listing, class: 'no-decoration' do %>
-            <div class="col-sm-6 col-xs-12 align-center">
-              <div class="listing-outline">
-                <br>
-                <h4><b class="blue">Wholesaler:</b> <%= listing.user.company %></h4>
-                <p><b class="blue">Location:</b> <%= listing.city %>, <%= listing.state_name %></p>
-                <p><b class="blue">Email:</b> <%= listing.user.email %></p>
-                <p><b class="blue">Phone:</b> <%= listing.user.phone %></p>
-                <p><b class="blue">Website:</b> <%= listing.user.url %></p>
-                <p><b class="blue">Specialties:</b> <%= listing.user.specialties %></p>
-              
+  <table class="table table-responsive table-striped table-hover">
+            <tr>
+              <th>Wholesaler</th>
+              <th>Location</th>
+              <th>Specialties</th>
+              <th></th>
+            </tr>
+      <% @listings.each do |listing| %>
+        <%= link_to listing, class: 'no-decoration' do %>
+            <tr>
+              <td><%= listing.user.company %></td>
+              <td><%= listing.city %>, <%= listing.state_name %></td>
+              <td><%= listing.user.specialties %></td>
+              <td>
                 <% if user_signed_in? && listing.user == current_user %>
 
-                    <p class="align-center"><%= link_to edit_listing_path(listing), class: 'btn btn-info btn-sm' do %>
-                       <!-- <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> --> Edit
-                    <% end %> &nbsp;
+                  <%= link_to edit_listing_path(listing), class: 'btn btn-info btn-sm' do %>
+                      Edit
+                  <% end %> &nbsp;
+                
+                  <%= link_to listing, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-info btn-sm' do %>
+                      Delete
+                  <% end %>
                   
-                    <%= link_to listing, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-info btn-sm' do %>
-                        <!-- <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> --> Delete
-                    <% end %></p>
                 <% end %><!-- end for if user signed in -->
-              </div><!--end listing-outline -->
-            </div><!-- end each col-sm-6 col-xs-12-->
-          <% end %><!-- end for display each listing -->
-         <% end %> <!-- link to each listing -->
-     </div><!-- end row(s) -->
-
+              </td>
+            </tr>
+          <% end %> <!-- link to each listing -->
+        <% end %><!-- end for display each listing -->
+    </table>
     <br>
 
-    <p>TODO: edit how paginations look.  Make smaller. </p>
     <p class="align-center">TODO: paginate</p>
 
-    <div class="row">
-      <div class="col-xs-12 align-center">
-        <b><%= link_to 'Create New Listing', new_listing_path, class: 'btn btn-info btn-lg' %></b>
-      </div><!-- end div for col-xs-12 -->
-    </div><!-- end row for new listing button -->
+   
+ 
 
-</div><!-- end .well -->
+
 
