@@ -221,6 +221,11 @@ h6 {
 	color: white;
 }
 
+#listing-footer-area {
+	margin: 0 auto;
+	background: yellow;
+}
+
 .listings_new td {
 	padding: 5px 15px;
 }
@@ -234,6 +239,22 @@ h6 {
 
 .listing-outline:hover {
 	background-color: #F6F6F6;
+}
+
+.listing-table {
+	margin: 0 auto;
+}
+
+.listings_show table {
+	margin: 0 auto;
+}
+
+.listings_show td {
+	padding: 5px 15px;
+}
+
+.listings_show .panel-footer {
+	margin: 0 auto;
 }
 
 .location-lists {
