@@ -22,6 +22,7 @@
               <td><%= listing.city %>, <%= listing.state_name %></td>
               <td><%= listing.user.specialties %></td>
               <td>
+                <%= link_to "View", listing_path(listing) %>
                 <% if user_signed_in? && listing.user == current_user %>
 
                   <%= link_to edit_listing_path(listing), class: 'btn btn-info btn-sm' do %>
