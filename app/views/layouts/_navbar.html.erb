@@ -1,7 +1,10 @@
 <nav>
 
 	<section class="small-logo"><%= link_to root_path do %>
-        <%= image_tag('rewd_logo_v1_small.png', class: 'logo-image-small') %>   
+        <%= image_tag('rewd_logo_v1_small.png', class: 'logo-image-small') %>  
+        <% unless current_page?(root_path) %>
+          <%= link_to "Real Estate Wholesaler Database", root_path, class: 'logo-company-top title-footer no-decoration no-wrap' %>
+        <% end %> 
       <% end %>
   </section><!-- end logo -->
 
@@ -18,7 +21,7 @@
 
            <% if user_signed_in? %>
 
-              <li><%= link_to new_listing_choice_path do  %>
+              <li><%= link_to new_listing_path do  %>
                   <span alt="New Listing" class="glyphicon glyphicon-pencil nav-glyph grow" aria-hidden="true"></span><span class="nav-text"></span>
                   <span class="nav-icon-label">&nbsp;New</span>
                 <% end %>

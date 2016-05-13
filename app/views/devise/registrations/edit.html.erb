@@ -1,18 +1,17 @@
 
 
 
-<h2 class="blue align-center">Edit Your Profile</h2>
+<h2 class="align-center">Edit Your Profile</h2>
 <p class="align-center"><i>Leave blank anything you do not wish to update.</i></p>
 <br>
 
-TODO: add and orgaize page with Resources info vs wholesaler info
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
   <div class="row">
       <div class="field">
         <div class="col-sm-4">
-          <h4 class="blue"><%= f.label :Company_name %>
+          <h4><%= f.label :Company_name %>
         </div>
         <div class="col-sm-8">
           <%= f.text_field :company, autofocus: true, class: 'form-control' %></h4>
@@ -22,7 +21,7 @@ TODO: add and orgaize page with Resources info vs wholesaler info
   <div class="row">
       <div class="field">
           <div class="col-sm-4">        
-            <h4 class="blue"><%= f.label :Company_email %>
+            <h4><%= f.label :Company_email %>
           </div>
           <div class="col-sm-8">            
             <%= f.email_field :email, autofocus: true, class: 'form-control' %></h4>
@@ -32,7 +31,7 @@ TODO: add and orgaize page with Resources info vs wholesaler info
   <div class="row">
       <div class="field">
         <div class="col-sm-4">        
-          <h4 class="blue"><%= f.label :Phone_number %>
+          <h4><%= f.label :Phone_number %>
         </div>
         <div class="col-sm-8">
           <%= f.text_field :phone, class: 'form-control' %></h4>
@@ -42,7 +41,7 @@ TODO: add and orgaize page with Resources info vs wholesaler info
   <div class="row">
       <div class="field">
         <div class="col-sm-4">        
-          <h4 class="blue"><%= f.label :Wholesaler_website %>
+          <h4><%= f.label :Wholesaler_website %>
         </div>
         <div class="col-sm-8">            
           <%= f.text_field :url, class: 'form-control' %></h4>
@@ -52,7 +51,7 @@ TODO: add and orgaize page with Resources info vs wholesaler info
   <div class="row">
       <div class="field">
         <div class="col-sm-4">        
-          <h4 class="blue"><%= f.label :Please_list_your_specialties %>
+          <h4><%= f.label :Please_list_your_specialties %>
         </div>
         <div class="col-sm-8">
           <%= f.text_field :specialties, placeholder: 'eg. multifamily, single family, land...', class: 'form-control' %></h4>
@@ -62,7 +61,7 @@ TODO: add and orgaize page with Resources info vs wholesaler info
   <div class="row">
       <div class="field">
         <div class="col-sm-4">        
-            <h4 class="blue"><%= f.label :Buyers_should_also_know %>
+            <h4><%= f.label :Buyers_should_also_know %>
         </div>
         <div class="col-sm-8">
             <%= f.text_area :details, placeholder: 'eg. Text me for fast response / Buy directly from my website.', class: 'form-control', cols: "5", rows: "5" %></h4>
@@ -76,7 +75,7 @@ TODO: add and orgaize page with Resources info vs wholesaler info
   <div class="row">
       <div class="field">
         <div class="col-sm-4">        
-            <h4 class="blue"><%= f.label :New_password %> <i>(leave blank if you don't want to change it)</i>
+            <h4><%= f.label :New_password %> <i>(leave blank if you don't want to change it)</i>
         </div>
         <div class="col-sm-8">
           <%= f.password_field :password, autocomplete: "off", class: 'form-control' %></h4>
@@ -86,7 +85,7 @@ TODO: add and orgaize page with Resources info vs wholesaler info
   <div class="row">
       <div class="field">
         <div class="col-sm-4">        
-            <h4 class="blue"><%= f.label :New_password_confirmation %>
+            <h4><%= f.label :New_password_confirmation %>
         </div>
         <div class="col-sm-8">              
           <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control' %></h4>
@@ -97,7 +96,7 @@ TODO: add and orgaize page with Resources info vs wholesaler info
   <div class="row">
       <div class="field">
         <div class="col-sm-4">        
-            <h4 class="blue"><%= f.label :current_password_ %><i> ( &#42; required)</i>
+            <h4><%= f.label :current_password_ %><i> ( &#42; required)</i>
         </div>
         <div class="col-sm-8">
             <%= f.password_field :current_password, autocomplete: "off", class: 'form-control' %></h4>
@@ -108,13 +107,13 @@ TODO: add and orgaize page with Resources info vs wholesaler info
   <div class="row">
       <br>
       <div class="actions align-center">
-        <%= f.submit "Update Profile", class: 'btn btn-info btn-lg align-center' %>
+        <%= f.submit "Update Profile", class: 'btn btn-primary btn-lg align-center' %>
       </div>
   </div><!-- end row -->
 <% end %><!-- end each form do -->
 
 <hr>
-<h3 class="blue align-center">Cancel my account</h3>
+<h3 class="align-center">Cancel my account</h3>
 
 <p class="align-center"><b>Unhappy?</b></p> 
   <p class="align-center"><%= link_to 'Tell Us About It', about_path, class: 'btn btn-info' %>&nbsp;...or...&nbsp;<%= link_to "Cancel My Account", registration_path(resource_name), data: { confirm: "Are you sure? Your profile info and all your listings will be deleted." }, method: :delete, class: 'btn btn-info' %></p>

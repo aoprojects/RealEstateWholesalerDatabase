@@ -123,6 +123,10 @@ button {
 	border-radius: 15px;
 }
 
+#FAQ > h3 {
+	font-size: 18px;
+}
+
 // .flash-messages {
 // 	background: $blue;
 // 	border-radius: 25px;
@@ -238,6 +242,13 @@ h6 {
 	bottom: 13px;
 }
 
+.logo-company-top {
+	position: relative;
+	top: 20px;
+	left: 70px;
+	color: $gray;
+}
+
 .no-decoration {
 	text-decoration: none;
 	color: black;
@@ -259,6 +270,16 @@ h6 {
 
 .margin-bottom {
 	margin-bottom: 15px;
+}
+
+.pages_about .question {
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.pages_about .answer {
+	margin-bottom: 40px;
+	font-size: 14px;
 }
 
 .pages-links {
