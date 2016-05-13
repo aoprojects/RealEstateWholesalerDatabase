@@ -4,7 +4,7 @@
 
 <div class="well">
 
-	<h3 class="align-center"><%= @listing.user.company %>, <span class="blue">Real Estate Wholesaler</span></h3>
+	<h3 class="align-center"><%= @listing.user.company %>, Real Estate Wholesaler</h3>
 		<h4 class='align-center'><strong><em><%= @listing.city %>, <%= @listing.state_name %></em></strong></h4>
 
 	<% if current_user == @listing.user && user_signed_in? %>
@@ -13,28 +13,29 @@
 		<% end %></h4>
 	<% end %>
 
-		<h4><strong class="blue">Email:</strong> <%= @listing.user.email %></h4>
-		<h4><strong class="blue">Phone number:</strong> <%= @listing.user.phone %></h4>
-		<h4><strong class="blue">Website:</strong> <%= @listing.user.url %></h4>
-		<h4><strong class="blue">Wholesaler's specialties:</strong> <%= @listing.user.specialties %></h4>
-		<h4><strong class="blue">Buyers should also know:</strong> <%= @listing.user.details %></h4>
+	<h4><strong>Wholesaler's specialties:</strong> <%= @listing.user.specialties %></h4>
+	<hr>
+
+		<h4><strong>Email:</strong> <%= @listing.user.email %></h4>
+		<h4><strong>Phone number:</strong> <%= @listing.user.phone %></h4>
+		<h4><strong>Website:</strong> <%= @listing.user.url %></h4>
+		<h4><strong>Buyers should also know:</strong> <%= @listing.user.details %></h4>
 	</p>
 	<br>
-	<h5><u>Summary:</u><%= @listing.user.company %> is listed as a wholesaler in <%= pluralize(current_user.listings.count, "area") %>:</h5>
+	<h5><u>Summary</u>: <%= @listing.user.company %> is listed as a wholesaler in <%= pluralize(current_user.listings.count, "area") %>:</h5>
 			<% current_user.listings.each do |l| %>
 				<ul>
-					<li><%= l.city %>, <%= l.state_name %></li>
+					<li><%= link_to "#{l.city}, #{l.state_name}", listing_path(l) %></li>
 				</ul>
 			<% end %>
 
 
 	
 	<h5 class="align-center">
-		TODO: button -><%= link_to listings_path(@listing), 'View #{@listing.state_name} Listings', class: 'btn btn-info btn-md' %>
 
 		<%= link_to listings_path, class: 'btn btn-info btn-md' do %>
 			<span class="glyphicon glyphicon-list" aria-hidden="true"></span> View All Listings
-		<% end %>
+		<% end %>TODO make this a view all State listings
 	</h5>
 
 
