@@ -1,25 +1,24 @@
 
-<h3 class="align-center blue">Your Active Listings</h3>
-
-<h5 class="align-right blue margin"><%= link_to 'Create New Listing', new_listing_choice_path, class: 'btn btn-info' %></h5>
+<h3 class="align-center">Your Listings:</h3>
 <br>
+<h5 class="align-right margin"><%= link_to 'Create New Listing', new_listing_choice_path, class: 'btn btn-primary btn-sm' %></h5>
 
-<h4 class="blue">Wholesaler Listings:</h4>
-<h5><%= current_user.company %>, you are listed as a wholesaler in <%= pluralize(current_user.listings.count, "area") %>:</h5>
+
+<h4>Your Wholesaler Listings:</h4>
+<h5 class="indent"><%= current_user.company %>, you are listed as a wholesaler in <%= pluralize(current_user.listings.count, "area") %>:</h5>
 			<% current_user.listings.each do |l| %>
-				<ul>
-					<li><%= l.city %>, <%= l.state_name %></li>
+				<ul><li><%= link_to "#{l.city}, #{l.state_name}", listing_path(l) %></li>
 				</ul>
 			<% end %>
 
 <br>
 
-<h4 class="blue">Wholesaler Educational Rescource Listings:</h4>
-<p>List and link to them</p>
-
-<h5 class="indent">TODO: Total Active Educational Resource listings = _ of _ available </h5>
-
-<p>TODO: give options for people to make listings inactive, and then they can switch which ones are being listed, if they have more saved than they are paying for</p>
+<h4> Your account status:</h4>
+<h5 class="indent">TODO active or inactive </h5>
+<br>
+<h5 class="align-right indent btn btn-info btn-sm">TODO Edit My Subscription</h5>
+<h5 class="align-right margin"><%= link_to 'Create New Listing', new_listing_choice_path, class: 'btn btn-primary btn-sm' %></h5>
+<br>
 
 
 
