@@ -421,6 +421,7 @@ nav {
 	z-index:10;
 	border-bottom: 1px solid $border-color;
 	color: $gray;
+	box-shadow: 0 0 1em #eee;
 }
 
 nav :hover {
