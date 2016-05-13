@@ -16,15 +16,15 @@
         
         <div class="col-sm-6 align-center">
           <div class="field">
-            <h4 class="blue"><%= f.label :City %></h4>
+            <h4><%= f.label :City %></h4>
             <%= f.text_field :city, class: 'form-control', placeholder: 'Wholesaling City' %>
           </div><!-- end field -->
         </div><!-- end col -->
 
         <div class="col-sm-6 align-center">
           <div class="field">
-            <h4 class="blue"><%= f.label :State %></h4>
-            <h4 class="drop-down"><%= f.select :state_name, Listing::STATES, prompt: "Choose a US State", class: 'drop-down' %></h4>
+            <h4><%= f.label :State %></h4>
+            <h4 class="drop-down"><%= f.select :state_name, Listing::STATES, {style: "min-width: 100px;"}, prompt: "Choose a US State", class: 'drop-down' %></h4>
           </div><!-- end field -->
         </div><!-- end col -->
 
@@ -32,17 +32,32 @@
     <hr>
     <h5 class="align-center"><i>~ The following data is pulled from your company profile and will be listed within your Wholesaler Listing automatically.  To change it, change your <%= link_to 'profile settings', my_profile_path %>. ~</i></h5><br>
 
-    <div class="align-center">
-      <h4><strong class="blue">Company email:</strong> <%= current_user.email %></h4>
-      <h4><strong class="blue">Phone number:</strong> <%= current_user.phone %></h4>
-      <h4><strong class="blue">Wholesaler website:</strong> <%= current_user.url %></h4>
-      <h4><strong class="blue">Wholesaler's specialties:</strong> <%= current_user.specialties %></h4>
-      <h4><strong class="blue">Buyers should also know:</strong> <%= current_user.details %></h4>
-    </div>
+    <table>
+      <tr>
+        <td><strong>Company email:</strong></td> 
+        <td><%= current_user.email %></td>
+      </tr>
+      <tr>
+        <td><strong>Phone number:</strong></td> 
+        <td><%= current_user.phone %></td>
+      </tr>
+      <tr>
+        <td><strong>Wholesaler website:</strong></td> 
+        <td><%= current_user.url %></td>
+      </tr>
+      <tr>
+        <td><strong>Wholesaler's specialties:</strong></td>
+        <td><%= current_user.specialties %></td>
+      </tr>
+      <tr>
+        <td><strong>Buyers should also know:</strong></td> 
+        <td><%= current_user.details %></td>
+      </tr>
+    </table>
 
     <br>
     <div class="align-center-important">
-      <%= f.submit class: 'btn btn-info btn-lg'%>
+      <%= f.submit class: 'btn btn-primary btn-lg'%>
     </div>
 
 <% end %>
