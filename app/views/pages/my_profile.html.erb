@@ -1,18 +1,37 @@
 <div class="well">
 
-	<h3 class="align-center blue double-space">Your User Profile</h3>
+	<h3 class="align-center double-space">Your User Profile</h3><br>
 
+<table>
+	<tr>
+		<td><strong>Wholesaling Company:</strong></td>
+		<td><%= current_user.company %></td>
+	</tr>
+	<tr>
+		<td><strong>Company email:</strong></td>
+		<td><%= current_user.email %></td>
+	</tr>
+	<tr>
+		<td><strong>Phone number:</strong></td>
+		<td><%= current_user.phone %></td>
+	</tr>
+	<tr>
+		<td><strong>Wholesaler website:</strong></td>
+		<td><%= current_user.url %></td>
+	</tr>
+	<tr>
+		<td><strong>Wholesaler's specialties:</strong></td>
+		<td><%= current_user.specialties %></td>
+	</tr>
+	<tr>
+		<td><strong>Buyers should also know:</strong></td>
+		<td><%= current_user.details %></td>
+	</tr>
 
-	<h4 class="double-space"><strong class="blue">Wholesaling Company:</strong> <%= current_user.company %></h4>
-	<h4 class="double-space"><strong class="blue">Company email:</strong> <%= current_user.email %></h4>
-	<h4 class="double-space"><strong class="blue">Phone number:</strong> <%= current_user.phone %></h4>
-	<h4 class="double-space"><strong class="blue">Wholesaler website:</strong> <%= current_user.url %></h4>
-	<h4 class="double-space"><strong class="blue">Wholesaler's specialties:</strong> <%= current_user.specialties %></h4>
-	<h4 class="double-space"><strong class="blue">Buyers should also know:</strong> <%= current_user.details %></h4>
-
-	<br>
+</table>
+<br><br>
 	
-	<p class="align-center"><i>Your profile information is posted along with each of your listings, as relevant.</i></p>
+	<p class="align-center"><i>Your profile information is posted along with each of your listings.</i></p>
 
 
 	

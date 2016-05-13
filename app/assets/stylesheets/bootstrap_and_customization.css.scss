@@ -282,6 +282,15 @@ h6 {
 	font-size: 14px;
 }
 
+.pages_my_profile table {
+	margin: 0 auto;
+}
+
+.pages_my_profile td {
+	padding: 5px 15px;
+	width: 50%;
+}
+
 .pages-links {
 	display: inline-block;
 	margin-top: 5px;
@@ -395,23 +404,6 @@ h6 {
 
 /* Begin navbar glyph hover descriptions */
 
-#nav-options-dropped ul li:hover ul li {
-	display: block;
-}
-
-#nav-options-dropped ul ul li {
-	display: none;
-	position: absolute; 
-	top: 100%; 
-	right: 20%;
-	list-style: none;
-	white-space: nowrap;
-	text-align: left;
-	color: #777;
-	margin: 4px;
-	padding: 9px;
-	background: #FFF;
-}
 
 // Nav area in general
 
@@ -606,6 +598,7 @@ nav :hover {
 	top: 60px;
 	right: 0;
 	padding: 10px;
+	display: none;
 }
 
 #nav-options-dropped ul li {
