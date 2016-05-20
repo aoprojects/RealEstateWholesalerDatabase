@@ -40,6 +40,8 @@ gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 # for seeing error messages better
 gem 'mail_form' 
 
+gem 'lightbox-bootstrap-rails'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
