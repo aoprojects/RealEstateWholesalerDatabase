@@ -13,187 +13,189 @@
 
 <% end %>
 
+<%= render 'layouts/modal_layout' %>
+
 <br>
 
 <!-- end experimental area for displaying only certain listings of certain states-->
         
-        <div class="wholesaler-areas">
+<div class="wholesaler-areas">
 
-                    <h4><strong>Find wholesalers with properties in your area, simply by searching below...</strong></h4>
-            
-            <br>
-        
+            <h4><strong>Find wholesalers with properties in your area, simply by searching below...</strong></h4>
+    
+    <br>
+
 <!-- experimental area begin -->
-            <div class="row">
-                <div class="offset-sm-3 col-sm-6 align-center">
-                    <div class="input-group">
-                      <input type="text" class="form-control" placeholder="Wholesaler details...">
-                      <span class="input-group-btn">
-                        <button class="btn btn-primary btn-sm" type="button">Search</button>
-                      </span>
-                    </div><!-- /input-group -->
-                  </div><!-- /.col-lg-6 -->
-            </div><!-- end .row for search bar -->
+    <div class="row">
+        <div class="col-sm-3-offset col-sm-6">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Wholesaler details...">
+              <span class="input-group-btn">
+                <button class="btn btn-primary btn-sm" type="button">Search</button>
+              </span>
+            </div><!-- /input-group -->
+          </div><!-- /.col-lg-6 -->
+    </div><!-- end .row for search bar -->
 <!-- experimental area end --><br>
-            <div class="row">
-                <h4 class="align-center"><strong>Or view all posted wholesalers of any US State...</strong></h4><br>
-            </div><!-- end .row -->
+    <div class="row">
+        <h4 class="align-center"><strong>Or view all posted wholesalers of any US State...</strong></h4><br>
+    </div><!-- end .row -->
 
-            <div class="row">
-            
-                <div class="col-md-2 col-sm-4 col-xs-6 align-center">
-                    <ul class="location-lists">
-                        <li><%= link_to "Alabama", listings_path %></li>
-                        <li><a>Alaska</a></li>
-                        <li><a>Arizona</a></li>
-                        <li><a>Arkansas</a></li>
-                        <li><%= link_to 'California', listings_path %></li>
-                        <li><a>Colorado</a></li>
-                        <li><a>Connecticut</a></li>
-                        <li><a>Delaware</a></li>
-                        <li><a>Florida</a></li>
-                    </ul>
-                
-                 </div><!-- end col 1 of 6 -->
-
-                 <div class="col-md-2 col-sm-4 col-xs-6 align-center">
-                    <ul class="location-lists">
-                        <li><a>Georgia</a></li>
-                        <li><a>Hawaii</a></li>
-                        <li><a>Idaho</a></li>
-                        <li><a>Illinois</a></li>
-                        <li><a>Indiana</a></li>
-                        <li><a>Iowa</a></li>
-                        <li><a>Kansas</a></li>
-                        <li><a>Kentucky</a></li>
-                        <li><a>Louisiana</a></li>
-                        
-                    </ul>
-                </div>  
-
-                <div class="col-md-2 col-sm-4 col-xs-6 align-center">
-                     <ul class="location-lists">
-                        <li><a>Maine</a></li>
-                        <li><a>Maryland</a></li>
-                        <li><a>Massachusetts</a></li>
-                        <li><a>Michigan</a></li>
-                        <li><a>Minnesota</a></li>
-                        <li><a>Mississippi </a></li>
-                        <li><a>Missouri</a></li>
-                        <li><a>Montana</a></li>
-                        <li><a>Nebraska</a></li>
-                        
-                    </ul>
-                </div>
-
-                <div class="col-md-2 col-sm-4 col-xs-6 align-center"> 
-                     <ul class="location-lists">
-                        <li><a>Nevada</a></li>
-                        <li><a>New Hampshire</a></li>
-                        <li><a>New Jersey</a></li>
-                        <li><a>New Mexico</a></li>
-                        <li><a>New York</a></li>
-                        <li><a>North Carolina</a></li>
-                        <li><a>North Dakota</a></li>
-                        <li><a>Ohio</a></li>
-                        <li><a>Oklahoma</a></li>
-                        
-                    </ul>
-                 </div>
-
-                  <div class="col-md-2 col-sm-4 col-xs-6 align-center"> 
-                     <ul class="location-lists">
-                        <li><a>Oregon</a></li>
-                        <li><a>Pennsylvania</a></li>
-                        <li><a>Rhode Island</a></li>
-                        <li><a>South Carolina</a></li>
-                        <li><a>South Dakota</a></li>
-                        <li><a>Tennessee</a></li>
-                        <li><a>Texas</a></li>
-                        <li><a>Utah</a></li>
-                        <li><a>Vermont</a></li>
-                        
-                    </ul>
-                 </div>
-
-                 <div class="col-md-2 col-sm-4 col-xs-6 align-center"> 
-                     <ul class="location-lists">
-                        <li><a>Virginia</a></li>
-                        <li><a>Washington</a></li>
-                        <li><a>West Virginia</a></li>
-                        <li><a>Wisconsin</a></li>
-                        <li><a>Wyoming</a></li>
-                        <br>
-                        <li><strong><%= link_to 'All US States', listings_path %></strong></li><br>
-                        <li><%= link_to new_listing_path, class: 'btn btn-primary btn-md align-right' do %>
-                            <span class="glyphicon glyphicon-pencil align-right" aria-hidden="true"></span>
-                            New
-                            <% end %></li>
-                    </ul>
-                 </div>
-
-                
-
-            </div><!--end row of states -->
-
-            <h6>If you would like us to expand to Canada, please <%= link_to "contact us", about_path %> to let us know.</h6>
-        </div><!-- end wholesaler areas -->
-
-        <div class="explanation">
-            <h4><strong>What is Real Estate Wholesaling?</strong></h4>
-            <br>
-            <p>Real estate wholesaling is the most popular and widely-taught method of breaking into the real estate investing scene.   With little or no money down, you follow these steps: <br>
-            <div class="internal-list">
-                 1. Put a property under contract for a cash purchase, usually a property that needs a lot of work or where the seller is in distress. (make sure this contract is assignable)<br>
-                 2. You  assign the contract to a cash buyer who wants to flip the property, who will pay slightly more for it than what you have it under contract for <br>
-                 3. All three parties directly involved in the transaction set up a closing date, and at closing you walk away with a check for the difference between the initial contract and the marked up price that the end user pays. 
-                    <br><br>
-                 <em>The wholesaler walks away with what usually resembles a profit (aka "finder's fee"), of about 10% of the initial contract price.</em>
-            </div><!--end .internal-list -->
-                 <br>
-                Investors like buying from wholesalers because they are experts in their market, they have a lot of properties to choose from, and the job of finding the deal is done for them.  All the investor has to do is flip the house for a profit.  <br>
-                Find wholesalers in your market by selecting your preferred location above.
-                </p><br>
-
-
-                <h4><strong>Why did we make this site?</strong></h4>
-                
-                <p><b>When we were selling:</b></p>
-
-                <ul>
-                    <li>We were tired of printing out property fliers, driving to REIAs, asking for business cards, sending massive emails with the details of that same investment property because the "buyer" lost the paper.</li>
-                    <li>We were tired of posting on craigslist once a day with different headlines, hoping to catch the right buyer's eye.</li>
-                    <li>We were tired of asking agents if they have investors in the area who are looking for our type of deal, just in case our private buyers' list didn't want to buy that day.</li>
-                </ul>
-
-                <p><b>When we were buying:</b></p>
-
-                <ul>
-                    <li>We were tired of running into newbies who didn't have properties.</li> 
-                    <li>We were tired of getting mailed properties that didn't fit our buying criteria.</li>
-                    <li>We were tired of going to networking events, hoping to find someone who actually had a property in our market, that was still available, that fit our criteria.</li>
-                    <li>We were tired of going to REIAs and explaining our buying criteria.</li>
-                </ul>
-                <br>
-
-                <span class="align-center">
-                    <p><b>Networking to buy and sell properties shouldn't be annoying.</p>
-                    <p>Let's do this right.</b></p>
-
-                    <p><%= link_to "List Yourself", new_listing_path, class: "btn btn-primary btn-md" %> 
-                    &nbsp;or&nbsp; 
-                    <%= link_to "View Wholesalers", root_path, class: "btn btn-primary btn-md" %></p>
-
-                    <h3 class="align-center">Happy investing!</h3>
-                </span>
-
-            
-            <br>
-
-        </div><!--close .explanation -->
+    <div class="row">
+    
+        <div class="col-md-2 col-sm-4 col-xs-6 align-center">
+            <ul class="location-lists">
+                <li><%= link_to "Alabama", listings_path %></li>
+                <li><a>Alaska</a></li>
+                <li><a>Arizona</a></li>
+                <li><a>Arkansas</a></li>
+                <li><%= link_to 'California', listings_path %></li>
+                <li><a>Colorado</a></li>
+                <li><a>Connecticut</a></li>
+                <li><a>Delaware</a></li>
+                <li><a>Florida</a></li>
+            </ul>
         
-        <div class="clear"></div>
-     
+         </div><!-- end col 1 of 6 -->
+
+         <div class="col-md-2 col-sm-4 col-xs-6 align-center">
+            <ul class="location-lists">
+                <li><a>Georgia</a></li>
+                <li><a>Hawaii</a></li>
+                <li><a>Idaho</a></li>
+                <li><a>Illinois</a></li>
+                <li><a>Indiana</a></li>
+                <li><a>Iowa</a></li>
+                <li><a>Kansas</a></li>
+                <li><a>Kentucky</a></li>
+                <li><a>Louisiana</a></li>
+                
+            </ul>
+        </div>  
+
+        <div class="col-md-2 col-sm-4 col-xs-6 align-center">
+             <ul class="location-lists">
+                <li><a>Maine</a></li>
+                <li><a>Maryland</a></li>
+                <li><a>Massachusetts</a></li>
+                <li><a>Michigan</a></li>
+                <li><a>Minnesota</a></li>
+                <li><a>Mississippi </a></li>
+                <li><a>Missouri</a></li>
+                <li><a>Montana</a></li>
+                <li><a>Nebraska</a></li>
+                
+            </ul>
+        </div>
+
+        <div class="col-md-2 col-sm-4 col-xs-6 align-center"> 
+             <ul class="location-lists">
+                <li><a>Nevada</a></li>
+                <li><a>New Hampshire</a></li>
+                <li><a>New Jersey</a></li>
+                <li><a>New Mexico</a></li>
+                <li><a>New York</a></li>
+                <li><a>North Carolina</a></li>
+                <li><a>North Dakota</a></li>
+                <li><a>Ohio</a></li>
+                <li><a>Oklahoma</a></li>
+                
+            </ul>
+         </div>
+
+          <div class="col-md-2 col-sm-4 col-xs-6 align-center"> 
+             <ul class="location-lists">
+                <li><a>Oregon</a></li>
+                <li><a>Pennsylvania</a></li>
+                <li><a>Rhode Island</a></li>
+                <li><a>South Carolina</a></li>
+                <li><a>South Dakota</a></li>
+                <li><a>Tennessee</a></li>
+                <li><a>Texas</a></li>
+                <li><a>Utah</a></li>
+                <li><a>Vermont</a></li>
+                
+            </ul>
+         </div>
+
+         <div class="col-md-2 col-sm-4 col-xs-6 align-center"> 
+             <ul class="location-lists">
+                <li><a>Virginia</a></li>
+                <li><a>Washington</a></li>
+                <li><a>West Virginia</a></li>
+                <li><a>Wisconsin</a></li>
+                <li><a>Wyoming</a></li>
+                <br>
+                <li><strong><%= link_to 'All US States', listings_path %></strong></li><br>
+                <li><%= link_to new_listing_path, class: 'btn btn-primary btn-md align-right' do %>
+                    <span class="glyphicon glyphicon-pencil align-right" aria-hidden="true"></span>
+                    New
+                    <% end %></li>
+            </ul>
+         </div>
+
+        
+
+    </div><!--end row of states -->
+
+    <h6>If you would like us to expand to Canada, please <%= link_to "contact us", about_path %> to let us know.</h6>
+</div><!-- end wholesaler areas -->
+
+<div class="explanation">
+    <h4><strong>What is Real Estate Wholesaling?</strong></h4>
+    <br>
+    <p>Real estate wholesaling is the most popular and widely-taught method of breaking into the real estate investing scene.   With little or no money down, you follow these steps: <br>
+    <div class="internal-list">
+         1. Put a property under contract for a cash purchase, usually a property that needs a lot of work or where the seller is in distress. (make sure this contract is assignable)<br>
+         2. You  assign the contract to a cash buyer who wants to flip the property, who will pay slightly more for it than what you have it under contract for <br>
+         3. All three parties directly involved in the transaction set up a closing date, and at closing you walk away with a check for the difference between the initial contract and the marked up price that the end user pays. 
+            <br><br>
+         <em>The wholesaler walks away with what usually resembles a profit (aka "finder's fee"), of about 10% of the initial contract price.</em>
+    </div><!--end .internal-list -->
+         <br>
+        Investors like buying from wholesalers because they are experts in their market, they have a lot of properties to choose from, and the job of finding the deal is done for them.  All the investor has to do is flip the house for a profit.  <br>
+        Find wholesalers in your market by selecting your preferred location above.
+        </p><br>
+
+
+        <h4><strong>Why did we make this site?</strong></h4>
+        
+        <p><b>When we were selling:</b></p>
+
+        <ul>
+            <li>We were tired of printing out property fliers, driving to REIAs, asking for business cards, sending massive emails with the details of that same investment property because the "buyer" lost the paper.</li>
+            <li>We were tired of posting on craigslist once a day with different headlines, hoping to catch the right buyer's eye.</li>
+            <li>We were tired of asking agents if they have investors in the area who are looking for our type of deal, just in case our private buyers' list didn't want to buy that day.</li>
+        </ul>
+
+        <p><b>When we were buying:</b></p>
+
+        <ul>
+            <li>We were tired of running into newbies who didn't have properties.</li> 
+            <li>We were tired of getting mailed properties that didn't fit our buying criteria.</li>
+            <li>We were tired of going to networking events, hoping to find someone who actually had a property in our market, that was still available, that fit our criteria.</li>
+            <li>We were tired of going to REIAs and explaining our buying criteria.</li>
+        </ul>
+        <br>
+
+        <span class="align-center">
+            <p><b>Networking to buy and sell properties shouldn't be annoying.</p>
+            <p>Let's do this right.</b></p>
+
+            <p><%= link_to "List Yourself", new_listing_path, class: "btn btn-primary btn-md" %> 
+            &nbsp;or&nbsp; 
+            <%= link_to "View Wholesalers", root_path, class: "btn btn-primary btn-md" %></p>
+
+            <h3 class="align-center">Happy investing!</h3>
+        </span>
+
+    
+    <br>
+
+</div><!--close .explanation -->
+
+<div class="clear"></div>
+
 
 </body>
 </html>
