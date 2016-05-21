@@ -25,6 +25,9 @@ $border-color: #DEDEDE;
 $xswidth: 472px;
 $hover-color: #eee;
 $background-blue: #337AB7;
+$panel-default-border: #337AB7;
+$panel-inner-border: #337AB7;
+
 
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
@@ -214,6 +217,10 @@ h6 {
 .jumbotron {
 	margin-top: -3em;
 	background: none;
+}
+
+.larger {
+	font-size: 1.1em;
 }
 
 .list-yourself {
@@ -434,6 +441,7 @@ h6 {
 	border-radius: 15px;
 	padding: 12px;
 }
+
 
 // BEGIN STYLING FOR SPECIAL AREAS
 
