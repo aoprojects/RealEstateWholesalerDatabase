@@ -50,6 +50,14 @@ $btn-primary-color: white;
 		align: center;
 	}
 
+	.listings_index table {
+		border: 1px solid $blue;
+	}
+
+	.listings_index table tr {
+		border: 1px solid $blue;
+	}
+
 	table td {
 		display: block;
 		width: 100%;
@@ -58,11 +66,10 @@ $btn-primary-color: white;
 
 	table td:first-child {
 		font-weight: bold;
-		border-top: 1px solid $blue;
 	}
 
 	table td:last-child {
-		border-bottom: 1px solid $blue;
+	
 	}
 
 

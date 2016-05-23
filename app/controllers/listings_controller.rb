@@ -5,7 +5,7 @@ class ListingsController < ApplicationController
 
 
   def index
-      @listings = Listing.all.order(:city)
+      @listings = Listing.all.order(:city).paginate(:page => params[:page], :per_page => 25)
   end
 
  
