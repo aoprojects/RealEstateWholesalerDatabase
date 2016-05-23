@@ -8,68 +8,15 @@
     <%= devise_error_messages! %>
 
   <div class="row">
-            <div class="field">
-              <div class="col-sm-3">
-                <h4 class="no-wrap"><%= f.label :Company_name %></h4>
-              </div>
-              <div class="col-md-9">
-                <%= f.text_field :company, autofocus: true, class: 'form-control', placeholder: "My Wholesaling Company LLC" %>
-              </div>              
-            </div>
-  </div><!-- end row -->          
-  <div class="row">
-            <div class="field">
-              <div class="col-sm-3">
-                <h4 class="no-wrap"><%= f.label :Company_email %></h4>
-              </div>
-              <div class="col-md-9">          
-                <%= f.email_field :email, autofocus: true, class: 'form-control', placeholder: 'Me@MyAwesomeCompany.com' %>
-              </div>              
-            </div>
-  </div><!-- end row -->          
-  <div class="row">
-             <div class="field">
-              <div class="col-sm-3">
-                <h4 class="no-wrap"><%= f.label :Phone_number %></h4>
-              </div>
-              <div class="col-md-9">
-                <%= f.text_field :phone, class: 'form-control', placeholder: "###.###.####" %>
-              </div>              
-            </div>
-  </div><!-- end row -->          
-  <div class="row">
-            <div class="field">
-              <div class="col-sm-3">
-                <h4 class="no-wrap"><%= f.label :Wholesaler_website %></h4>
-              </div>
-              <div class="col-md-9">              
-                <%= f.text_field :url, class: 'form-control', placeholder: "MyAwesomeCompany.com" %>
-              </div>              
-            </div>
-  </div><!-- end row -->          
-   <div class="row">       
-            <div class="field">
-              <div class="col-sm-3">
-                  <h4 class="no-wrap"><%= f.label :Please_list_your_specialties %></h4>
-              </div>
-              <div class="col-md-9">                
-                  <%= f.text_field :specialties, placeholder: 'multifamily / single family / land...', class: 'form-control' %>
-              </div>
-            </div>
-  </div><!-- end row -->
-  <div class="row">
-            <div class="field">
-              <div class="col-sm-3">
-                  <h4 class="no-wrap"><%= f.label :Buyers_should_also_know %></h4>
-              </div>
-              <div class="col-md-9">                
-                  <%= f.text_field :details, placeholder: 'I am best contacted by text. / You can view current properties on my website.', class: 'form-control', cols: "5", rows: "5"  %>
-              </div>
-            </div><!-- end field div -->
-  </div><!-- end row -->          
-      <hr>
-
-
+      <div class="field">
+        <div class="col-sm-3">
+          <h4 class="no-wrap"><%= f.label :Email_address %></h4>
+        </div>
+        <div class="col-md-9">          
+          <%= f.email_field :email, autofocus: true, class: 'form-control', placeholder: 'Me@MyAwesomeCompany.com' %>
+        </div>              
+      </div>
+  </div><!-- end row -->  
   <div class="row">
       <div class="field">
         <div class="col-sm-3">
@@ -89,13 +36,70 @@
   <div class="row">      
         <div class="field">
            <div class="col-sm-3">
-              <h4><%= f.label :Password_confirmation %></h4>
+              <h4><%= f.label :Retype_password %></h4>
             </div><!-- end col div -->
             <div class="col-sm-9">
               <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control', placeholder: 'same as above' %>
             </div><!-- end col div -->
         </div><!-- end field div -->
   </div><!-- end div row -->    
+  <hr>
+
+  <h4 class="align-center">Additional Required Information:</h4>
+  <div class="row">
+            <div class="field">
+              <div class="col-sm-3">
+                <h4 class="no-wrap"><%= f.label :Company_name %></h4>
+              </div>
+              <div class="col-md-9">
+                <%= f.text_field :company, autofocus: true, class: 'form-control', placeholder: "My Wholesaling Company LLC" %>
+              </div>              
+            </div>
+  </div><!-- end row -->                  
+  <div class="row">
+             <div class="field">
+              <div class="col-sm-3">
+                <h4 class="no-wrap"><%= f.label :Phone_number %></h4>
+              </div>
+              <div class="col-md-9">
+                <%= f.text_field :phone, class: 'form-control', placeholder: "###.###.####" %>
+              </div>              
+            </div>
+  </div><!-- end row -->          
+  <div class="row">
+            <div class="field">
+              <div class="col-sm-3">
+                <h4 class="no-wrap"><%= f.label :Wholesaler_website %></h4>
+              </div>
+              <div class="col-md-9">              
+                http://&nbsp;<%= f.text_field :url, class: 'form-control', placeholder: "MyAwesomeCompany.com" %>
+              </div>              
+            </div>
+  </div><!-- end row -->          
+   <div class="row">       
+            <div class="field">
+              <div class="col-sm-3">
+                  <h4 class="no-wrap"><%= f.label :Please_list_your_specialties %></h4>
+              </div>
+
+              <div class="col-md-9">
+                <em>(Max: 150 characters)</em>                
+                  <%= f.text_field :specialties, placeholder: 'multifamily / single family / land...', class: 'form-control' %> 
+              </div>
+            </div>
+  </div><!-- end row -->
+  <div class="row">
+            <div class="field">
+              <div class="col-sm-3">
+                  <h4 class="no-wrap"><%= f.label :Buyers_should_also_know %></h4>
+              </div>
+              <div class="col-md-9">
+                <em>(Max: 500 characters)</em>                
+                  <%= f.text_field :details, placeholder: 'I am best contacted by text. / You can view current properties on my website.', class: 'form-control', cols: "5", rows: "5"  %>
+              </div>
+            </div><!-- end field div -->
+  </div><!-- end row -->          
+      <hr>
 
         <br>
         <div class="actions align-center">

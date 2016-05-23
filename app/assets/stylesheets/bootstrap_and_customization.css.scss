@@ -27,6 +27,7 @@ $hover-color: #eee;
 $background-blue: #337AB7;
 $panel-default-border: #337AB7;
 $panel-inner-border: #337AB7;
+$btn-primary-color: white;
 
 
 @import 'bootstrap-sprockets';
@@ -37,6 +38,21 @@ $panel-inner-border: #337AB7;
 
 
 // test area
+
+@media(max-width:767px){
+
+table .xs-label {
+	display: block;
+	width: 50%;
+}
+
+table td {
+	display: block;
+	width: 50%;
+	align: left;
+}
+
+}
 
 body {
 
@@ -434,6 +450,10 @@ h6 {
 
 .well {
 
+}
+
+.white {
+	color: white;
 }
 
 .wholesaler-areas {

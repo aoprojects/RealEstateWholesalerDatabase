@@ -9,4 +9,11 @@ class User < ActiveRecord::Base
 
   validates :email, presence: true
   validates :company, presence: true
+  validates :details, :length => { :maximum => 500 }
+  validates :specialties, :length => { :maximum => 150 }
+  validates :terms_of_service, :acceptance => true
+
+  def company=(val)
+    write_attribute(:company, val.titleize)
+  end
 end

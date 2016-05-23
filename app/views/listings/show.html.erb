@@ -1,5 +1,4 @@
 
-
 <p id="notice"><%= notice %></p>
 
 <div id="wholesaler-details" class="panel panel-default">
@@ -56,7 +55,13 @@
 
 </div><!-- end .panel -->
 	
-	<section>
-		TODO paginate "Previous" | All _state_ | "Next"
-	</section>
+<section class="pagination">
+	<p class="align-center">TODO paginate "Previous" | All _state_ | "Next"</p>
+</section>
 
+
+<% if user_signed_in? %>
+	<p class="align-right"><%= link_to 'Create New Listing', new_listing_path, class: "btn btn-info btn-sm" %></p>
+<% end %>
+
+<div class="clearfix"></div>
