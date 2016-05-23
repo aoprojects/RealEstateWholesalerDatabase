@@ -24,9 +24,9 @@
       <% @listings.each do |listing| %>
         <%= link_to listing, class: 'no-decoration' do %>
             <tr>
-              <td>Wholesaler: <%= listing.user.company %></td>
-              <td>Location: <%= listing.city %>, <%= listing.state_name %></td>
-              <td>Specialties: <%= listing.user.specialties %></td>
+              <td><span class="hidden-sm hidden-md hidden-lg inline">Wholesaler: </span><%= listing.user.company %></td>
+              <td><span class="hidden-sm hidden-md hidden-lg inline">Location: </span><%= listing.city %>, <%= listing.state_name %></td>
+              <td><span class="hidden-sm hidden-md hidden-lg inline">Specialties: </span><%= listing.user.specialties %></td>
               <td>
                 <%= link_to "View", listing_path(listing) %>
                 <% if user_signed_in? && listing.user == current_user %>
@@ -45,12 +45,10 @@
           <% end %> <!-- link to each listing -->
         <% end %><!-- end for ruby block of index display each listing -->
         </tbody>
-        <tfoot class="align-center">
-          <tr>
-              <td colspan: "3">TODO: paginate<td>
-          </tr>
-        </tfoot>
     </table>
+    <div class="align-center">  
+      <p>TODO: paginate</p>
+    </div>
     <br>
 
    
