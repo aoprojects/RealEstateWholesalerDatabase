@@ -34,23 +34,39 @@ $btn-primary-color: white;
 @import 'bootstrap';
 @import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css");
 
-// test again
+// test area below
 
 
-// test area
+// test area end
+
+@media(min-width:768px){
+	.xs-label {
+		display: hidden;
+	}
+}
 
 @media(max-width:767px){
 
-table .xs-label {
-	display: block;
-	width: 50%;
-}
+	table {
+		width: 100%;
+		align: center;
+	}
 
-table td {
-	display: block;
-	width: 50%;
-	align: left;
-}
+	table td {
+		display: block;
+		width: 100%;
+		text-align: center;
+	}
+
+	table td:first-child {
+		font-weight: bold;
+		border-top: 1px solid $blue;
+	}
+
+	table td:last-child {
+		border-bottom: 1px solid $blue;
+	}
+
 
 }
 
