@@ -16,14 +16,14 @@
         
         <div class="col-sm-6 align-center">
           <div class="field">
-            <h4><%= f.label :City %></h4>
+            <h4 class="blue"><%= f.label :City %></h4>
             <%= f.text_field :city, class: 'form-control', placeholder: 'Wholesaling City' %>
           </div><!-- end field -->
         </div><!-- end col -->
 
         <div class="col-sm-6 align-center">
           <div class="field">
-            <h4><%= f.label :State %></h4>
+            <h4 class="blue"><%= f.label :State %></h4>
             <h4 class="drop-down"><%= f.select :state_name, Listing::STATES, {style: "min-width: 100px;"}, prompt: "Choose a US State", class: 'drop-down' %></h4>
           </div><!-- end field -->
         </div><!-- end col -->
