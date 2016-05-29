@@ -47,6 +47,13 @@
             <ul class="location-lists">
                 <li><%= link_to "Alabama", listings_path %></li>
                 <li><a>Alaska</a></li>
+                
+                <% STATES.each do |x| %>
+                <li>
+                    <%= link_to x, listings_path(state_name: x) %>
+                </li>
+                <% end %>
+                
                 <li><a>Arizona</a></li>
                 <li><a>Arkansas</a></li>
                 <li><%= link_to 'California', listings_path %></li>
