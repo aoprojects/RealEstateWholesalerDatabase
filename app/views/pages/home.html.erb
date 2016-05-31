@@ -40,7 +40,7 @@
         <div class="col-md-2 col-sm-4 col-xs-6 align-center">
             <ul class="location-lists">
                 
-                <% STATES.each do |x| %>
+                <% STATES[0..8].each do |x| %>
                     <li><%= link_to x, listings_path(state_name: x) %></li>
                 <% end %><!-- end loop through states of STATES array -->
         
@@ -50,71 +50,50 @@
 
          <div class="col-md-2 col-sm-4 col-xs-6 align-center">
             <ul class="location-lists">
-                <li><a>Georgia</a></li>
-                <li><a>Hawaii</a></li>
-                <li><a>Idaho</a></li>
-                <li><a>Illinois</a></li>
-                <li><a>Indiana</a></li>
-                <li><a>Iowa</a></li>
-                <li><a>Kansas</a></li>
-                <li><a>Kentucky</a></li>
-                <li><a>Louisianaaaaaaa</a></li>
+      
+                <% STATES[9..17].each do |x| %>
+                    <li><%= link_to x, listings_path(state_name: x) %></li>
+                <% end %><!-- end loop through states of STATES array -->
                 
             </ul>
         </div>  
 
         <div class="col-md-2 col-sm-4 col-xs-6 align-center">
              <ul class="location-lists">
-                <li><a>Maine</a></li>
-                <li><a>Maryland</a></li>
-                <li><a>Massachusetts</a></li>
-                <li><a>Michigan</a></li>
-                <li><a>Minnesota</a></li>
-                <li><a>Mississippi </a></li>
-                <li><a>Missouri</a></li>
-                <li><a>Montana</a></li>
-                <li><a>Nebraska</a></li>
+
+                <% STATES[18..26].each do |x| %>
+                    <li><%= link_to x, listings_path(state_name: x) %></li>
+                <% end %><!-- end loop through states of STATES array -->
                 
             </ul>
         </div>
 
         <div class="col-md-2 col-sm-4 col-xs-6 align-center"> 
              <ul class="location-lists">
-                <li><a>Nevada</a></li>
-                <li><a>New Hampshire</a></li>
-                <li><a>New Jersey</a></li>
-                <li><a>New Mexico</a></li>
-                <li><a>New York</a></li>
-                <li><a>North Carolina</a></li>
-                <li><a>North Dakota</a></li>
-                <li><a>Ohio</a></li>
-                <li><a>Oklahoma</a></li>
+
+                <% STATES[27..35].each do |x| %>
+                    <li><%= link_to x, listings_path(state_name: x) %></li>
+                <% end %><!-- end loop through states of STATES array -->
                 
             </ul>
          </div>
 
           <div class="col-md-2 col-sm-4 col-xs-6 align-center"> 
              <ul class="location-lists">
-                <li><a>Oregon</a></li>
-                <li><a>Pennsylvania</a></li>
-                <li><a>Rhode Island</a></li>
-                <li><a>South Carolina</a></li>
-                <li><a>South Dakota</a></li>
-                <li><a>Tennessee</a></li>
-                <li><a>Texas</a></li>
-                <li><a>Utah</a></li>
-                <li><a>Vermont</a></li>
+
+                <% STATES[36..44].each do |x| %>
+                    <li><%= link_to x, listings_path(state_name: x) %></li>
+                <% end %><!-- end loop through states of STATES array -->
                 
             </ul>
          </div>
 
          <div class="col-md-2 col-sm-4 col-xs-6 align-center"> 
              <ul class="location-lists">
-                <li><a>Virginia</a></li>
-                <li><a>Washington</a></li>
-                <li><a>West Virginia</a></li>
-                <li><a>Wisconsin</a></li>
-                <li><a>Wyoming</a></li>
+
+                 <% STATES[45..49].each do |x| %>
+                    <li><%= link_to x, listings_path(state_name: x) %></li>
+                <% end %><!-- end loop through states of STATES array -->
                 <br>
                 <li><strong><%= link_to 'All US States', listings_path %></strong></li><br>
                 <li><%= link_to new_listing_path, class: 'btn btn-primary btn-md align-right' do %>
