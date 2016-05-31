@@ -39,22 +39,11 @@
     
         <div class="col-md-2 col-sm-4 col-xs-6 align-center">
             <ul class="location-lists">
-                <li><%= link_to "Alabama", listings_path %></li>
-                <li><a>Alaska</a></li>
                 
                 <% STATES.each do |x| %>
-                <li>
-                    <%= link_to x, listings_path(state_name: x) %>
-                </li>
-                <% end %>
-                
-                <li><a>Arizona</a></li>
-                <li><a>Arkansas</a></li>
-                <li><%= link_to 'California', listings_path %></li>
-                <li><a>Colorado</a></li>
-                <li><a>Connecticut</a></li>
-                <li><a>Delaware</a></li>
-                <li><a>Florida</a></li>
+                    <li><%= link_to x, listings_path(state_name: x) %></li>
+                <% end %><!-- end loop through states of STATES array -->
+        
             </ul>
         
          </div><!-- end col 1 of 6 -->
@@ -69,7 +58,7 @@
                 <li><a>Iowa</a></li>
                 <li><a>Kansas</a></li>
                 <li><a>Kentucky</a></li>
-                <li><a>Louisiana</a></li>
+                <li><a>Louisianaaaaaaa</a></li>
                 
             </ul>
         </div>  
