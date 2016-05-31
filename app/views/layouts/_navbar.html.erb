@@ -49,11 +49,14 @@
               </li>
           <% end %><!-- end for if user is signed in -->
 
-          <li class="border-left"><%= link_to newsletter_path, alt: 'newsletter' do %>
+          <li class="border-left">
+            <a type="button" data-toggle="modal" data-target="#modal-1">
               <span class="glyphicon glyphicon-envelope nav-glyph grow" aria-hidden="true" alt="Newsletter"></span>
-              <span class="nav-icon-label">Updates</span>
-            <% end %>
+               <span class="nav-icon-label">Newsletter</span>
+            </a>
           </li>
+
+         
 
             <li><%= link_to about_path do %>
                 <span alt="Contact Us" class="glyphicon glyphicon-earphone nav-glyph grow" aria-hidden="true"></span>
@@ -104,10 +107,11 @@
               </li>
           <% end %><!-- end for if user is signed in -->
 
-          <li><%= link_to newsletter_path, alt: 'newsletter' do %>
+          <li>
+            <a type="button" data-toggle="modal" data-target="#modal-1">
               <span class="glyphicon glyphicon-envelope nav-glyph grow" aria-hidden="true" alt="Newsletter"></span>
               <span class="nav-text">Newsletter</span>
-            <% end %>
+            </a>
           </li>
 
            <li><%= link_to about_path do %>

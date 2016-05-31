@@ -11,14 +11,10 @@ class PagesController < ApplicationController
   def my_account
   end
 
-
   def my_profile
   end
 
   def new_listing_choice
-  end
-
-  def newsletter
   end
 
   def privacy_policy

@@ -9,7 +9,6 @@ Rails.application.routes.draw do
   get "about" => "pages#about"
   get "my_account" => "pages#my_account"
   get "my_profile" => "pages#my_profile"
-  get "newsletter" => "pages#newsletter"
   get "new_listing_choice" => "pages#new_listing_choice"
   get "privacy_policy" => "pages#privacy_policy"
   get "advert_summary" => "pages#advert_summary"
