@@ -70,68 +70,66 @@
   </span>
 
   <span class="hidden-sm hidden-md hidden-lg">
-    
-	<section id="nav-options-dropped">
-        <ul>
-           <% if user_signed_in? %>
-
-              <li><%= link_to new_listing_choice_path do  %>
-                  <span alt="New Listing" class="glyphicon glyphicon-pencil nav-glyph grow" aria-hidden="true"></span><span class="nav-text"></span>
-                  <span class="nav-text">New Listing</span>
-                 
-                <% end %>
-              </li>
-
-              <li><%= link_to my_account_path do  %>
-                  <span alt="My Account" class="glyphicon glyphicon-user nav-glyph grow" aria-hidden="true"></span>
-                  <span class="nav-text">My Account</span>
-                               
-                <% end %>
-              </li>
-
-
-              <li><%= link_to destroy_user_session_path, :method => :delete do %>
-                <span alt="Sign Out" class="glyphicon glyphicon-log-out nav-glyph grpw" aria-hidden="true"></span>
-                <span class="nav-text">Sign Out</span>
-       
-                <% end %>
-              </li>
-              
-            <% else %>
-
-              <li><%= link_to new_user_session_path do %>
-                <span alt="Sign In" class="glyphicon glyphicon-log-in nav-glyph grow" aria-hidden="true"></span>
-                <span class="nav-text">Sign&nbsp;In/Up</span>
-        
-                <% end %>
-              </li>
-          <% end %><!-- end for if user is signed in -->
-
-          <li>
-            <a type="button" data-toggle="modal" data-target="#modal-1">
-              <span class="glyphicon glyphicon-envelope nav-glyph grow" aria-hidden="true" alt="Newsletter"></span>
-              <span class="nav-text">Newsletter</span>
-            </a>
-          </li>
-
-           <li><%= link_to about_path do %>
-              <span alt="Contact Us" class="glyphicon glyphicon-earphone nav-glyph grow" aria-hidden="true"></span>
-              <span class="nav-text">Contact Us</span>
-         
-              <% end %>
-            </li>
-
-
-        </ul>
-    </section><!-- end span for section for nav options -->
-    </span>
+    <section id="hamburger-menu-area" class"small-nav-only">
+      <span id="nav-hamburger">&#9776;</span><br>
+      <span id="hamburger-menu-label">Menu</span>
+    </section><!-- end #hamburger-menu-area -->
+  </span>
 
   <span class="hidden-sm hidden-md hidden-lg">
-	<section id="hamburger-menu-area" class"small-nav-only">
-	  <span id="nav-hamburger">&#9776;</span><br>
-	  <span id="hamburger-menu-label">Menu</span>
-	</section><!-- end #hamburger-menu-area -->
-  </span>
+  	<section id="nav-options-dropped">
+          <ul>
+             <% if user_signed_in? %>
+
+                <li><%= link_to new_listing_choice_path do  %>
+                    <span alt="New Listing" class="glyphicon glyphicon-pencil nav-glyph grow" aria-hidden="true"></span><span class="nav-text"></span>
+                    <span class="nav-text">New Listing</span>
+                   
+                  <% end %>
+                </li>
+
+                <li><%= link_to my_account_path do  %>
+                    <span alt="My Account" class="glyphicon glyphicon-user nav-glyph grow" aria-hidden="true"></span>
+                    <span class="nav-text">My Account</span>
+                                 
+                  <% end %>
+                </li>
+
+
+                <li><%= link_to destroy_user_session_path, :method => :delete do %>
+                  <span alt="Sign Out" class="glyphicon glyphicon-log-out nav-glyph grpw" aria-hidden="true"></span>
+                  <span class="nav-text">Sign Out</span>
+         
+                  <% end %>
+                </li>
+                
+              <% else %>
+
+                <li><%= link_to new_user_session_path do %>
+                  <span alt="Sign In" class="glyphicon glyphicon-log-in nav-glyph grow" aria-hidden="true"></span>
+                  <span class="nav-text">Sign&nbsp;In/Up</span>
+          
+                  <% end %>
+                </li>
+            <% end %><!-- end for if user is signed in -->
+
+            <li>
+              <a type="button" data-toggle="modal" data-target="#modal-1">
+                <span class="glyphicon glyphicon-envelope nav-glyph grow" aria-hidden="true" alt="Newsletter"></span>
+                <span class="nav-text">Newsletter</span>
+              </a>
+            </li>
+
+             <li><%= link_to about_path do %>
+                <span alt="Contact Us" class="glyphicon glyphicon-earphone nav-glyph grow" aria-hidden="true"></span>
+                <span class="nav-text">Contact Us</span>
+           
+                <% end %>
+              </li>
+
+          </ul>
+      </section><!-- end span for section for nav options -->
+    </span>
 
 </nav>
 <br>
