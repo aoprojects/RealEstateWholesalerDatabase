@@ -53,13 +53,12 @@
 
 </div><!-- end .panel -->
 	
-<section class="pagination">
-	<p class="align-center">TODO paginate "Previous" | All _state_ | "Next"</p>
-</section>
-
+<!-- <section class="pagination">
+	TODOlater, paginate between the show view of each listing, ordered as they are ordered on index states listing that user clicked on.
+</section> -->
 
 <% if user_signed_in? %>
-	<p class="align-right"><%= link_to 'Create New Listing', new_listing_path, class: "btn btn-info btn-sm" %></p>
+	<p class="align-center"><%= link_to 'Create New Listing', new_listing_path, class: "btn btn-default btn-md" %></p>
 <% end %>
 
-<div class="clearfix"></div>
+<div class="clearfix"></div><br>
