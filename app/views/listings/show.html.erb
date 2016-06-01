@@ -42,13 +42,13 @@
 		</table>
 	</div><!-- end .panel-body -->
 
-	<div class="panel-footer">
+	<div class="panel-footer text-center">
 		<span id="listing-footer-area">
-		<h5><u>Summary</u>: <%= @listing.user.company %> is listed as a wholesaler in <%= pluralize(@listing.user.listings.count, "area") %>:</h5>
+			<h5><u>Summary</u>: <%= @listing.user.company %> is listed as a wholesaler in <%= pluralize(@listing.user.listings.count, "area") %>:</h5>
 				<% @listing.user.listings.each do |l| %>
-					<ul>
-						<li><%= link_to "#{l.city}, #{l.state_name}", listing_path(l) %></li>
-					</ul>
+					
+						<p><%= link_to "#{l.city}, #{l.state_name}", listing_path(l) %></p>
+					
 				<% end %>
 		</span>
 	</div><!-- end .panel-footer -->
