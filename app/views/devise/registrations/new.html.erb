@@ -1,7 +1,7 @@
  
   <h2 class="align-center">New Wholesaler Sign Up</h2>
 
-  <p class="align-center"><i>Your profile info will be used to complete each Wholesaler listing location associated with this account.</i></p>
+  <p class="align-center"><i>Your profile info will be used to complete each Wholesaler listing you post.</i></p>
   <br>
 
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -21,12 +21,13 @@
       <div class="field">
         <div class="col-sm-3">
           <h4><%= f.label :Password %></h4>
+          <% if @minimum_password_length %>
+          <small>(<%= @minimum_password_length %> characters minimum)</small>
+          <% end %>
         </div><!-- end col div -->
     
         <div class="col-sm-9">
-          <% if @minimum_password_length %>
-          <em>(<%= @minimum_password_length %> characters minimum)</em>
-          <% end %><br />
+          <br />
           <%= f.password_field :password, autocomplete: "off", class: 'form-control' %>
         </div><!-- end col div -->
       </div><!-- end field div -->
@@ -39,7 +40,7 @@
               <h4><%= f.label :Retype_password %></h4>
             </div><!-- end col div -->
             <div class="col-sm-9">
-              <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control', placeholder: 'same as above' %>
+              <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control' %>
             </div><!-- end col div -->
         </div><!-- end field div -->
   </div><!-- end div row -->    
@@ -69,21 +70,20 @@
   <div class="row">
             <div class="field">
               <div class="col-sm-3">
-                <h4 class="no-wrap"><%= f.label :Wholesaler_website %></h4>
+                <h4 class="no-wrap"><%= f.label :Wholesaler_website %></h4> 
               </div>
-              <div class="col-md-9">              
-                http://&nbsp;<%= f.text_field :url, class: 'form-control', placeholder: "MyAwesomeCompany.com" %>
+              <div class="col-md-9">             
+                <%= f.text_field :url, class: 'form-control', placeholder: "MyAwesomeCompany.com" %>
               </div>              
             </div>
   </div><!-- end row -->          
    <div class="row">       
             <div class="field">
               <div class="col-sm-3">
-                  <h4 class="no-wrap"><%= f.label :Please_list_your_specialties %></h4>
+                  <h4 class="no-wrap"><%= f.label :Please_list_your_specialties %></h4> <small>(Max: 150 characters)</small> 
               </div>
 
               <div class="col-md-9">
-                <em>(Max: 150 characters)</em>                
                   <%= f.text_field :specialties, placeholder: 'multifamily / single family / land...', class: 'form-control' %> 
               </div>
             </div>
@@ -91,10 +91,9 @@
   <div class="row">
             <div class="field">
               <div class="col-sm-3">
-                  <h4 class="no-wrap"><%= f.label :Buyers_should_also_know %></h4>
+                  <h4 class="no-wrap"><%= f.label :Buyers_should_also_know %></h4><small>(Max: 500 characters)</small> 
               </div>
-              <div class="col-md-9">
-                <em>(Max: 500 characters)</em>                
+              <div class="col-md-9">               
                   <%= f.text_field :details, placeholder: 'I am best contacted by text. / You can view current properties on my website.', class: 'form-control', cols: "5", rows: "5"  %>
               </div>
             </div><!-- end field div -->
