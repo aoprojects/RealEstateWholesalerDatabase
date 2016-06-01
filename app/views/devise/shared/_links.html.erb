@@ -6,12 +6,12 @@
 
 
 	<%- if devise_mapping.registerable? && controller_name != 'registrations' %>
-	  <%= link_to "Sign up", new_registration_path(resource_name), class: "btn btn-sm btn-default shared-links" %>
+	  <%= link_to "Sign up", new_registration_path(resource_name), class: "btn btn-sm btn-primary white shared-links" %>
 	<% end -%>
 
 
 	<%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
-	  <%= link_to "Forgot your password?", new_password_path(resource_name), class: "btn btn-sm btn-default shared-links" %>
+	  <%= link_to "Forgot your password?", new_password_path(resource_name), class: "btn btn-sm btn-warning white shared-links" %>
 	<% end -%>
 
 
