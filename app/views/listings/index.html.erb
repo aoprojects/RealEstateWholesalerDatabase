@@ -23,43 +23,42 @@
   <% else %><!-- if listing size is not == 0 -->
 
       <table class="table table-responsive table-striped table-hover">
-          <caption>
-
-          </caption>
-          <thead class="hidden-xs">  
+          <thead class="not-vis-xs">  
             <tr>
               <th scope: "col">Wholesaler</th>
               <th scope: "col">Location</th>
               <th scope: "col">Specialties</th>
-              <th></th>
+              <th scope: "col"></th>
             </tr>
           </thead>
           <tbody>
 
-          <% @listings.each do |listing| %>
+            <% @listings.each do |listing| %>
 
-            <%= link_to listing, class: 'no-decoration' do %>
-              <tr>
-                <td><span class="xs-title hidden-sm hidden-md hidden-lg inline">Wholesaler: </span><%= listing.user.company %></td>
-                <td><span class="xs-title hidden-sm hidden-md hidden-lg inline">Location: </span><%= listing.city %>, <%= listing.state_name %></td>
-                <td><span class="xs-title hidden-sm hidden-md hidden-lg inline">Specialties: </span><%= listing.user.specialties %></td>
-                <td>
-                  <%= link_to "View Details", listing_path(listing) %>
-                  <% if user_signed_in? && listing.user == current_user %>
-                    &nbsp;|&nbsp;
-                    <%= link_to edit_listing_path(listing) do %>
-                       Edit
-                    <% end %> 
-                    &nbsp;|&nbsp;
-                    <%= link_to listing, method: :delete, data: { confirm: 'Are you sure?' } do %>
-                      Delete
-                    <% end %>
-                    
-                  <% end %><!-- end for if user signed in -->
-                </td>
-              </tr>
-            <% end %> <!-- link to each listing -->
-          <% end %><!-- end for ruby block of index display each listing -->
+              <%= link_to listing, class: 'no-decoration' do %>
+
+                <tr>
+                  <td><span class="xs-title hidden-sm hidden-md hidden-lg inline">Wholesaler: </span><%= listing.user.company %></td>
+                  <td><span class="xs-title hidden-sm hidden-md hidden-lg inline">Location: </span><b><%= listing.city %></b>, <%= listing.state_name %></td>
+                  <td><span class="xs-title hidden-sm hidden-md hidden-lg inline">Specialties: </span><%= listing.user.specialties %></td>
+                  <td>
+                    <%= link_to "View Details", listing_path(listing) %>
+                    <% if user_signed_in? && listing.user == current_user %>
+                      &nbsp;|&nbsp;
+                      <%= link_to edit_listing_path(listing) do %>
+                         Edit
+                      <% end %> 
+                      &nbsp;|&nbsp;
+                      <%= link_to listing, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                        Delete
+                      <% end %>
+                      
+                    <% end %><!-- end for if user signed in -->
+                  </td>
+                </tr>
+
+              <% end %> <!-- link to each listing -->
+            <% end %><!-- end for ruby block of index display each listing -->
         <% end %><!-- end for unless @listings.count == 0  -->
       </tbody>
     </table>

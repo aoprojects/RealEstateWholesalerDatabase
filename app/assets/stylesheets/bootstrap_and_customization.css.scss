@@ -34,16 +34,16 @@ $btn-primary-color: white;
 @import 'bootstrap';
 @import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css");
 
-// test area below
-
-
-// test area end
 
 @media(min-width:768px){
-
+	
 }
 
 @media(max-width:767px){
+
+	.not-vis-xs {
+		display: none;
+	}
 
 	table {
 		width: 100%;
@@ -52,10 +52,12 @@ $btn-primary-color: white;
 
 	.listings_index table {
 		border: 1px solid $blue;
+		
 	}
 
 	.listings_index table tr {
 		border: 1px solid $blue;
+
 	}
 
 	table td {
