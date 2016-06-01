@@ -46,9 +46,7 @@
 		<span id="listing-footer-area">
 			<h5><u>Summary</u>: <%= @listing.user.company %> is listed as a wholesaler in <%= pluralize(@listing.user.listings.count, "area") %>:</h5>
 				<% @listing.user.listings.each do |l| %>
-					
-						<p><%= link_to "#{l.city}, #{l.state_name}", listing_path(l) %></p>
-					
+					<p><%= link_to "#{l.city}, #{l.state_name}", listing_path(l) %></p>
 				<% end %>
 		</span>
 	</div><!-- end .panel-footer -->

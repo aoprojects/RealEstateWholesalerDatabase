@@ -46,13 +46,13 @@
                 <td>
                   <%= link_to "View Details", listing_path(listing) %>
                   <% if user_signed_in? && listing.user == current_user %>
-
-                    <%= link_to edit_listing_path(listing), class: 'btn btn-info btn-sm' do %>
-                        Edit
-                    <% end %> &nbsp;
-                  
-                    <%= link_to listing, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-info btn-sm' do %>
-                        Delete
+                    &nbsp;|&nbsp;
+                    <%= link_to edit_listing_path(listing) do %>
+                       Edit
+                    <% end %> 
+                    &nbsp;|&nbsp;
+                    <%= link_to listing, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                      Delete
                     <% end %>
                     
                   <% end %><!-- end for if user signed in -->
