@@ -5,7 +5,7 @@
   <br>
 
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-    <%= devise_error_messages! %>
+    <p><%= devise_error_messages! %></p>
 
   <div class="row">
       <div class="field">
@@ -103,7 +103,13 @@
 
         <br>
         <div class="actions align-center">
-          <p>TODO agree to terms checkbox</p>
+          <% if !user_signed_in? %>
+            <p class="no-wrap">
+              <%= f.check_box :terms %>
+              &nbsp;Accept the <%= link_to 'Terms and Conditions', privacy_policy_path, target: "_none" %>
+            </p>
+            <br>
+          <% end %>
           <%= f.submit "Create Free Account", class: 'btn btn-primary btn-lg' %>
         </div>
       <% end %>

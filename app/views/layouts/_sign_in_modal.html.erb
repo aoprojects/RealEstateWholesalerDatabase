@@ -1,0 +1,44 @@
+
+<div class="container">
+
+	<div class="modal fade" id="modal-2">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h2 class="modal-heading margin-bottom align-center">Sign In</h2>
+		
+				</div><!-- end .modal-header -->
+				<div class="modal-body">
+				     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+				      <div class="field form-group">
+				        <h4><%= f.label :email %></h4>
+				        <%= f.email_field :email, autofocus: true, class: 'form-control' %>
+				      </div>
+
+				      <div class="field form-group">
+				        <h4><%= f.label :password %></h4>
+				        <%= f.password_field :password, autocomplete: "off", class: 'form-control' %>
+				      </div>
+
+				      <br>
+				      <% if devise_mapping.rememberable? -%>
+				        <h4><div class="field align-center">
+				          <span class="indent"><%= f.check_box :remember_me %></span>
+				          <%= f.label :remember_me %>
+				        </div>
+				      <% end -%></h4>
+
+				</div><!-- end .modal-body -->
+				<div class="modal-footer">
+ 					  <div class="actions align-center">
+				        <h4 class="button-normalize"><b><%= f.submit "Sign in", class: 'btn btn-primary btn-lg' %></b></h4>
+				      </div>      
+				      <h4 class="align-right"><%= render "devise/shared/links" %></h4>
+				    <% end %>
+				</div><!-- end .modal-footer -->
+			</div><!-- end .modal-content-->
+		</div><!-- end .modal-dialog -->
+	</div><!-- end .modal -->
+</div><!-- end .container -->
