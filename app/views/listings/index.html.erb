@@ -66,11 +66,12 @@
     <div class="align-center">  
       <p><%= will_paginate @listings, renderer: BootstrapPagination::Rails %></p>
     </div>
-    <div>
-      <!-- TODO after launch: change this button to one button for the previous state and one for the next state, so users don't have to click back to home to see another state -->
-      <p class="text-center"><%= link_to "View A Different State's Listings", root_path, class: 'btn btn-sm btn-primary' %></p>
-    </div>
-
+    <% if @listings.size != 0 %>
+      <div>
+        <!-- TODO after launch: change this button to one button for the previous state and one for the next state, so users don't have to click back to home to see another state -->
+        <p class="text-center"><%= link_to "View A Different State's Listings", root_path, class: 'btn btn-sm btn-primary' %></p>
+      </div>
+    <% end %>
     <br>
 
    
