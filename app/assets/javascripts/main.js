@@ -1,5 +1,7 @@
 $(document).ready(function() {
-	$("#hamburger-menu-area").click(function() {
-		$("#nav-options-dropped").toggleClass("collapsed");
+	$("#hamburger-menu-area").click(function(event) {
+		// console.log("clicked",arguments)
+		event.stopImmediatePropagation();
+		$("#nav-options-dropped").toggle("fast");
 	});
-)};
+});
