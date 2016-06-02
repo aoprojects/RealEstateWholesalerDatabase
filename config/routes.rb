@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
 
-  devise_for :users
+  devise_for :users, controllers: { registration: "registrations" }
   resources :resources
   resources :listings
   resources :contacts, only: [:new, :create]
+  resources :subscribers, only: [:new, :create]
   root 'pages#home'
   get "wholesaling" => "pages#wholesaling"
   get "about" => "pages#about"

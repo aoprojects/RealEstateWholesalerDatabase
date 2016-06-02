@@ -1,4 +1,7 @@
 class SubscribersController < ApplicationController
+		
+	before_filter :authenticate_user!
+
 	def new
 		# stripe gem takes care of all things needed in here
 	end
