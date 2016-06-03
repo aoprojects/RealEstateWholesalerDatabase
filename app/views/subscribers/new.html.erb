@@ -1,4 +1,18 @@
-<h3>Sign up for monthly subscription.</h3>
-<p>TODO fix this text, maybe use the text form the modal I made earlier. </p>
+<div class="panel panel-primary text-center">
+	<div class="panel-heading">
+		<h4>Activate Your Monthly Subscription to Real Estate Wholesaler Database</h4>
+	</div><!-- end .modal-header -->
+	<div class="panel-body">
+		<p>To create a new wholesaler listing, you must be an active monthly subscriber. <br>Once you have subscribed, you can list your company as a wholesaler up to 50 times.</p>
+		<br>
+		<p><b>A subscription to Real Estate Wholesaler Database is just $9/month USD, your first 30 days are free, and you can cancel your subscription at any time.</b></p>
+		<br>
+	
+		<%= render 'subscribers/form' %>
+	</div><!-- end .modal-body -->
+	<div class="panel-footer">
+			<small class="text-right">Questions? Maybe our <%= link_to "FAQ", about_path %> page can help</small>
+	</div><!-- end .panel-footer -->
+</div><!-- .panel .panel-default -->
 
-<%= render 'subscribers/form' %>
+
