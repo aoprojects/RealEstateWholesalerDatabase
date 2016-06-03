@@ -13,7 +13,7 @@ class SubscribersController < ApplicationController
 		customer = Stripe::Customer.create(
 			card: token,
 			# plan is subscription plan that we want to enroll customer in, as we called in in stripe account
-			plan: 1001
+			plan: 1001,
 			email: current_user.email
 			)
 
