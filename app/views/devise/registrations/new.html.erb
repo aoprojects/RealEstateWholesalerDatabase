@@ -1,7 +1,14 @@
  
-  <h2 class="align-center">New Wholesaler Sign Up</h2>
+  <h2 class="align-center">New Wholesaler Sign Up</h2><br>
+  <section id="sign_up_purpose_warning">
+    <p class="text-center blue">Please note that accounts are intended to be used by wholesalers / investment property sellers, not property buyers.<p>
+    <p class="text-center blue">If you just want to stay informed and/or receive updates when new wholesalers are added, you can simply <a href="#" data-toggle="modal" data-target="#modal-1"><b>sign up for our newsletter</b></a> instead.</p>
+    <!-- below will only be visible when modal is clicked  -->
+    <%= render 'layouts/newsletter_modal' %>
+  </section><!-- end #sign_up_purpose_warning -->
 
-  <p class="align-center"><i>Your profile info will be used to complete each Wholesaler listing you post.</i></p>
+  <br> 
+  <p class="align-center"><i>Your profile info will be used to complete each Wholesaler listing you create.</i></p>
   <br>
 
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
