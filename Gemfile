@@ -37,7 +37,9 @@ gem 'will_paginate', '~> 3.0.6'
 gem 'will_paginate-bootstrap'
 # stripe for payment processing
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
-# for seeing error messages better
+# figaro gem for securely managing credentials, like stripe api keys
+gem 'figaro'
+
 gem 'mail_form' 
 
 gem 'lightbox-bootstrap-rails'
