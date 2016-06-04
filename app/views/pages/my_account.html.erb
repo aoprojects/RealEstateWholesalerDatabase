@@ -8,15 +8,14 @@
 	</div><!-- end panel header -->
 	<br>
 	<div class="row">
-		<div class="col-xs-6 text-right double-space vertical-line">
-
-			<h4 class="double-space"><%= link_to 'Edit Account Settings', edit_user_registration_path %></h4>
+		<div class="col-sm-6 text-right double-space vertical-line">
+			<h4 class="double-space"><%= link_to 'Edit My Account Settings', edit_user_registration_path %></h4>
 			<h4 class="double-space"><%= link_to 'View My Profile', my_profile_path %></h4>
 			<h4 class="double-space"><%= link_to 'Listings Summary', advert_summary_path %></h4>
 			</div><!-- end col#1 -->
-		<div class="col-xs-6 double-space">
+		<div class="col-sm-6 double-space">
 			<h4 class="double-space"><%= link_to 'Sign Out', destroy_user_session_path %></h4>
-			<h4 class="double-space"><%= link_to "Cancel Account", edit_user_registration_path %></h4>
+			<h4 class="double-space"><%= link_to "Cancel My Account", edit_user_registration_path %></h4>
 			<h4 class="double-space"><%= link_to "Contact Us", about_path %></h4>
 		</div><!-- end col #2 -->
 	</div><!-- end row -->
