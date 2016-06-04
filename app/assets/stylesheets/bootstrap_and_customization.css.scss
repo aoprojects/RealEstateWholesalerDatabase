@@ -27,7 +27,7 @@ $hover-color: #eee;
 $background-blue: #337AB7;
 $panel-default-border: #337AB7;
 $panel-inner-border: #337AB7;
-$btn-primary-color: white;
+$btn-primary-color: white !important;
 
 
 @import 'bootstrap-sprockets';

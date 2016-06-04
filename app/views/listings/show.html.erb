@@ -7,7 +7,7 @@
 		<h4 class='align-center blue'><strong><em><%= @listing.city %>, <%= @listing.state_name %></em></strong></h4>
 
 		<% if current_user == @listing.user && user_signed_in? %>
-			<h4 class="align-right"><%= link_to edit_listing_path(@listing), class: 'btn btn-info btn-sm' do %>
+			<h4 class="align-right"><%= link_to edit_listing_path(@listing), class: 'btn btn-primary btn-sm' do %>
 				<span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> Edit Listing
 			<% end %></h4>
 		<% end %>
@@ -45,9 +45,11 @@
 	<div class="panel-footer text-center">
 		<span id="listing-footer-area">
 			<h5><u>Summary</u>: <%= @listing.user.company %> is listed as a wholesaler in <%= pluralize(@listing.user.listings.count, "area") %>:</h5>
+				
 				<% @listing.user.listings.each do |l| %>
 					<p><%= link_to "#{l.city}, #{l.state_name}", listing_path(l) %></p>
 				<% end %>
+
 		</span>
 	</div><!-- end .panel-footer -->
 
@@ -58,7 +60,9 @@
 </section> -->
 
 <% if user_signed_in? %>
-	<p class="align-center"><%= link_to 'Create New Listing', new_listing_path, class: "btn btn-default btn-md" %></p>
+	<p class="align-center"><%= link_to 'Create New Listing', new_listing_path, class: "white btn btn-primary btn-md" %></p>
 <% end %>
+
+<%= link_to "<-- Back", :back, class: "white btn btn-primary btn-sm" %>
 
 <div class="clearfix"></div><br>
