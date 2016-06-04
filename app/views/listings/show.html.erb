@@ -64,8 +64,8 @@
 <% end %>
 
 <%= link_to "<-- Back", :back, class: "white btn btn-primary btn-xs" %> 
+<%= link_to "#{@listing.state_name} listings", listings_path(state_name: @listing.state_name), class: "btn btn-primary btn-xs" %>
 <%= link_to "View All States", root_path, class: "btn btn-primary btn-xs" %>
-<%= link_to "View All Listings", listings_path, class: "btn btn-primary btn-xs" %>
 
 
 <div class="clearfix"></div><br>
