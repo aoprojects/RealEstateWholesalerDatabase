@@ -7,7 +7,7 @@
 		<h4 class='align-center blue'><strong><em><%= @listing.city %>, <%= @listing.state_name %></em></strong></h4>
 
 		<% if current_user == @listing.user && user_signed_in? %>
-			<h4 class="align-right"><%= link_to edit_listing_path(@listing), class: 'btn btn-primary btn-sm' do %>
+			<h4 class="align-right"><%= link_to edit_listing_path(@listing), class: 'btn btn-warning btn-xs white' do %>
 				<span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> Edit Listing
 			<% end %></h4>
 		<% end %>
@@ -63,6 +63,9 @@
 	<p class="align-center"><%= link_to 'Create New Listing', new_listing_path, class: "white btn btn-primary btn-md" %></p>
 <% end %>
 
-<%= link_to "<-- Back", :back, class: "white btn btn-primary btn-sm" %>
+<%= link_to "<-- Back", :back, class: "white btn btn-primary btn-xs" %> 
+<%= link_to "View All States", root_path, class: "btn btn-primary btn-xs" %>
+<%= link_to "View All Listings", listings_path, class: "btn btn-primary btn-xs" %>
+
 
 <div class="clearfix"></div><br>

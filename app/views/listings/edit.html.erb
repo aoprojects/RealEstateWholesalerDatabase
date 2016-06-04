@@ -3,10 +3,14 @@
 
 	<%= render 'form' %>
 
+	<% if user_signed_in? %>
+		<%= link_to "Delete", @listing, method: :delete %> | 
+	<% end %>
+
 	<%= link_to 'Back', @listing %> &nbsp;|&nbsp;
 	<%= link_to 'All Listings', listings_path %>
 
-	<p>TODO: let them delete this listing too</p>
+	<p></p>
 
-	<p> TODO: Note to self. They should not be charged extra for updating things., unless they are changing the type of listing they are making to one of a resource from one of a wholesaler. Or maybe they shouldn't even be able to do that. Maybe they should just be able to create a category of listing and not change the type of listing from the two main types. </p>
+	
 </div><!-- end .well -->
