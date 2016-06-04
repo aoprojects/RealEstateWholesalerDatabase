@@ -14,9 +14,19 @@
 <br>
 
 <h4> Your account status:</h4>
-<h5 class="indent">TODO active or inactive </h5>
-<br>
-<h5 class="align-right indent btn btn-info btn-sm">TODO Edit My Subscription</h5>
+<h5 class="indent">
+<!-- 	TODO turn this below section into active ruby code after stripe branch merge -->
+	 if current_user.subscribed
+		ACTIVE
+	 else
+		INACTIVE
+		<p>TODO activate your subscription.</p>
+	 end
+</h5>
+<br><hr>
+<small class="text-right">To cancel your subscription, please email team@rewholesalerdatabase.com.
+<br>For your convenience, we are working on creating an automatic unsubscription method. To be released soon.</small>
+
 <h5 class="align-right margin"><%= link_to 'Create New Listing', new_listing_choice_path, class: 'btn btn-primary btn-sm' %></h5>
 <br>
 
