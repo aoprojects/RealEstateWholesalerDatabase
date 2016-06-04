@@ -34,11 +34,11 @@ $btn-primary-color: white !important;
 @import 'bootstrap';
 @import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css");
 
-
+// for larger screens, below. This is a bootstrap breakpoint.
 @media(min-width:768px){
 	
 }
-
+// for smaller screens, below. This is a bootstrap breakpoint.
 @media(max-width:767px){
 
 	.not-vis-xs {
@@ -58,6 +58,10 @@ $btn-primary-color: white !important;
 	.listings_index table tr {
 		border: 1px solid $blue;
 
+	}
+
+	.listings_index table td {
+		border-top: none !important;
 	}
 
 	table td {
