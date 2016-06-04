@@ -336,6 +336,14 @@ h6 {
 	color: $gray;
 }
 
+.margin {
+	margin: 6px;
+}
+
+.margin-bottom {
+	margin-bottom: 15px;
+}
+
 .no-decoration {
 	text-decoration: none;
 	color: black;
@@ -350,13 +358,12 @@ h6 {
 	white-space: nowrap;
 }
 
-
-.margin {
-	margin: 6px;
-}
-
-.margin-bottom {
-	margin-bottom: 15px;
+p#notice {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 15px;
+	background: rgba(250,250,208,1.0);
+	border-radius: 10px;
 }
 
 .pages_about .question {
