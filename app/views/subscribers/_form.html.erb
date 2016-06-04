@@ -1,0 +1,20 @@
+<%= form_tag subscribers_path(1), method: :put do %>
+
+  <article>
+    <% if flash[:error].present? %>
+      <div id="error_explanation">
+        <p><%= flash[:error] %></p>
+      </div>
+    <% end %>
+  </article>
+
+  <section id="pay-with-card">
+    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+            data-description="REWD Monthly Subscription"
+            data-amount="900"
+            data-locale="auto">
+    </script>
+  </section>
+
+<% end %>

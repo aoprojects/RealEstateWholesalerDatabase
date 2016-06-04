@@ -20,7 +20,11 @@ class ListingsController < ApplicationController
 
  
   def new
-    @listing = current_user.listings.build
+    if !current_user.subscribed 
+      redirect_to '/subscribers/new'
+    else
+      @listing = current_user.listings.build
+    end
   end
  
   def create
