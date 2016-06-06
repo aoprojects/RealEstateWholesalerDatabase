@@ -40,13 +40,13 @@
                 <tr>
                   <td><span class="xs-title hidden-sm hidden-md hidden-lg inline">Wholesaler: </span><%= listing.user.company %></td>
                   <td><span class="xs-title hidden-sm hidden-md hidden-lg inline">Location: </span><b><%= listing.city %></b>, <%= listing.state_name %></td>
-                  <td><span class="xs-title hidden-sm hidden-md hidden-lg inline">Specialties: </span><%= listing.user.specialties %></td>
+                  <td><span class="xs-title hidden-sm hidden-md hidden-lg inline">Specialties: </span><%= truncate(listing.user.specialties) %></td>
                   <td>
                     <%= link_to "View Details", listing_path(listing) %>
                     <% if user_signed_in? && listing.user == current_user %>
                       &nbsp;|&nbsp;
                       <%= link_to edit_listing_path(listing) do %>
-                         Edit
+                        Edit
                       <% end %> 
                       &nbsp;|&nbsp;
                       <%= link_to listing, method: :delete, data: { confirm: 'Are you sure?' } do %>
