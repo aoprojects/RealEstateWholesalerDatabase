@@ -6,8 +6,9 @@ $(document).ready(function() {
 	});
 
 	// todo we want the paragraph yellow area only to display for a notice if there is a notice
-	if $('#notice').innerHTML == nil {
-		$('p#notice').css('display:none');
-	};
-
+	$("p").each(function(){
+  		if ($.trim($(this).text()) == ""){
+   			$this.remove();
+		} 
+	});
 });

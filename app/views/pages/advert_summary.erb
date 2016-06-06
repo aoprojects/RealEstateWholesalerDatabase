@@ -5,7 +5,7 @@
 
 
 <h4>Your Wholesaler Listings:</h4>
-<h5 class="indent"><%= current_user.company %>, you are listed as a wholesaler in <%= pluralize(current_user.listings.count, "area") %>:</h5>
+<h5 class="indent"><%= current_user.company %>, you are listed as a wholesaler in <%= pluralize(current_user.listings.count, "area") %>: </h5>
 			<% current_user.listings.each do |l| %>
 				<ul><li><%= link_to "#{l.city}, #{l.state_name}", listing_path(l) %></li>
 				</ul>
@@ -16,21 +16,21 @@
 <h4> Your account status:</h4>
 <h5 class="indent">
 <!-- 	TODO turn this below section into active ruby code after stripe branch merge -->
-	 if current_user.subscribed
-		ACTIVE
-	 else
-		INACTIVE
-		<p>TODO activate your subscription.</p>
-	 end
+	 <% if current_user.subscribed %>
+		<p>ACTIVE.</p>
+		
+	 <% else %>
+		<p>INACTIVE</p>
+		<p><%= link_to "Active My Subscription", new_subscriber_path, class: "btn btn-sm btn-primary" %></p>
+	 <% end %>
 </h5>
 <br><hr>
-<small class="text-right">To cancel your subscription, please email team@rewholesalerdatabase.com.
-<br>For your convenience, we are working on creating an automatic unsubscription method. To be released soon.</small>
+<small class="text-right">To cancel your subscription, please email team@rewholesalerdatabase.com.</small>
+	<!-- TODOlater create automatic unsubscribe button below -->
+<p class="indent"><small>For your convenience, we are working on creating an automatic unsubscription method. To be released soon.</small></p>
 
-<h5 class="align-right margin"><%= link_to 'Create New Listing', new_listing_choice_path, class: 'btn btn-primary btn-sm' %></h5>
 <br>
-
-<%= link_to "Back to My Account", my_account_path, class: "btn btn-primary btn-xs text-left" %><br><br>
+<%= link_to "<-- Back to My Account", my_account_path %><br><br>
 
 
 
