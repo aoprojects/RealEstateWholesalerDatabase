@@ -5,11 +5,15 @@ $(document).ready(function() {
 		$("#nav-options-dropped").toggle("fast");
 	});
 
+	$(".question").click(function() {
+		$(this).children(".will_show_after_click").toggle("fast");
+		$(this).children(".will_show_before_click").toggle("fast");
+
+	});
+
 	$(".question").click(function(event) {
 		event.stopImmediatePropagation();
-		$(this).next().toggle("fast");
-		$(this).child(".will_toggle_after").toggle("fast");
-		$(this).child(".will_toggle_before").toggle("fast");
+		$(this).next(".answer").toggle("fast");
 	});
 
 	// todo we want the paragraph yellow area only to display for a notice if there is a notice
