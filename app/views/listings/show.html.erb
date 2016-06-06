@@ -63,9 +63,9 @@
 	<p class="align-center"><%= link_to 'Create New Listing', new_listing_path, class: "white btn btn-primary btn-md" %></p>
 <% end %>
 
-<%= link_to "<-- Back", :back, class: "white btn btn-primary btn-xs" %> 
-<%= link_to "#{@listing.state_name} listings", listings_path(state_name: @listing.state_name), class: "btn btn-primary btn-xs" %>
-<%= link_to "View All States", root_path, class: "btn btn-primary btn-xs" %>
+<%= link_to "<-- Back", :back %> &nbsp;|&nbsp;
+<%= link_to "#{@listing.state_name} listings", listings_path(state_name: @listing.state_name) %> &nbsp;|&nbsp; 
+<%= link_to "View All States", root_path %>
 
 
 <div class="clearfix"></div><br>
