@@ -3,12 +3,13 @@
 
 	<%= render 'form' %>
 
-	<% if user_signed_in? %>
-		<%= link_to "Delete", @listing, method: :delete %> | 
-	<% end %>
-
+	<br>
 	<%= link_to 'Back', @listing %> &nbsp;|&nbsp;
-	<%= link_to 'All Listings', listings_path %>
+	<%= link_to 'All Listings', listings_path %> 
+
+	<% if user_signed_in? %>
+		&nbsp;|&nbsp; <%= link_to "Delete Listing", @listing, method: :delete %>
+	<% end %>
 
 	<p></p>
 
