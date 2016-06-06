@@ -8,12 +8,12 @@ class User < ActiveRecord::Base
   # TODO validate presence of non email and password fields, on create of new listing, not new user
 
   validates :email, presence: true
-  validates :company, presence: true
-  validates :company, :length => { :maximum => 15 }
-  validates :details, :length => { :maximum => 500 }
-  validates :specialties, :length => { :maximum => 150 }
+  validates :phone, presence: true
+  validates :url, presence: true
+  validates :company, presence: true, :length => { :maximum => 15 }
+  validates :details, presence: true, :length => { :maximum => 500 }
+  validates :specialties, presence: true, :length => { :maximum => 150 }
   validates_acceptance_of :terms, :allow_nil => false, :acceptance => true, :on => :create
-
 
   def company=(val)
     write_attribute(:company, val.titleize)
