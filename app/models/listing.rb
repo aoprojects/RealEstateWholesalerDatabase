@@ -1,7 +1,7 @@
 class Listing < ActiveRecord::Base
 
 	validates :state_name, inclusion: {in: STATES}
-	validates :city, presence: true
+	validates :city, presence: true, :length => { :maximum => 25 }
 
 	belongs_to :user
 
