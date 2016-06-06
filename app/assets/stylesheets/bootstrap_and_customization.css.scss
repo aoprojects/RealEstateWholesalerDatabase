@@ -36,7 +36,13 @@ $btn-primary-color: white !important;
 
 // for larger screens, below. This is a bootstrap breakpoint.
 @media(min-width:768px){
-	
+	.listings_show table tr td:first-child {
+	width: 30%;
+	}
+
+	.listings_show table tr td:nth-child(2) {
+		width: 70%;
+	}
 }
 // for smaller screens, below. This is a bootstrap breakpoint.
 @media(max-width:767px){
@@ -61,6 +67,7 @@ $btn-primary-color: white !important;
 
 	.listings_index table td {
 		border-top: none !important;
+
 	}
 
 	table td {
