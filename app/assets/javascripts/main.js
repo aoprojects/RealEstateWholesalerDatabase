@@ -1,4 +1,7 @@
 $(document).ready(function() {
+
+	// if ($("p#notice").innerHTML == "") { $("p#notice").hide(); }
+
 	$("#hamburger-menu-area").click(function(event) {
 		// console.log("clicked",arguments)
 		event.stopImmediatePropagation();
