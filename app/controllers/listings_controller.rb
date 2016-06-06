@@ -10,7 +10,7 @@ class ListingsController < ApplicationController
         # raise 'foo'
         @listings = Listing.where(state_name: params[:state_name]).order(:city).paginate(:page => params[:page], :per_page => 25)
       else
-        @listings = Listing.all.order(:state, :city).paginate(:page => params[:page], :per_page => 25)
+        @listings = Listing.all.order(:city).paginate(:page => params[:page], :per_page => 25)
       end
   end
 
