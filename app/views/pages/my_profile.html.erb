@@ -32,6 +32,8 @@
 
 		</table>
 		<br>
+		<h5 class="align-right"><%= link_to 'Edit My Profile', edit_user_registration_path, class: "btn btn-primary" %></h5>
+		
 	</div><!-- end .panel-body -->
 	<div class="panel-footer">
 		<div class="row">
@@ -39,9 +41,9 @@
 				<p class="text-left"><i>Your profile information is posted along with each of your listings.</i></p>
 			</div>
 			<div class="col-sm-3">
-				<h5 class="align-right"><%= link_to 'Edit Your Profile', edit_user_registration_path %></h5>
-				<h5 class="align-right"><%= link_to 'View Your Listings', advert_summary_path %></h5>
-				<h5 class="align-right"><%= link_to 'Your Account Settings', my_account_path %></h5>
+			
+				<h5 class="align-right"><%= link_to 'View My Listings', advert_summary_path %></h5>
+				<h5 class="align-right"><%= link_to 'My Account Settings', my_account_path %></h5>
 			</div>
 		<br>
 	</div><!-- end .panle-footer -->
