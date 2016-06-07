@@ -43,6 +43,11 @@ $btn-primary-color: white !important;
 	.listings_show table tr td:nth-child(2) {
 		width: 70%;
 	}
+
+	.modal {
+	/* todo make this modal centered */
+	}
+
 }
 // for smaller screens, below. This is a bootstrap breakpoint.
 @media(max-width:767px){

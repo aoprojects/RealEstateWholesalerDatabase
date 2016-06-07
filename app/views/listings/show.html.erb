@@ -61,11 +61,12 @@
 
 <% if user_signed_in? %>
 	<p class="align-center"><%= link_to 'Create New Listing', new_listing_path, class: "white btn btn-primary btn-md" %></p>
-<% end %>
+<% end %><br>
 
 <%= link_to "<-- Back", :back %> &nbsp;|&nbsp;
 <%= link_to "#{@listing.state_name} listings", listings_path(state_name: @listing.state_name) %> &nbsp;|&nbsp; 
-<%= link_to "View All States", root_path %>
+<%= link_to "View All Listings", listings_path %> &nbsp;|&nbsp; 
+<%= link_to "All US States", root_path %>
 
 
 <div class="clearfix"></div><br>

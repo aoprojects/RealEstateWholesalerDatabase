@@ -70,7 +70,11 @@
       <div>
         <!-- TODO after launch: change this button to one button for the previous state and one for the next state, so users don't have to click back to home to see another state -->
         <p class="text-center"><%= link_to "View A Different State's Listings", root_path, class: 'btn btn-sm btn-primary' %></p>
-        <%= link_to "View All Listings", listings_path, class: "btn btn-primary btn-xs" %>
+
+        <% if params[:state_name] %>
+          <%= link_to "View All Listings", listings_path, class: "btn btn-primary btn-xs" %>
+        <% end %>
+
       </div>
     <% end %>
     <br>
