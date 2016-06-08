@@ -198,7 +198,28 @@ button {
 .drop-down {
 	background: white;
 	width: 100%;
+}
 
+#error_explanation {
+	border-radius: 5px;
+	padding: 15px;
+	text-align: center;
+	background: rgba(250,250,208,1.0);
+	font-size: 16px;
+}  /* some error messages are in this id */
+
+#error_explanation h2 {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+#error_explanation:empty {
+	display: none;
+}/* don't display this div's background color if the paragraph is empty, like it is when there's no error. */
+
+
+#error_explanation ul {
+	list-style: none;
 }
 
 .explanation {
@@ -392,7 +413,7 @@ h6 {
 
 p:empty {
 	display: none;
-}
+}/* don't display this paragraph's background color if the paragraph is empty, like it is when there's no error. */
 
 p#notice {
 	margin-top: 10px;
@@ -403,7 +424,8 @@ p#notice {
 	font-size: 16px;
 	text-align: center;
 	margin-bottom: 15px;
-}
+}/* some error messages are in this id */
+
 
 .pages_about .question {
 	font-weight: bold;
