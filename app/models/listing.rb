@@ -9,10 +9,6 @@ class Listing < ActiveRecord::Base
 
   # TODOlater if listing has no user, delete listing
 
-  def listing_active?
-    listing.user.subscribed == true
-  end
-
   def listing_count_within_limit
     if self.user.listings(:reload).count >= 50
       # limit amount of listings per account to 50. TODOlater, make it possible for users to 'add another batch' of 50 listings by increasing monthly pay. Probably an upgrade to another subscription.
