@@ -2,7 +2,7 @@ class ListingsController < ApplicationController
   before_action :set_listing, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
   
-
+# make a before action on the new and the create and the update actions to check if current_user.subscribed
 
   def index
       # search listings based on city 
