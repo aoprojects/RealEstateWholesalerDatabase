@@ -9,11 +9,6 @@ class Listing < ActiveRecord::Base
 
   # TODOlater if listing has no user, delete listing
 
-  if listing.user.subscribed == true
-    listing.active_listing = true
-    listing.save
-  end
-
   def active_listing?
     :active_listing == true
   end
