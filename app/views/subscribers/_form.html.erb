@@ -8,10 +8,12 @@
     <% end %>
   </article>
 
-  <section id="pay-with-card">
+  <section id="pay-with-card" class="text-center btn">
     <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
             data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-            data-description="REWD Monthly Subscription"
+            data-description="Trial + Monthly Subscription"
+            data-panel-label="Subscribe"
+            data-label="Subscribe"
             data-amount="900"
             data-locale="auto">
     </script>
