@@ -55,38 +55,9 @@
 <br>
     <div class="clearfix"></div>
     <br><br>
-    <footer>
+  
+  <%= render 'layouts/footer' %>
 
-            <div class="row align-center">
-                <div class="col-sm-4 col-xs-12 align-center">
-                    
-                    <p><%= link_to 'List Yourself On This Site', new_listing_path %></p>
-                    <p><%= link_to "Terms, Privacy, & Pricing", privacy_policy_path %></p>
-                    <p><%= link_to "Contact | FAQ", about_path %></p>
-                    <p>team@rewholesalerdatabase.com</p>
-                    
-                    
-                </div><!-- end col -->
-
-                <div class="col-sm-4 col-xs-12 align-center vertical-center">
-                    <br>
-                    <p><%= image_tag("rewd_logo_v1_small.png") %></p>
-                   
-                </div>
-
-                <div class="col-sm-4 col-xs-12 align-center">
-                    
-                    <p><a href="https://www.facebook.com/REWholesalerDatabase" target="_none" class="nav-text"><%= image_tag('facebook.png', alt: "facebook", class: 'icon-small grow') %></a> &nbsp; &nbsp; &nbsp;
-
-                    <a href="https://twitter.com/REWholesalerDb" alt="twitter" target="_none" class="nav-text"><%= image_tag('twitter.png', alt: 'twitter', class: 'icon-small bottom grow') %></a></p>
-                    <br>
-                    <p class="vertical-center"><%= link_to "Real Estate Wholesaler Database", root_path, class: 'title-footer no-decoration no-wrap' %></p>
-                    <P>Developed by <%= link_to "Virgo Ventures LLC", "http://www.virgoventures.org", target: "_none" %> </p>
-
-                </div><!-- col -->
-            </div><!-- row -->
-       
-    </footer>
 <!-- this is for Agile CRM tracking  -->
 <script type="text/javascript" src="https://rewholesalerdatabase.agilecrm.com/stats/min/agile-min.js"> </script> <script type="text/javascript" > _agile.set_account('2icm59erulgt3edcbjs73cpk88', 'rewholesalerdatabase'); _agile.track_page_view(); _agile_execute_web_rules(); </script>
 
