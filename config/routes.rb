@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :resources
   resources :listings
   resources :contacts, only: [:new, :create]
-  resources :subscribers, only: [:new, :create]
+  resources :subscribers, only: [:new, :create, :update]
   root 'pages#home'
   get "wholesaling" => "pages#wholesaling"
   get "about" => "pages#about"

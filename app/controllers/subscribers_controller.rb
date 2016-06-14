@@ -21,7 +21,7 @@ class SubscribersController < ApplicationController
 		current_user.stripeid = customer.id
 		current_user.save
 
-		redirect_to new_listing_path
+		redirect_to new_listing_path, notice: "You have successfully subscribed, and you may now post yourself as a wholesaler up to 50 times."
 	end
 
 end
