@@ -1,0 +1,19 @@
+<!-- This is the layout for all of the emails we send through the welcome mailer. -->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>REWD Welcome Email</title>
+	</head>
+	<body>
+		
+		<%= yield %>
+		
+		<small>
+			<p>Happy investing, <br>
+				Alison | Real Estate Wholesaler Database</p>
+			<p><%= link_to 'REWholesalerDatabase.com', "http://www.rewholesalerdatabase.com" %></p>
+			<p class="text-center"><i>Questions? Comments? We'd love to hear them. Please email <i>team@REWholesalerDatabase.com</i>, and thank you for your input.</i></p>
+		</small>
+	</body>
+</html>
