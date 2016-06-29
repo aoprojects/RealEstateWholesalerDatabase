@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
   validates :email, presence: true
   validates :phone, presence: true
   validates :url, presence: true
-  validates :company, presence: true, :length => { :maximum => 15 }
+  validates :company, presence: true, :length => { :maximum => 40 }
   validates :details, presence: true, :length => { :maximum => 500 }
   validates :specialties, presence: true, :length => { :maximum => 150 }
   validates_acceptance_of :terms, :allow_nil => false, :acceptance => true, :on => :create
