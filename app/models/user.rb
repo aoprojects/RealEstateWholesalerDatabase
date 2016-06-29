@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-  has_many :listings
+  has_many :listings, dependent: :destroy
   has_many :resources
   # TODO validate presence of non email and password fields, on create of new listing, not new user
 
