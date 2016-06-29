@@ -9,10 +9,6 @@ class Listing < ActiveRecord::Base
 
   # TODOlater if listing has no user, delete listing
 
-  def active_listing?
-    :active_listing == true
-  end
-
   # TODO make it so that listings only show if active_listing?
 
   def listing_count_within_limit
