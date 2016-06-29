@@ -33,20 +33,24 @@
     <h5 class="align-center"><i>~ The following data is pulled from your company profile and will be listed within your Wholesaler Listing automatically.  To change it, change your <%= link_to 'profile settings', my_profile_path %>. ~</i></h5><br>
 
     <table class="listing-table">
+       <tr>
+        <td><strong>Your Name:</strong></td> 
+        <td><%= current_user.company %></td>
+      </tr>
       <tr>
-        <td><strong>Company email:</strong></td> 
+        <td><strong>Your Email:</strong></td> 
         <td><%= current_user.email %></td>
       </tr>
       <tr>
-        <td><strong>Phone number:</strong></td> 
+        <td><strong>Your Phone number:</strong></td> 
         <td><%= current_user.phone %></td>
       </tr>
       <tr>
-        <td><strong>Wholesaler website:</strong></td> 
+        <td><strong>Your Website:</strong></td> 
         <td><%= current_user.url %></td>
       </tr>
       <tr>
-        <td><strong>Wholesaler's specialties:</strong></td>
+        <td><strong>Your Specialties:</strong></td>
         <td><%= current_user.specialties %></td>
       </tr>
       <tr>
