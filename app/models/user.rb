@@ -15,16 +15,7 @@ class User < ActiveRecord::Base
   validates :specialties, presence: true, :length => { :maximum => 150 }
   validates_acceptance_of :terms, :allow_nil => false, :acceptance => true, :on => :create
 
-  after_create :email_welcome
-
   def company=(val)
     write_attribute(:company, val.titleize)
   end
-
-private
-  def email_welcome
-    WelcomeMailer.welcome_email(self).deliver
-    # TODO ?
-  end
-
 end
