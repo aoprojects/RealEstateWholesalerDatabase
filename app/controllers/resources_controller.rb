@@ -33,11 +33,9 @@ class ResourcesController < ApplicationController
   def update
     respond_to do |format|
       if @resource.update(resource_params)
-        format.html { redirect_to @resource, notice: 'Educational resource was successfully updated.' }
-        
+        format.html { redirect_to @resource, notice: 'Educational resource was successfully updated.' }        
       else
         format.html { render :edit }
-        
       end
     end
   end
