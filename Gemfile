@@ -42,7 +42,7 @@ gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 # figaro gem for securely managing credentials, like stripe api keys
 gem 'figaro'
 
-gem 'letter_opener', group: :development
+gem 'mail_form' 
 
 gem 'lightbox-bootstrap-rails'
 
