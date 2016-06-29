@@ -31,8 +31,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bootstrap-sass'
 
 gem 'devise', '~> 3.5.2'
-# add active admin to generate an admin interface
-gem 'activeadmin', github: 'activeadmin'
 
 gem 'will_paginate', '~> 3.0.6'
 
