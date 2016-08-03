@@ -20,11 +20,11 @@ class ListingsController < ApplicationController
 
  
   def new
-    if !current_user.subscribed 
-      redirect_to '/subscribers/new'
-    else
+    # if !current_user.subscribed 
+    #   redirect_to '/subscribers/new'
+    # else
       @listing = current_user.listings.build
-    end
+    # end
   end
  
   def create
