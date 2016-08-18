@@ -389,7 +389,9 @@ h6 {
 .logo-image {
 	position: relative;
 	width: 90px;
-	bottom: 13px;
+	bottom: 30px;
+	margin-bottom: -35px;
+	z-index: -1;
 }
 
 .logo-company-top {
