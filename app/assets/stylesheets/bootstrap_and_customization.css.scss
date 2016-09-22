@@ -318,6 +318,10 @@ h6 {
 	display: inline;
 }
 
+input:textarea:-webkit-autofill {
+	background-color: white !important;
+}
+
 .internal-list {
 	padding: 10px;
 }
